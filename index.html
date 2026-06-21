@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>台灣日期工具｜農曆轉西元、民國西元轉換、工作天、連假攻略</title>
 <meta name="description" content="免費台灣日期工具：農曆生日轉西元/民國、民國西元年互轉、含國定假日的工作天計算、2026 連假請假攻略、相處天數計算。手機可用、即算即得。">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H3W0TZ95YZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H3W0TZ95YZ');
+</script>
 <style>
   :root{
     --bg:#0F1319;--surface:#19202B;--surface-2:#141A23;
@@ -569,6 +577,19 @@
 
   const t=new Date();
   $('#d-end').value=`${t.getFullYear()}-${pad(t.getMonth()+1)}-${pad(t.getDate())}`;
+
+  /* ===== 廣告點擊追蹤（GA4）：自動為所有推廣連結綁定事件 ===== */
+  document.querySelectorAll('a.promo').forEach(function(el){
+    el.addEventListener('click',function(){
+      const href=el.getAttribute('href')||'';
+      const vendor=href.indexOf('onelink.one')>-1?'KKday':href.indexOf('afflink.one')>-1?'Trip.com':'other';
+      const titleEl=el.querySelector('.ptitle');
+      const title=titleEl?titleEl.textContent.trim():'';
+      if(typeof gtag==='function'){
+        gtag('event','ad_click',{ad_vendor:vendor,ad_title:title,ad_url:href});
+      }
+    });
+  });
 })();
 </script>
 </body>
