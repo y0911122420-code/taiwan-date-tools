@@ -177,6 +177,7 @@
       <button class="tab" role="tab" aria-selected="false" data-tab="work">工作天計算</button>
       <button class="tab" role="tab" aria-selected="false" data-tab="leave">連假請假攻略</button>
       <button class="tab" role="tab" aria-selected="false" data-tab="days">相處天數</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="passport">護照效期</button>
     </div>
   </div>
 </nav>
@@ -296,6 +297,26 @@
       <div class="result" id="days-result"><div class="big" id="days-big">—</div><div class="sub" id="days-sub"></div><div class="grid2" id="days-grid"></div><p class="note" id="days-note"></p>
         <!-- 結果觸發式情境廣告：紀念日 → KKday 體驗 -->
         <a class="promo" href="https://onelink.one/s/xTqQW" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">💑</div><div class="pbody"><div class="ptitle">紀念日來場小旅行</div><div class="pdesc">KKday 在地體驗、一日遊、約會行程</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 護照效期 -->
+  <section class="panel" id="panel-passport" role="tabpanel">
+    <div class="card">
+      <h2>護照效期計算</h2>
+      <p class="lead">多數國家要求入境時護照「剩餘效期至少 6 個月」。輸入護照到期日，算出剩餘效期、是否該換發；可選填預計入境日與要求月數，判斷是否符合規定。</p>
+      <div class="field"><label>護照到期日</label><input type="date" id="p-expiry"></div>
+      <div class="row">
+        <div class="field"><label>預計入境日（可不填）</label><input type="date" id="p-entry"></div>
+        <div class="field"><label>要求剩餘效期（月）</label><input type="number" id="p-months" inputmode="numeric" value="6" min="0" max="24"></div>
+      </div>
+      <button class="btn" id="passport-go">計算</button>
+      <div class="result" id="passport-result">
+        <div class="big" id="passport-big">—</div><div class="sub" id="passport-sub"></div>
+        <div class="grid2" id="passport-grid"></div><p class="note" id="passport-note"></p>
+        <!-- 結果觸發式情境廣告：出國 → Trip.com -->
+        <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">🛂</div><div class="pbody"><div class="ptitle">準備出國？機票飯店先比價</div><div class="pdesc">Trip.com 一站搞定，早訂早安心</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
       </div>
     </div>
   </section>
@@ -581,6 +602,54 @@
     const nextAnni=new Date(start);nextAnni.setFullYear(start.getFullYear()+y+1);
     grid.innerHTML=stat(`下一個 ${nextHundred} 天`,fmt(hundredDate))+stat('還有',dayDiff(end,hundredDate)+' 天','work')+stat(`第 ${y+1} 週年`,fmt(nextAnni))+stat('還有',dayDiff(end,nextAnni)+' 天','holiday');
     note.textContent=`起：${fmt(start)}　迄：${fmt(end)}。第一天起算為第 1 天。`;
+  });
+
+  /* ===== 護照效期 ===== */
+  function addMonths(date,n){const d=new Date(date);const day=d.getDate();d.setMonth(d.getMonth()+n);if(d.getDate()<day)d.setDate(0);return d;}
+  function ymdDiff(a,b){let y=b.getFullYear()-a.getFullYear(),m=b.getMonth()-a.getMonth(),d=b.getDate()-a.getDate();
+    if(d<0){m--;d+=new Date(b.getFullYear(),b.getMonth(),0).getDate();}if(m<0){y--;m+=12;}return{y,m,d};}
+  $('#passport-go').addEventListener('click',()=>{
+    const res=$('#passport-result'),big=$('#passport-big'),sub=$('#passport-sub'),grid=$('#passport-grid'),note=$('#passport-note');
+    const reset=msg=>{big.textContent=msg;big.classList.add('err');sub.textContent='';grid.innerHTML='';note.textContent='';res.classList.add('show');};
+    big.classList.remove('err');
+    const ev=$('#p-expiry').value;
+    if(!ev) return reset('請選擇護照到期日');
+    const expiry=new Date(ev+'T00:00:00');
+    const today=new Date(new Date().toDateString());
+    const reqM=Math.max(0,parseInt($('#p-months').value,10)||0);
+    res.classList.add('show');
+    const remDays=dayDiff(today,expiry);
+    if(remDays<0){
+      big.innerHTML='護照已過期';big.classList.add('err');
+      sub.textContent=`到期日 ${fmt(expiry)}，已過期 ${-remDays} 天`;
+      grid.innerHTML='';note.textContent='請盡快換發護照後再規劃出國行程。';
+      return;
+    }
+    const diff=ymdDiff(today,expiry);
+    big.innerHTML=`剩餘效期 <span style="font-variant-numeric:tabular-nums">${diff.y}</span> 年 <span style="font-variant-numeric:tabular-nums">${diff.m}</span> 個月 <span style="font-variant-numeric:tabular-nums">${diff.d}</span> 天`;
+    sub.textContent=`護照到期日 ${fmt(expiry)}（剩 ${remDays} 天）`;
+    const safeUntil=addMonths(expiry,-reqM);
+    let cells=stat('護照到期日',fmt(expiry))+stat('剩餘天數',remDays+' 天','work');
+    const ent=$('#p-entry').value;
+    if(ent){
+      const entry=new Date(ent+'T00:00:00');
+      if(expiry<entry){
+        cells+=stat('預計入境日',fmt(entry))+stat('⚠️ 不符合','護照到期早於入境日','holiday');
+        note.textContent='護照在入境日前就到期，務必先換發。各國規定不同，請以目的地國要求為準。';
+      }else{
+        const needBy=addMonths(entry,reqM);
+        const ok=expiry>=needBy;
+        const er=ymdDiff(entry,expiry);
+        cells+=stat('預計入境日',fmt(entry))+stat(ok?'✅ 符合規定':'⚠️ 效期不足',`入境時剩 ${er.y} 年 ${er.m} 月 ${er.d} 天`,ok?'work':'holiday');
+        note.textContent=ok
+          ?`入境當天護照剩餘效期符合「至少 ${reqM} 個月」的常見要求。各國規定不同，請以目的地國要求為準。`
+          :`入境當天護照剩餘效期不足 ${reqM} 個月，建議先換發護照再出國。各國規定不同，請以目的地國要求為準。`;
+      }
+    }else{
+      cells+=stat(`建議使用至（保留 ${reqM} 個月）`,fmt(safeUntil),'holiday');
+      note.textContent=`多數國家要求入境時護照剩餘效期至少 ${reqM} 個月。依此標準，建議在 ${fmt(safeUntil)} 之前出國入境；之後出國部分國家可能拒絕入境，宜提前換發。各國規定不同，請以目的地國要求為準。`;
+    }
+    grid.innerHTML=cells;
   });
 
   /* ===== 信任頁 ===== */
