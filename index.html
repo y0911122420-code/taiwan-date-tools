@@ -147,6 +147,10 @@
   .legal p{font-size:13.5px;color:var(--ink-soft);margin:0 0 8px}
   .legal .close{font-size:13px;color:var(--brand);cursor:pointer;font-weight:700;display:inline-block;margin-top:6px}
 
+  .langbar{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+  .langbar button{border:1px solid var(--line);background:var(--surface);color:var(--ink-soft);padding:5px 12px;border-radius:999px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit;transition:.15s}
+  .langbar button[aria-pressed="true"]{background:var(--brand-bg);border-color:var(--brand-bg);color:#fff}
+
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -157,8 +161,8 @@
     <div class="brand">
       <div class="mark">日期<br>工具</div>
       <div>
-        <h1>台灣日期工具</h1>
-        <p>農曆轉西元 · 民國西元 · 工作天 · 連假攻略 · 相處天數</p>
+        <h1 data-i18n="brand_title">台灣日期工具</h1>
+        <p data-i18n="brand_sub">農曆轉西元 · 民國西元 · 工作天 · 連假攻略 · 相處天數</p>
       </div>
     </div>
     <div class="today" id="today">
@@ -166,18 +170,24 @@
       <span class="meta" id="today-meta"></span>
       <span class="cd" id="today-cd"></span>
     </div>
+    <div class="langbar" id="langbar">
+      <button data-lang="zh" aria-pressed="true">中文</button>
+      <button data-lang="en" aria-pressed="false">English</button>
+      <button data-lang="id" aria-pressed="false">Indonesia</button>
+      <button data-lang="vi" aria-pressed="false">Tiếng Việt</button>
+    </div>
   </div>
 </header>
 
 <nav class="tabs">
   <div class="wrap">
     <div class="tabs-inner" role="tablist">
-      <button class="tab" role="tab" aria-selected="true"  data-tab="lunar">農曆轉西元</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="roc">民國 ⇄ 西元</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="work">工作天計算</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="leave">連假請假攻略</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="days">相處天數</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="passport">護照效期</button>
+      <button class="tab" role="tab" aria-selected="true"  data-tab="lunar" data-i18n="tab_lunar">農曆轉西元</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="roc" data-i18n="tab_roc">民國 ⇄ 西元</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="work" data-i18n="tab_work">工作天計算</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="leave" data-i18n="tab_leave">連假請假攻略</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="days" data-i18n="tab_days">相處天數</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="passport" data-i18n="tab_passport">護照效期</button>
     </div>
   </div>
 </nav>
@@ -203,15 +213,15 @@
   <!-- 農曆轉西元 -->
   <section class="panel active" id="panel-lunar" role="tabpanel">
     <div class="card">
-      <h2>農曆生日轉西元 / 民國</h2>
-      <p class="lead">很多人記得的是農曆生日。輸入農曆年月日，算出對應的西元與民國國曆日期。支援西元 1912～2049 年。</p>
-      <div class="field"><label>農曆年（西元）</label><input type="number" id="l-year" inputmode="numeric" placeholder="例如 1990"></div>
+      <h2 data-i18n="lunar_h2">農曆生日轉西元 / 民國</h2>
+      <p class="lead" data-i18n="lunar_lead">很多人記得的是農曆生日。輸入農曆年月日，算出對應的西元與民國國曆日期。支援西元 1912～2049 年。</p>
+      <div class="field"><label data-i18n="lunar_l_year">農曆年（西元）</label><input type="number" id="l-year" inputmode="numeric" placeholder="例如 1990" data-i18n-ph="ph_eg1990"></div>
       <div class="row">
-        <div class="field"><label>農曆月</label><select id="l-month"></select></div>
-        <div class="field"><label>農曆日</label><select id="l-day"></select></div>
+        <div class="field"><label data-i18n="lunar_l_month">農曆月</label><select id="l-month"></select></div>
+        <div class="field"><label data-i18n="lunar_l_day">農曆日</label><select id="l-day"></select></div>
       </div>
-      <label class="check"><input type="checkbox" id="l-leap"> 這是閏月（同一個月過兩次時才勾）</label>
-      <button class="btn" id="lunar-go">換算國曆日期</button>
+      <label class="check"><input type="checkbox" id="l-leap"> <span data-i18n="lunar_leap">這是閏月（同一個月過兩次時才勾）</span></label>
+      <button class="btn" id="lunar-go" data-i18n="lunar_btn">換算國曆日期</button>
       <div class="result" id="lunar-result">
         <div class="big" id="lunar-big">—</div><div class="sub" id="lunar-sub"></div>
         <div class="grid2" id="lunar-grid"></div><p class="note" id="lunar-note"></p>
@@ -224,18 +234,18 @@
   <!-- 民國 / 西元 -->
   <section class="panel" id="panel-roc" role="tabpanel">
     <div class="card">
-      <h2>民國 ⇄ 西元 年份轉換</h2>
-      <p class="lead">輸入年份（可加月、日）即可雙向換算，西元 = 民國 + 1911。</p>
+      <h2 data-i18n="roc_h2">民國 ⇄ 西元 年份轉換</h2>
+      <p class="lead" data-i18n="roc_lead">輸入年份（可加月、日）即可雙向換算，西元 = 民國 + 1911。</p>
       <div class="seg" id="roc-seg">
-        <button aria-pressed="true"  data-dir="roc2ad">民國 → 西元</button>
-        <button aria-pressed="false" data-dir="ad2roc">西元 → 民國</button>
+        <button aria-pressed="true"  data-dir="roc2ad" data-i18n="roc_seg_r2a">民國 → 西元</button>
+        <button aria-pressed="false" data-dir="ad2roc" data-i18n="roc_seg_a2r">西元 → 民國</button>
       </div>
       <div class="row">
-        <div class="field"><label id="roc-ylabel">民國年</label><input type="number" id="roc-year" inputmode="numeric" placeholder="例如 115"></div>
-        <div class="field"><label>月（可不填）</label><input type="number" id="roc-month" inputmode="numeric" min="1" max="12" placeholder="月"></div>
-        <div class="field"><label>日（可不填）</label><input type="number" id="roc-day" inputmode="numeric" min="1" max="31" placeholder="日"></div>
+        <div class="field"><label id="roc-ylabel" data-i18n="roc_l_year">民國年</label><input type="number" id="roc-year" inputmode="numeric" placeholder="例如 115" data-i18n-ph="ph_eg115"></div>
+        <div class="field"><label data-i18n="roc_l_month">月（可不填）</label><input type="number" id="roc-month" inputmode="numeric" min="1" max="12" placeholder="月" data-i18n-ph="ph_month"></div>
+        <div class="field"><label data-i18n="roc_l_day">日（可不填）</label><input type="number" id="roc-day" inputmode="numeric" min="1" max="31" placeholder="日" data-i18n-ph="ph_day"></div>
       </div>
-      <button class="btn" id="roc-go">換算</button>
+      <button class="btn" id="roc-go" data-i18n="roc_btn">換算</button>
       <div class="result" id="roc-result"><div class="big" id="roc-out">—</div><div class="sub" id="roc-sub"></div>
         <!-- 結果觸發式情境廣告：出國查年份 → Trip.com 比價 -->
         <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">✈️</div><div class="pbody"><div class="ptitle">要出國嗎？機票飯店先比價</div><div class="pdesc">Trip.com 一站搞定，早訂早划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
@@ -247,21 +257,21 @@
   <!-- 工作天 -->
   <section class="panel" id="panel-work" role="tabpanel">
     <div class="card">
-      <h2>工作天計算</h2>
-      <p class="lead">自動扣除週六、週日與台灣國定假日（目前涵蓋 2026 年）。</p>
+      <h2 data-i18n="work_h2">工作天計算</h2>
+      <p class="lead" data-i18n="work_lead">自動扣除週六、週日與台灣國定假日（目前涵蓋 2026 年）。</p>
       <div class="seg" id="work-seg">
-        <button aria-pressed="true"  data-mode="range">區間工作天</button>
-        <button aria-pressed="false" data-mode="add">推算到期日</button>
+        <button aria-pressed="true"  data-mode="range" data-i18n="work_seg_range">區間工作天</button>
+        <button aria-pressed="false" data-mode="add" data-i18n="work_seg_add">推算到期日</button>
       </div>
       <div id="work-range"><div class="row">
-        <div class="field"><label>起始日</label><input type="date" id="w-start"></div>
-        <div class="field"><label>結束日</label><input type="date" id="w-end"></div>
+        <div class="field"><label data-i18n="work_l_start">起始日</label><input type="date" id="w-start"></div>
+        <div class="field"><label data-i18n="work_l_end">結束日</label><input type="date" id="w-end"></div>
       </div></div>
       <div id="work-add" style="display:none"><div class="row">
-        <div class="field"><label>起算日</label><input type="date" id="w-from"></div>
-        <div class="field"><label>工作天數</label><input type="number" id="w-n" inputmode="numeric" placeholder="例如 10"></div>
+        <div class="field"><label data-i18n="work_l_from">起算日</label><input type="date" id="w-from"></div>
+        <div class="field"><label data-i18n="work_l_n">工作天數</label><input type="number" id="w-n" inputmode="numeric" placeholder="例如 10" data-i18n-ph="ph_eg10"></div>
       </div></div>
-      <button class="btn" id="work-go">計算</button>
+      <button class="btn" id="work-go" data-i18n="work_btn">計算</button>
       <div class="result" id="work-result"><div class="big" id="work-big">—</div><div class="grid2" id="work-grid"></div><p class="note" id="work-note"></p>
         <!-- 結果觸發式情境廣告：排假 → Trip.com 訂房機票 -->
         <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">🏖️</div><div class="pbody"><div class="ptitle">假期排好了？搶先訂房機票</div><div class="pdesc">Trip.com 熱門飯店班機，越早越划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
@@ -272,11 +282,11 @@
   <!-- 連假攻略 -->
   <section class="panel" id="panel-leave" role="tabpanel">
     <div class="card">
-      <h2>2026 連假請假攻略</h2>
-      <p class="lead">依行政院人事行政總處核定的 115 年行事曆整理。2026 起「只補假、不補班」，全年無補班日。</p>
+      <h2 data-i18n="leave_h2">2026 連假請假攻略</h2>
+      <p class="lead" data-i18n="leave_lead">依行政院人事行政總處核定的 115 年行事曆整理。2026 起「只補假、不補班」，全年無補班日。</p>
       <div id="leave-list"></div>
       <!-- ====== 旅遊聯盟專區（看完攻略最容易轉換，把 href 換成你的聯盟連結）====== -->
-      <div class="promo-h">連假玩什麼？（合作推廣）</div>
+      <div class="promo-h" data-i18n="leave_promo_h">連假玩什麼？（合作推廣）</div>
       <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener"><div class="pic">🏨</div><div class="pbody"><div class="ptitle">連假訂房</div><div class="pdesc">熱門飯店民宿，早訂早划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
       <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener"><div class="pic">✈️</div><div class="pbody"><div class="ptitle">連假機票</div><div class="pdesc">出國比價，搶連假航班</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
       <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener"><div class="pic">🎫</div><div class="pbody"><div class="ptitle">行程與票券</div><div class="pdesc">景點門票、一日遊、體驗活動</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
@@ -287,13 +297,13 @@
   <!-- 相處天數 -->
   <section class="panel" id="panel-days" role="tabpanel">
     <div class="card">
-      <h2>相處天數 / 紀念日計算</h2>
-      <p class="lead">算出在一起或某個起點已經過了幾天，並倒數下一個整百日與週年。</p>
+      <h2 data-i18n="days_h2">相處天數 / 紀念日計算</h2>
+      <p class="lead" data-i18n="days_lead">算出在一起或某個起點已經過了幾天，並倒數下一個整百日與週年。</p>
       <div class="row">
-        <div class="field"><label>起始日期（如在一起、生日）</label><input type="date" id="d-start"></div>
-        <div class="field"><label>計算到（預設今天）</label><input type="date" id="d-end"></div>
+        <div class="field"><label data-i18n="days_l_start">起始日期（如在一起、生日）</label><input type="date" id="d-start"></div>
+        <div class="field"><label data-i18n="days_l_end">計算到（預設今天）</label><input type="date" id="d-end"></div>
       </div>
-      <button class="btn" id="days-go">計算</button>
+      <button class="btn" id="days-go" data-i18n="days_btn">計算</button>
       <div class="result" id="days-result"><div class="big" id="days-big">—</div><div class="sub" id="days-sub"></div><div class="grid2" id="days-grid"></div><p class="note" id="days-note"></p>
         <!-- 結果觸發式情境廣告：紀念日 → KKday 體驗 -->
         <a class="promo" href="https://onelink.one/s/xTqQW" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">💑</div><div class="pbody"><div class="ptitle">紀念日來場小旅行</div><div class="pdesc">KKday 在地體驗、一日遊、約會行程</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
@@ -304,14 +314,14 @@
   <!-- 護照效期 -->
   <section class="panel" id="panel-passport" role="tabpanel">
     <div class="card">
-      <h2>護照效期計算</h2>
-      <p class="lead">多數國家要求入境時護照「剩餘效期至少 6 個月」。輸入護照到期日，算出剩餘效期、是否該換發；可選填預計入境日與要求月數，判斷是否符合規定。</p>
-      <div class="field"><label>護照到期日</label><input type="date" id="p-expiry"></div>
+      <h2 data-i18n="pp_h2">護照效期計算</h2>
+      <p class="lead" data-i18n="pp_lead">多數國家要求入境時護照「剩餘效期至少 6 個月」。輸入護照到期日，算出剩餘效期、是否該換發；可選填預計入境日與要求月數，判斷是否符合規定。</p>
+      <div class="field"><label data-i18n="pp_l_expiry">護照到期日</label><input type="date" id="p-expiry"></div>
       <div class="row">
-        <div class="field"><label>預計入境日（可不填）</label><input type="date" id="p-entry"></div>
-        <div class="field"><label>要求剩餘效期（月）</label><input type="number" id="p-months" inputmode="numeric" value="6" min="0" max="24"></div>
+        <div class="field"><label data-i18n="pp_l_entry">預計入境日（可不填）</label><input type="date" id="p-entry"></div>
+        <div class="field"><label data-i18n="pp_l_months">要求剩餘效期（月）</label><input type="number" id="p-months" inputmode="numeric" value="6" min="0" max="24"></div>
       </div>
-      <button class="btn" id="passport-go">計算</button>
+      <button class="btn" id="passport-go" data-i18n="pp_btn">計算</button>
       <div class="result" id="passport-result">
         <div class="big" id="passport-big">—</div><div class="sub" id="passport-sub"></div>
         <div class="grid2" id="passport-grid"></div><p class="note" id="passport-note"></p>
@@ -363,9 +373,9 @@
 
   <footer>
     <div class="links">
-      <a href="#" data-legal="legal-about">關於本站</a>
-      <a href="#" data-legal="legal-privacy">隱私權與推廣揭露</a>
-      <a href="#" data-legal="legal-contact">聯絡方式</a>
+      <a href="#" data-legal="legal-about" data-i18n="foot_about">關於本站</a>
+      <a href="#" data-legal="legal-privacy" data-i18n="foot_privacy">隱私權與推廣揭露</a>
+      <a href="#" data-legal="legal-contact" data-i18n="foot_contact">聯絡方式</a>
     </div>
     <div>本站工具僅供一般參考。國定假日依行政院人事行政總處公告為準，民間企業放假請以公司公告與勞動部規定為準。</div>
     <div style="margin-top:8px">© <span id="yr"></span> 台灣日期工具</div>
@@ -384,6 +394,127 @@
   const dayDiff = (a,b) => Math.round((toUTC(b)-toUTC(a))/86400000);
   const RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* ===== i18n 多語言 ===== */
+  let T_LANG = 'zh';
+  const I18N = {
+    zh: {
+      roc_l_yearAD:'西元年', ph_eg2026:'例如 2026',
+      pp_err_expiry:'請選擇護照到期日', pp_expired:'護照已過期',
+      pp_expired_sub:'到期日 {date}，已過期 {days} 天', pp_expired_note:'請盡快換發護照後再規劃出國行程。',
+      pp_remain:'剩餘效期 {y} 年 {m} 個月 {d} 天', pp_subexp:'護照到期日 {date}（剩 {days} 天）',
+      pp_st_expiry:'護照到期日', pp_st_remdays:'剩餘天數', fmt_days:'{n} 天',
+      pp_st_entry:'預計入境日', pp_bad_title:'⚠️ 不符合', pp_early_val:'護照到期早於入境日',
+      pp_note_early:'護照在入境日前就到期，務必先換發。各國規定不同，請以目的地國要求為準。',
+      pp_ok_title:'✅ 符合規定', pp_short_title:'⚠️ 效期不足',
+      pp_entry_remain:'入境時剩 {y} 年 {m} 月 {d} 天',
+      pp_note_ok:'入境當天護照剩餘效期符合「至少 {n} 個月」的常見要求。各國規定不同，請以目的地國要求為準。',
+      pp_note_short:'入境當天護照剩餘效期不足 {n} 個月，建議先換發護照再出國。各國規定不同，請以目的地國要求為準。',
+      pp_st_safe:'建議使用至（保留 {n} 個月）',
+      pp_note_safe:'多數國家要求入境時護照剩餘效期至少 {n} 個月。依此標準，建議在 {date} 之前出國入境；之後出國部分國家可能拒絕入境，宜提前換發。各國規定不同，請以目的地國要求為準。'
+    },
+    en: {
+      brand_title:'Taiwan Date Tools', brand_sub:'Lunar↔Solar · ROC↔AD · Working days · Holiday planner · Days together',
+      tab_lunar:'Lunar→Solar', tab_roc:'ROC ⇄ AD', tab_work:'Working days', tab_leave:'Holiday planner', tab_days:'Days together', tab_passport:'Passport validity',
+      lunar_h2:'Lunar birthday → Solar / ROC', lunar_lead:'Many people only know their lunar birthday. Enter the lunar date to get the matching solar (AD) and ROC date. Supports years 1912–2049.',
+      lunar_l_year:'Lunar year (AD)', lunar_l_month:'Lunar month', lunar_l_day:'Lunar day', lunar_leap:'This is a leap month (only tick if the month repeats)', lunar_btn:'Convert to solar date',
+      roc_h2:'ROC ⇄ AD year converter', roc_lead:'Enter a year (month/day optional) to convert both ways. AD = ROC + 1911.',
+      roc_seg_r2a:'ROC → AD', roc_seg_a2r:'AD → ROC', roc_l_year:'ROC year', roc_l_yearAD:'AD year', roc_l_month:'Month (optional)', roc_l_day:'Day (optional)', roc_btn:'Convert',
+      work_h2:'Working-day calculator', work_lead:'Automatically excludes Saturdays, Sundays and Taiwan public holidays (currently covers 2026).',
+      work_seg_range:'Days in range', work_seg_add:'Find a due date', work_l_start:'Start date', work_l_end:'End date', work_l_from:'From date', work_l_n:'Working days', work_btn:'Calculate',
+      leave_h2:'2026 Holiday leave planner', leave_lead:'Based on the Executive Yuan (DGPA) 2026 calendar. From 2026 it is “make-up leave only, no make-up workdays”, so there are no make-up workdays all year.', leave_promo_h:'What to do on the holidays? (sponsored)',
+      days_h2:'Days together / anniversary', days_lead:'Count how many days since a start date, and count down to the next hundred-day mark and anniversary.', days_l_start:'Start date (e.g. together, birthday)', days_l_end:'Count until (default today)', days_btn:'Calculate',
+      pp_h2:'Passport validity calculator', pp_lead:'Most countries require at least 6 months of passport validity on entry. Enter your passport expiry date to see remaining validity and whether to renew; optionally add a planned entry date and required months to check compliance.',
+      pp_l_expiry:'Passport expiry date', pp_l_entry:'Planned entry date (optional)', pp_l_months:'Required validity (months)', pp_btn:'Calculate',
+      foot_about:'About', foot_privacy:'Privacy & disclosure', foot_contact:'Contact',
+      ph_eg1990:'e.g. 1990', ph_eg115:'e.g. 115', ph_eg2026:'e.g. 2026', ph_month:'M', ph_day:'D', ph_eg10:'e.g. 10',
+      pp_err_expiry:'Please select the passport expiry date', pp_expired:'Passport expired',
+      pp_expired_sub:'Expiry {date}, expired {days} days ago', pp_expired_note:'Please renew your passport before planning any travel.',
+      pp_remain:'Validity left: {y}y {m}mo {d}d', pp_subexp:'Passport expiry {date} ({days} days left)',
+      pp_st_expiry:'Expiry date', pp_st_remdays:'Days left', fmt_days:'{n} days',
+      pp_st_entry:'Planned entry', pp_bad_title:'⚠️ Not valid', pp_early_val:'Expires before entry date',
+      pp_note_early:'The passport expires before the entry date — you must renew first. Rules vary by country; follow the destination’s requirements.',
+      pp_ok_title:'✅ Compliant', pp_short_title:'⚠️ Insufficient',
+      pp_entry_remain:'At entry: {y}y {m}mo {d}d left',
+      pp_note_ok:'On the entry date your passport meets the common “at least {n} months” requirement. Rules vary by country; follow the destination’s requirements.',
+      pp_note_short:'On the entry date your passport has less than {n} months left; renew it before travelling. Rules vary by country; follow the destination’s requirements.',
+      pp_st_safe:'Use before (keep {n} months)',
+      pp_note_safe:'Most countries require at least {n} months of validity on entry. By that standard, enter before {date}; after that some countries may refuse entry, so renew early. Rules vary by country; follow the destination’s requirements.'
+    },
+    id: {
+      brand_title:'Alat Tanggal Taiwan', brand_sub:'Imlek↔Masehi · ROC↔Masehi · Hari kerja · Panduan libur · Hari bersama',
+      tab_lunar:'Imlek→Masehi', tab_roc:'ROC ⇄ Masehi', tab_work:'Hari kerja', tab_leave:'Panduan libur', tab_days:'Hari bersama', tab_passport:'Masa paspor',
+      lunar_h2:'Ulang tahun Imlek → Masehi / ROC', lunar_lead:'Banyak orang hanya ingat tanggal lahir Imlek. Masukkan tanggal Imlek untuk mendapat tanggal Masehi dan ROC. Mendukung tahun 1912–2049.',
+      lunar_l_year:'Tahun Imlek (Masehi)', lunar_l_month:'Bulan Imlek', lunar_l_day:'Hari Imlek', lunar_leap:'Ini bulan kabisat (centang hanya bila bulan berulang)', lunar_btn:'Konversi ke tanggal Masehi',
+      roc_h2:'Konversi tahun ROC ⇄ Masehi', roc_lead:'Masukkan tahun (bulan/hari opsional) untuk konversi dua arah. Masehi = ROC + 1911.',
+      roc_seg_r2a:'ROC → Masehi', roc_seg_a2r:'Masehi → ROC', roc_l_year:'Tahun ROC', roc_l_yearAD:'Tahun Masehi', roc_l_month:'Bulan (opsional)', roc_l_day:'Hari (opsional)', roc_btn:'Konversi',
+      work_h2:'Kalkulator hari kerja', work_lead:'Otomatis mengecualikan Sabtu, Minggu, dan hari libur nasional Taiwan (saat ini mencakup 2026).',
+      work_seg_range:'Hari dalam rentang', work_seg_add:'Cari tanggal jatuh tempo', work_l_start:'Tanggal mulai', work_l_end:'Tanggal akhir', work_l_from:'Dari tanggal', work_l_n:'Jumlah hari kerja', work_btn:'Hitung',
+      leave_h2:'Panduan cuti libur 2026', leave_lead:'Berdasarkan kalender 2026 dari Executive Yuan (DGPA). Mulai 2026 berlaku “hanya cuti pengganti, tanpa hari kerja pengganti”, jadi tidak ada hari kerja pengganti sepanjang tahun.', leave_promo_h:'Mau ke mana saat libur? (iklan mitra)',
+      days_h2:'Hari bersama / hari jadi', days_lead:'Hitung berapa hari sejak tanggal awal, dan hitung mundur ke kelipatan 100 hari dan hari jadi berikutnya.', days_l_start:'Tanggal awal (mis. jadian, ulang tahun)', days_l_end:'Hitung sampai (default hari ini)', days_btn:'Hitung',
+      pp_h2:'Kalkulator masa berlaku paspor', pp_lead:'Sebagian besar negara mewajibkan masa berlaku paspor minimal 6 bulan saat masuk. Masukkan tanggal kedaluwarsa paspor untuk melihat sisa masa berlaku dan apakah perlu diperpanjang; opsional isi tanggal masuk dan bulan yang disyaratkan untuk memeriksa.',
+      pp_l_expiry:'Tanggal kedaluwarsa paspor', pp_l_entry:'Tanggal masuk rencana (opsional)', pp_l_months:'Masa berlaku disyaratkan (bulan)', pp_btn:'Hitung',
+      foot_about:'Tentang', foot_privacy:'Privasi & keterbukaan', foot_contact:'Kontak',
+      ph_eg1990:'mis. 1990', ph_eg115:'mis. 115', ph_eg2026:'mis. 2026', ph_month:'Bln', ph_day:'Hr', ph_eg10:'mis. 10',
+      pp_err_expiry:'Silakan pilih tanggal kedaluwarsa paspor', pp_expired:'Paspor sudah kedaluwarsa',
+      pp_expired_sub:'Kedaluwarsa {date}, lewat {days} hari', pp_expired_note:'Perpanjang paspor dulu sebelum merencanakan perjalanan.',
+      pp_remain:'Sisa berlaku: {y} thn {m} bln {d} hr', pp_subexp:'Kedaluwarsa {date} (sisa {days} hari)',
+      pp_st_expiry:'Tanggal kedaluwarsa', pp_st_remdays:'Sisa hari', fmt_days:'{n} hari',
+      pp_st_entry:'Tanggal masuk', pp_bad_title:'⚠️ Tidak memenuhi', pp_early_val:'Kedaluwarsa sebelum tanggal masuk',
+      pp_note_early:'Paspor kedaluwarsa sebelum tanggal masuk — harus diperpanjang dulu. Aturan tiap negara berbeda; ikuti ketentuan negara tujuan.',
+      pp_ok_title:'✅ Memenuhi', pp_short_title:'⚠️ Kurang',
+      pp_entry_remain:'Saat masuk: sisa {y} thn {m} bln {d} hr',
+      pp_note_ok:'Pada tanggal masuk paspor memenuhi syarat umum “minimal {n} bulan”. Aturan tiap negara berbeda; ikuti ketentuan negara tujuan.',
+      pp_note_short:'Pada tanggal masuk sisa berlaku paspor kurang dari {n} bulan; perpanjang dulu sebelum berangkat. Aturan tiap negara berbeda; ikuti ketentuan negara tujuan.',
+      pp_st_safe:'Gunakan sebelum (sisakan {n} bulan)',
+      pp_note_safe:'Sebagian besar negara mewajibkan minimal {n} bulan masa berlaku saat masuk. Dengan standar itu, masuklah sebelum {date}; setelah itu sebagian negara bisa menolak, jadi perpanjang lebih awal. Aturan tiap negara berbeda; ikuti ketentuan negara tujuan.'
+    },
+    vi: {
+      brand_title:'Công cụ ngày tháng Đài Loan', brand_sub:'Âm↔Dương · ROC↔Dương · Ngày làm việc · Lịch nghỉ lễ · Số ngày bên nhau',
+      tab_lunar:'Âm→Dương', tab_roc:'ROC ⇄ Dương', tab_work:'Ngày làm việc', tab_leave:'Lịch nghỉ lễ', tab_days:'Ngày bên nhau', tab_passport:'Hạn hộ chiếu',
+      lunar_h2:'Sinh nhật âm lịch → Dương / ROC', lunar_lead:'Nhiều người chỉ nhớ sinh nhật âm lịch. Nhập ngày âm lịch để ra ngày dương (AD) và ROC tương ứng. Hỗ trợ năm 1912–2049.',
+      lunar_l_year:'Năm âm lịch (dương)', lunar_l_month:'Tháng âm lịch', lunar_l_day:'Ngày âm lịch', lunar_leap:'Đây là tháng nhuận (chỉ tick khi tháng lặp lại)', lunar_btn:'Đổi sang ngày dương',
+      roc_h2:'Chuyển đổi năm ROC ⇄ Dương', roc_lead:'Nhập năm (tháng/ngày tùy chọn) để đổi hai chiều. Dương = ROC + 1911.',
+      roc_seg_r2a:'ROC → Dương', roc_seg_a2r:'Dương → ROC', roc_l_year:'Năm ROC', roc_l_yearAD:'Năm dương', roc_l_month:'Tháng (tùy chọn)', roc_l_day:'Ngày (tùy chọn)', roc_btn:'Chuyển đổi',
+      work_h2:'Tính ngày làm việc', work_lead:'Tự động trừ thứ Bảy, Chủ nhật và ngày lễ Đài Loan (hiện bao gồm 2026).',
+      work_seg_range:'Ngày trong khoảng', work_seg_add:'Tìm ngày đến hạn', work_l_start:'Ngày bắt đầu', work_l_end:'Ngày kết thúc', work_l_from:'Từ ngày', work_l_n:'Số ngày làm việc', work_btn:'Tính',
+      leave_h2:'Cẩm nang nghỉ lễ 2026', leave_lead:'Dựa trên lịch 2026 của Viện Hành chính (DGPA). Từ 2026 áp dụng “chỉ nghỉ bù, không làm bù”, nên cả năm không có ngày làm bù.', leave_promo_h:'Đi đâu dịp lễ? (quảng cáo đối tác)',
+      days_h2:'Số ngày bên nhau / kỷ niệm', days_lead:'Tính số ngày kể từ ngày bắt đầu, và đếm ngược tới mốc trăm ngày và ngày kỷ niệm kế tiếp.', days_l_start:'Ngày bắt đầu (vd. yêu nhau, sinh nhật)', days_l_end:'Tính đến (mặc định hôm nay)', days_btn:'Tính',
+      pp_h2:'Tính hạn hộ chiếu', pp_lead:'Hầu hết các nước yêu cầu hộ chiếu còn hạn ít nhất 6 tháng khi nhập cảnh. Nhập ngày hết hạn để xem hạn còn lại và có cần đổi mới; có thể thêm ngày nhập cảnh dự kiến và số tháng yêu cầu để kiểm tra.',
+      pp_l_expiry:'Ngày hết hạn hộ chiếu', pp_l_entry:'Ngày nhập cảnh dự kiến (tùy chọn)', pp_l_months:'Hạn yêu cầu (tháng)', pp_btn:'Tính',
+      foot_about:'Giới thiệu', foot_privacy:'Quyền riêng tư & công bố', foot_contact:'Liên hệ',
+      ph_eg1990:'vd. 1990', ph_eg115:'vd. 115', ph_eg2026:'vd. 2026', ph_month:'Th', ph_day:'Ng', ph_eg10:'vd. 10',
+      pp_err_expiry:'Vui lòng chọn ngày hết hạn hộ chiếu', pp_expired:'Hộ chiếu đã hết hạn',
+      pp_expired_sub:'Hết hạn {date}, đã quá {days} ngày', pp_expired_note:'Hãy đổi hộ chiếu mới trước khi lên kế hoạch đi nước ngoài.',
+      pp_remain:'Hạn còn lại: {y} năm {m} tháng {d} ngày', pp_subexp:'Hết hạn {date} (còn {days} ngày)',
+      pp_st_expiry:'Ngày hết hạn', pp_st_remdays:'Số ngày còn lại', fmt_days:'{n} ngày',
+      pp_st_entry:'Ngày nhập cảnh', pp_bad_title:'⚠️ Không đạt', pp_early_val:'Hết hạn trước ngày nhập cảnh',
+      pp_note_early:'Hộ chiếu hết hạn trước ngày nhập cảnh — phải đổi mới trước. Quy định mỗi nước khác nhau; theo yêu cầu của nước đến.',
+      pp_ok_title:'✅ Đạt yêu cầu', pp_short_title:'⚠️ Không đủ',
+      pp_entry_remain:'Khi nhập cảnh còn: {y} năm {m} tháng {d} ngày',
+      pp_note_ok:'Vào ngày nhập cảnh, hộ chiếu đáp ứng yêu cầu phổ biến “ít nhất {n} tháng”. Quy định mỗi nước khác nhau; theo yêu cầu của nước đến.',
+      pp_note_short:'Vào ngày nhập cảnh, hộ chiếu còn dưới {n} tháng; hãy đổi mới trước khi đi. Quy định mỗi nước khác nhau; theo yêu cầu của nước đến.',
+      pp_st_safe:'Dùng trước (giữ {n} tháng)',
+      pp_note_safe:'Hầu hết các nước yêu cầu còn ít nhất {n} tháng khi nhập cảnh. Theo chuẩn đó, hãy nhập cảnh trước {date}; sau đó một số nước có thể từ chối, nên đổi sớm. Quy định mỗi nước khác nhau; theo yêu cầu của nước đến.'
+    }
+  };
+  function t(key){ const d=I18N[T_LANG]; if(d&&d[key]!=null) return d[key]; return I18N.zh[key]!=null?I18N.zh[key]:key; }
+  function fmtP(d){ return `${d.getFullYear()}/${pad(d.getMonth()+1)}/${pad(d.getDate())}`; }
+  function initI18nBase(){
+    document.querySelectorAll('[data-i18n]').forEach(el=>{ const k=el.dataset.i18n; if(I18N.zh[k]==null) I18N.zh[k]=el.innerHTML; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ const k=el.dataset.i18nPh; if(I18N.zh[k]==null) I18N.zh[k]=el.placeholder; });
+  }
+  function syncRocLabel(){ const ad=(typeof rocDir!=='undefined'&&rocDir==='ad2roc'); const yl=$('#roc-ylabel'); if(yl) yl.textContent=t(ad?'roc_l_yearAD':'roc_l_year'); const yi=$('#roc-year'); if(yi) yi.placeholder=t(ad?'ph_eg2026':'ph_eg115'); }
+  function applyLang(lang){
+    if(!I18N[lang]) lang='zh'; T_LANG=lang;
+    const get=k=>{ const d=I18N[lang]; return (d&&d[k]!=null)?d[k]:I18N.zh[k]; };
+    document.querySelectorAll('[data-i18n]').forEach(el=>{ const v=get(el.dataset.i18n); if(v!=null) el.innerHTML=v; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ const v=get(el.dataset.i18nPh); if(v!=null) el.placeholder=v; });
+    document.documentElement.lang={zh:'zh-Hant',en:'en',id:'id',vi:'vi'}[lang]||'zh-Hant';
+    document.querySelectorAll('#langbar button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.lang===lang?'true':'false'));
+    syncRocLabel();
+    try{localStorage.setItem('tdt_lang',lang);}catch(e){}
+  }
 
   /* ===== 國定假日 ===== */
   const HOLIDAYS = { 2026:{
@@ -510,8 +641,7 @@
     const b=e.target.closest('button'); if(!b)return;
     [...e.currentTarget.children].forEach(x=>x.setAttribute('aria-pressed','false'));
     b.setAttribute('aria-pressed','true'); rocDir=b.dataset.dir;
-    $('#roc-ylabel').textContent=rocDir==='roc2ad'?'民國年':'西元年';
-    $('#roc-year').placeholder=rocDir==='roc2ad'?'例如 115':'例如 2026';
+    syncRocLabel();
   });
   $('#roc-go').addEventListener('click',()=>{
     const y=parseInt($('#roc-year').value,10);
@@ -610,44 +740,43 @@
     if(d<0){m--;d+=new Date(b.getFullYear(),b.getMonth(),0).getDate();}if(m<0){y--;m+=12;}return{y,m,d};}
   $('#passport-go').addEventListener('click',()=>{
     const res=$('#passport-result'),big=$('#passport-big'),sub=$('#passport-sub'),grid=$('#passport-grid'),note=$('#passport-note');
+    const F=(k,o)=>{let s=t(k);if(o)for(const p in o)s=s.split('{'+p+'}').join(o[p]);return s;};
     const reset=msg=>{big.textContent=msg;big.classList.add('err');sub.textContent='';grid.innerHTML='';note.textContent='';res.classList.add('show');};
     big.classList.remove('err');
     const ev=$('#p-expiry').value;
-    if(!ev) return reset('請選擇護照到期日');
+    if(!ev) return reset(t('pp_err_expiry'));
     const expiry=new Date(ev+'T00:00:00');
     const today=new Date(new Date().toDateString());
     const reqM=Math.max(0,parseInt($('#p-months').value,10)||0);
     res.classList.add('show');
     const remDays=dayDiff(today,expiry);
     if(remDays<0){
-      big.innerHTML='護照已過期';big.classList.add('err');
-      sub.textContent=`到期日 ${fmt(expiry)}，已過期 ${-remDays} 天`;
-      grid.innerHTML='';note.textContent='請盡快換發護照後再規劃出國行程。';
+      big.textContent=t('pp_expired');big.classList.add('err');
+      sub.textContent=F('pp_expired_sub',{date:fmtP(expiry),days:-remDays});
+      grid.innerHTML='';note.textContent=t('pp_expired_note');
       return;
     }
     const diff=ymdDiff(today,expiry);
-    big.innerHTML=`剩餘效期 <span style="font-variant-numeric:tabular-nums">${diff.y}</span> 年 <span style="font-variant-numeric:tabular-nums">${diff.m}</span> 個月 <span style="font-variant-numeric:tabular-nums">${diff.d}</span> 天`;
-    sub.textContent=`護照到期日 ${fmt(expiry)}（剩 ${remDays} 天）`;
+    big.textContent=F('pp_remain',{y:diff.y,m:diff.m,d:diff.d});
+    sub.textContent=F('pp_subexp',{date:fmtP(expiry),days:remDays});
     const safeUntil=addMonths(expiry,-reqM);
-    let cells=stat('護照到期日',fmt(expiry))+stat('剩餘天數',remDays+' 天','work');
+    let cells=stat(t('pp_st_expiry'),fmtP(expiry))+stat(t('pp_st_remdays'),F('fmt_days',{n:remDays}),'work');
     const ent=$('#p-entry').value;
     if(ent){
       const entry=new Date(ent+'T00:00:00');
       if(expiry<entry){
-        cells+=stat('預計入境日',fmt(entry))+stat('⚠️ 不符合','護照到期早於入境日','holiday');
-        note.textContent='護照在入境日前就到期，務必先換發。各國規定不同，請以目的地國要求為準。';
+        cells+=stat(t('pp_st_entry'),fmtP(entry))+stat(t('pp_bad_title'),t('pp_early_val'),'holiday');
+        note.textContent=t('pp_note_early');
       }else{
         const needBy=addMonths(entry,reqM);
         const ok=expiry>=needBy;
         const er=ymdDiff(entry,expiry);
-        cells+=stat('預計入境日',fmt(entry))+stat(ok?'✅ 符合規定':'⚠️ 效期不足',`入境時剩 ${er.y} 年 ${er.m} 月 ${er.d} 天`,ok?'work':'holiday');
-        note.textContent=ok
-          ?`入境當天護照剩餘效期符合「至少 ${reqM} 個月」的常見要求。各國規定不同，請以目的地國要求為準。`
-          :`入境當天護照剩餘效期不足 ${reqM} 個月，建議先換發護照再出國。各國規定不同，請以目的地國要求為準。`;
+        cells+=stat(t('pp_st_entry'),fmtP(entry))+stat(ok?t('pp_ok_title'):t('pp_short_title'),F('pp_entry_remain',{y:er.y,m:er.m,d:er.d}),ok?'work':'holiday');
+        note.textContent=ok?F('pp_note_ok',{n:reqM}):F('pp_note_short',{n:reqM});
       }
     }else{
-      cells+=stat(`建議使用至（保留 ${reqM} 個月）`,fmt(safeUntil),'holiday');
-      note.textContent=`多數國家要求入境時護照剩餘效期至少 ${reqM} 個月。依此標準，建議在 ${fmt(safeUntil)} 之前出國入境；之後出國部分國家可能拒絕入境，宜提前換發。各國規定不同，請以目的地國要求為準。`;
+      cells+=stat(F('pp_st_safe',{n:reqM}),fmtP(safeUntil),'holiday');
+      note.textContent=F('pp_note_safe',{n:reqM,date:fmtP(safeUntil)});
     }
     grid.innerHTML=cells;
   });
@@ -660,8 +789,8 @@
   });
   document.querySelectorAll('[data-close]').forEach(c=>c.addEventListener('click',()=>c.closest('.legal').classList.remove('show')));
 
-  const t=new Date();
-  $('#d-end').value=`${t.getFullYear()}-${pad(t.getMonth()+1)}-${pad(t.getDate())}`;
+  const nowD=new Date();
+  $('#d-end').value=`${nowD.getFullYear()}-${pad(nowD.getMonth()+1)}-${pad(nowD.getDate())}`;
 
   /* ===== 廣告點擊追蹤（GA4）：自動為所有推廣連結綁定事件 ===== */
   document.querySelectorAll('a.promo').forEach(function(el){
@@ -675,6 +804,12 @@
       }
     });
   });
+
+  /* ===== i18n 初始化 ===== */
+  initI18nBase();
+  document.querySelectorAll('#langbar button').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+  let savedLang='zh'; try{savedLang=localStorage.getItem('tdt_lang')||'zh';}catch(e){}
+  applyLang(savedLang);
 })();
 </script>
 </body>
