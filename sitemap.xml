@@ -1,9 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://y0911122420-code.github.io/taiwan-date-tools/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://y0911122420-code.github.io/taiwan-date-tools/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://y0911122420-code.github.io/taiwan-date-tools/en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://y0911122420-code.github.io/taiwan-date-tools/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://y0911122420-code.github.io/taiwan-date-tools/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://y0911122420-code.github.io/taiwan-date-tools/"/>
+  </url>
+  <url>
+    <loc>https://y0911122420-code.github.io/taiwan-date-tools/en/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://y0911122420-code.github.io/taiwan-date-tools/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://y0911122420-code.github.io/taiwan-date-tools/en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://y0911122420-code.github.io/taiwan-date-tools/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://y0911122420-code.github.io/taiwan-date-tools/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://y0911122420-code.github.io/taiwan-date-tools/"/>
+  </url>
+  <url>
+    <loc>https://y0911122420-code.github.io/taiwan-date-tools/id/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://y0911122420-code.github.io/taiwan-date-tools/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://y0911122420-code.github.io/taiwan-date-tools/en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://y0911122420-code.github.io/taiwan-date-tools/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://y0911122420-code.github.io/taiwan-date-tools/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://y0911122420-code.github.io/taiwan-date-tools/"/>
+  </url>
+  <url>
+    <loc>https://y0911122420-code.github.io/taiwan-date-tools/vi/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://y0911122420-code.github.io/taiwan-date-tools/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://y0911122420-code.github.io/taiwan-date-tools/en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://y0911122420-code.github.io/taiwan-date-tools/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://y0911122420-code.github.io/taiwan-date-tools/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://y0911122420-code.github.io/taiwan-date-tools/"/>
   </url>
 </urlset>

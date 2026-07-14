@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>台灣日期工具｜農曆轉西元、民國西元轉換、工作天、連假攻略</title>
-<meta name="description" content="免費台灣日期工具：農曆生日轉西元/民國、民國西元年互轉、含國定假日的工作天計算、2026 連假請假攻略、相處天數計算。手機可用、即算即得。">
+<title>Công cụ Ngày tháng Đài Loan｜Đổi năm Dân Quốc↔Dương lịch, Âm lịch, Ngày làm việc, Hạn hộ chiếu</title>
+<meta name="description" content="Công cụ ngày tháng Đài Loan miễn phí: đổi năm Dân Quốc (ROC) ↔ Dương lịch cho thẻ cư trú ARC / giấy tờ, đổi sinh nhật Âm lịch sang Dương lịch, tính ngày làm việc &amp; ngày lễ quốc gia, kế hoạch nghỉ 2026, kiểm tra hạn hộ chiếu. Dùng tốt trên điện thoại, kết quả tức thì.">
 
 <!-- Canonical / 多語 hreflang（zh-Hant 主頁 + en/id/vi 子頁）— build.mjs 會為子頁改寫 canonical -->
-<link rel="canonical" href="https://y0911122420-code.github.io/taiwan-date-tools/">
+<link rel="canonical" href="https://y0911122420-code.github.io/taiwan-date-tools/vi/">
 <link rel="alternate" hreflang="zh-Hant" href="https://y0911122420-code.github.io/taiwan-date-tools/">
 <link rel="alternate" hreflang="en" href="https://y0911122420-code.github.io/taiwan-date-tools/en/">
 <link rel="alternate" hreflang="id" href="https://y0911122420-code.github.io/taiwan-date-tools/id/">
@@ -17,16 +17,16 @@
 <!-- Open Graph / 社群分享預覽 -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="台灣日期工具">
-<meta property="og:locale" content="zh_TW">
-<meta property="og:title" content="台灣日期工具｜農曆轉西元、民國西元轉換、工作天、連假攻略">
-<meta property="og:description" content="免費台灣日期工具：農曆/民國西元轉換、含國定假日的工作天計算、2026 連假請假攻略、相處天數計算。手機可用、即算即得。">
-<meta property="og:url" content="https://y0911122420-code.github.io/taiwan-date-tools/">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Công cụ Ngày tháng Đài Loan｜Dân Quốc↔Dương lịch, Âm lịch, Ngày làm việc, Hạn hộ chiếu">
+<meta property="og:description" content="Công cụ miễn phí cho cuộc sống ở Đài Loan: đổi năm Dân Quốc↔Dương lịch (giấy tờ ARC), sinh nhật Âm lịch sang Dương lịch, ngày làm việc kèm ngày lễ, kế hoạch nghỉ 2026, kiểm tra hộ chiếu. Hợp điện thoại, tức thì.">
+<meta property="og:url" content="https://y0911122420-code.github.io/taiwan-date-tools/vi/">
 <meta property="og:image" content="https://y0911122420-code.github.io/taiwan-date-tools/og-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="台灣日期工具｜農曆轉西元、民國西元轉換、工作天、連假攻略">
-<meta name="twitter:description" content="免費台灣日期工具：農曆/民國西元轉換、工作天、2026 連假攻略，手機可用即算即得。">
+<meta name="twitter:title" content="Công cụ Ngày tháng Đài Loan｜Dân Quốc↔Dương lịch, Âm lịch, Ngày làm việc, Hạn hộ chiếu">
+<meta name="twitter:description" content="Công cụ miễn phí cho cuộc sống ở Đài Loan: đổi năm Dân Quốc↔Dương lịch (giấy tờ ARC), sinh nhật Âm lịch sang Dương lịch, ngày làm việc kèm ngày lễ, kế hoạch nghỉ 2026, kiểm tra hộ chiếu. Hợp điện thoại, tức thì.">
 <meta name="twitter:image" content="https://y0911122420-code.github.io/taiwan-date-tools/og-cover.png">
 
 <!-- Google tag (gtag.js) -->
@@ -161,6 +161,7 @@
 
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
+<script>window.__PAGE_LANG__='vi';</script>
 </head>
 <body>
 
@@ -169,8 +170,8 @@
     <div class="brand">
       <div class="mark">日期<br>工具</div>
       <div>
-        <h1 data-i18n="brand_title">台灣日期工具</h1>
-        <p data-i18n="brand_sub">農曆轉西元 · 民國西元 · 工作天 · 連假攻略 · 相處天數</p>
+        <h1 data-i18n="brand_title">Công cụ ngày tháng Đài Loan</h1>
+        <p data-i18n="brand_sub">Âm↔Dương · ROC↔Dương · Ngày làm việc · Lịch nghỉ lễ · Số ngày bên nhau</p>
       </div>
     </div>
     <div class="today" id="today">
@@ -190,12 +191,12 @@
 <nav class="tabs">
   <div class="wrap">
     <div class="tabs-inner" role="tablist">
-      <button class="tab" role="tab" aria-selected="true"  data-tab="lunar" data-i18n="tab_lunar">農曆轉西元</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="roc" data-i18n="tab_roc">民國 ⇄ 西元</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="work" data-i18n="tab_work">工作天計算</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="leave" data-i18n="tab_leave">連假請假攻略</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="days" data-i18n="tab_days">相處天數</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="passport" data-i18n="tab_passport">護照效期</button>
+      <button class="tab" role="tab" aria-selected="true"  data-tab="lunar" data-i18n="tab_lunar">Âm→Dương</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="roc" data-i18n="tab_roc">ROC ⇄ Dương</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="work" data-i18n="tab_work">Ngày làm việc</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="leave" data-i18n="tab_leave">Lịch nghỉ lễ</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="days" data-i18n="tab_days">Ngày bên nhau</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="passport" data-i18n="tab_passport">Hạn hộ chiếu</button>
     </div>
   </div>
 </nav>
@@ -221,15 +222,15 @@
   <!-- 農曆轉西元 -->
   <section class="panel active" id="panel-lunar" role="tabpanel">
     <div class="card">
-      <h2 data-i18n="lunar_h2">農曆生日轉西元 / 民國</h2>
-      <p class="lead" data-i18n="lunar_lead">很多人記得的是農曆生日。輸入農曆年月日，算出對應的西元與民國國曆日期。支援西元 1912～2049 年。</p>
-      <div class="field"><label data-i18n="lunar_l_year">農曆年（西元）</label><input type="number" id="l-year" inputmode="numeric" placeholder="例如 1990" data-i18n-ph="ph_eg1990"></div>
+      <h2 data-i18n="lunar_h2">Sinh nhật âm lịch → Dương / ROC</h2>
+      <p class="lead" data-i18n="lunar_lead">Nhiều người chỉ nhớ sinh nhật âm lịch. Nhập ngày âm lịch để ra ngày dương (AD) và ROC tương ứng. Hỗ trợ năm 1912–2049.</p>
+      <div class="field"><label data-i18n="lunar_l_year">Năm âm lịch (dương)</label><input type="number" id="l-year" inputmode="numeric" placeholder="vd. 1990" data-i18n-ph="ph_eg1990"></div>
       <div class="row">
-        <div class="field"><label data-i18n="lunar_l_month">農曆月</label><select id="l-month"></select></div>
-        <div class="field"><label data-i18n="lunar_l_day">農曆日</label><select id="l-day"></select></div>
+        <div class="field"><label data-i18n="lunar_l_month">Tháng âm lịch</label><select id="l-month"></select></div>
+        <div class="field"><label data-i18n="lunar_l_day">Ngày âm lịch</label><select id="l-day"></select></div>
       </div>
-      <label class="check"><input type="checkbox" id="l-leap"> <span data-i18n="lunar_leap">這是閏月（同一個月過兩次時才勾）</span></label>
-      <button class="btn" id="lunar-go" data-i18n="lunar_btn">換算國曆日期</button>
+      <label class="check"><input type="checkbox" id="l-leap"> <span data-i18n="lunar_leap">Đây là tháng nhuận (chỉ tick khi tháng lặp lại)</span></label>
+      <button class="btn" id="lunar-go" data-i18n="lunar_btn">Đổi sang ngày dương</button>
       <div class="result" id="lunar-result">
         <div class="big" id="lunar-big">—</div><div class="sub" id="lunar-sub"></div>
         <div class="grid2" id="lunar-grid"></div><p class="note" id="lunar-note"></p>
@@ -242,44 +243,44 @@
   <!-- 民國 / 西元 -->
   <section class="panel" id="panel-roc" role="tabpanel">
     <div class="card">
-      <h2 data-i18n="roc_h2">民國 ⇄ 西元 年份轉換</h2>
-      <p class="lead" data-i18n="roc_lead">輸入年份（可加月、日）即可雙向換算，西元 = 民國 + 1911。</p>
+      <h2 data-i18n="roc_h2">Chuyển đổi năm ROC ⇄ Dương</h2>
+      <p class="lead" data-i18n="roc_lead">Nhập năm (tháng/ngày tùy chọn) để đổi hai chiều. Dương = ROC + 1911.</p>
       <div class="seg" id="roc-seg">
-        <button aria-pressed="true"  data-dir="roc2ad" data-i18n="roc_seg_r2a">民國 → 西元</button>
-        <button aria-pressed="false" data-dir="ad2roc" data-i18n="roc_seg_a2r">西元 → 民國</button>
+        <button aria-pressed="true"  data-dir="roc2ad" data-i18n="roc_seg_r2a">ROC → Dương</button>
+        <button aria-pressed="false" data-dir="ad2roc" data-i18n="roc_seg_a2r">Dương → ROC</button>
       </div>
       <div class="row">
-        <div class="field"><label id="roc-ylabel" data-i18n="roc_l_year">民國年</label><input type="number" id="roc-year" inputmode="numeric" placeholder="例如 115" data-i18n-ph="ph_eg115"></div>
-        <div class="field"><label data-i18n="roc_l_month">月（可不填）</label><input type="number" id="roc-month" inputmode="numeric" min="1" max="12" placeholder="月" data-i18n-ph="ph_month"></div>
-        <div class="field"><label data-i18n="roc_l_day">日（可不填）</label><input type="number" id="roc-day" inputmode="numeric" min="1" max="31" placeholder="日" data-i18n-ph="ph_day"></div>
+        <div class="field"><label id="roc-ylabel" data-i18n="roc_l_year">Năm ROC</label><input type="number" id="roc-year" inputmode="numeric" placeholder="vd. 115" data-i18n-ph="ph_eg115"></div>
+        <div class="field"><label data-i18n="roc_l_month">Tháng (tùy chọn)</label><input type="number" id="roc-month" inputmode="numeric" min="1" max="12" placeholder="Th" data-i18n-ph="ph_month"></div>
+        <div class="field"><label data-i18n="roc_l_day">Ngày (tùy chọn)</label><input type="number" id="roc-day" inputmode="numeric" min="1" max="31" placeholder="Ng" data-i18n-ph="ph_day"></div>
       </div>
-      <button class="btn" id="roc-go" data-i18n="roc_btn">換算</button>
+      <button class="btn" id="roc-go" data-i18n="roc_btn">Chuyển đổi</button>
       <div class="result" id="roc-result"><div class="big" id="roc-out">—</div><div class="sub" id="roc-sub"></div>
         <!-- 結果觸發式情境廣告：出國查年份 → Trip.com 比價 -->
         <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">✈️</div><div class="pbody"><div class="ptitle">要出國嗎？機票飯店先比價</div><div class="pdesc">Trip.com 一站搞定，早訂早划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
       </div>
-      <p class="note" data-i18n="roc_note_static">小提醒：民國元年為西元 1912 年。民國前年份可用「西元 → 民國」查看。</p>
+      <p class="note" data-i18n="roc_note_static">Lưu ý: năm ROC thứ 1 là 1912. Với năm trước đó, dùng “Dương → ROC”.</p>
     </div>
   </section>
 
   <!-- 工作天 -->
   <section class="panel" id="panel-work" role="tabpanel">
     <div class="card">
-      <h2 data-i18n="work_h2">工作天計算</h2>
-      <p class="lead" data-i18n="work_lead">自動扣除週六、週日與台灣國定假日（目前涵蓋 2026 年）。</p>
+      <h2 data-i18n="work_h2">Tính ngày làm việc</h2>
+      <p class="lead" data-i18n="work_lead">Tự động trừ thứ Bảy, Chủ nhật và ngày lễ Đài Loan (hiện bao gồm 2026).</p>
       <div class="seg" id="work-seg">
-        <button aria-pressed="true"  data-mode="range" data-i18n="work_seg_range">區間工作天</button>
-        <button aria-pressed="false" data-mode="add" data-i18n="work_seg_add">推算到期日</button>
+        <button aria-pressed="true"  data-mode="range" data-i18n="work_seg_range">Ngày trong khoảng</button>
+        <button aria-pressed="false" data-mode="add" data-i18n="work_seg_add">Tìm ngày đến hạn</button>
       </div>
       <div id="work-range"><div class="row">
-        <div class="field"><label data-i18n="work_l_start">起始日</label><input type="date" id="w-start"></div>
-        <div class="field"><label data-i18n="work_l_end">結束日</label><input type="date" id="w-end"></div>
+        <div class="field"><label data-i18n="work_l_start">Ngày bắt đầu</label><input type="date" id="w-start"></div>
+        <div class="field"><label data-i18n="work_l_end">Ngày kết thúc</label><input type="date" id="w-end"></div>
       </div></div>
       <div id="work-add" style="display:none"><div class="row">
-        <div class="field"><label data-i18n="work_l_from">起算日</label><input type="date" id="w-from"></div>
-        <div class="field"><label data-i18n="work_l_n">工作天數</label><input type="number" id="w-n" inputmode="numeric" placeholder="例如 10" data-i18n-ph="ph_eg10"></div>
+        <div class="field"><label data-i18n="work_l_from">Từ ngày</label><input type="date" id="w-from"></div>
+        <div class="field"><label data-i18n="work_l_n">Số ngày làm việc</label><input type="number" id="w-n" inputmode="numeric" placeholder="vd. 10" data-i18n-ph="ph_eg10"></div>
       </div></div>
-      <button class="btn" id="work-go" data-i18n="work_btn">計算</button>
+      <button class="btn" id="work-go" data-i18n="work_btn">Tính</button>
       <div class="result" id="work-result"><div class="big" id="work-big">—</div><div class="grid2" id="work-grid"></div><p class="note" id="work-note"></p>
         <!-- 結果觸發式情境廣告：排假 → Trip.com 訂房機票 -->
         <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">🏖️</div><div class="pbody"><div class="ptitle">假期排好了？搶先訂房機票</div><div class="pdesc">Trip.com 熱門飯店班機，越早越划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
@@ -290,28 +291,28 @@
   <!-- 連假攻略 -->
   <section class="panel" id="panel-leave" role="tabpanel">
     <div class="card">
-      <h2 data-i18n="leave_h2">2026 連假請假攻略</h2>
-      <p class="lead" data-i18n="leave_lead">依行政院人事行政總處核定的 115 年行事曆整理。2026 起「只補假、不補班」，全年無補班日。</p>
+      <h2 data-i18n="leave_h2">Cẩm nang nghỉ lễ 2026</h2>
+      <p class="lead" data-i18n="leave_lead">Dựa trên lịch 2026 của Viện Hành chính (DGPA). Từ 2026 áp dụng “chỉ nghỉ bù, không làm bù”, nên cả năm không có ngày làm bù.</p>
       <div id="leave-list"></div>
       <!-- ====== 旅遊聯盟專區（看完攻略最容易轉換，把 href 換成你的聯盟連結）====== -->
-      <div class="promo-h" data-i18n="leave_promo_h">連假玩什麼？（合作推廣）</div>
+      <div class="promo-h" data-i18n="leave_promo_h">Đi đâu dịp lễ? (quảng cáo đối tác)</div>
       <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener"><div class="pic">🏨</div><div class="pbody"><div class="ptitle">連假訂房</div><div class="pdesc">熱門飯店民宿，早訂早划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
       <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener"><div class="pic">✈️</div><div class="pbody"><div class="ptitle">連假機票</div><div class="pdesc">出國比價，搶連假航班</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
       <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener"><div class="pic">🎫</div><div class="pbody"><div class="ptitle">行程與票券</div><div class="pdesc">景點門票、一日遊、體驗活動</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
-      <p class="note" data-i18n="leave_note_static">資料來源：行政院人事行政總處 115 年政府行政機關辦公日曆表。連假與請假建議以公務機關行事曆為準；民間企業放假依勞動部規定與公司公告為準。</p>
+      <p class="note" data-i18n="leave_note_static">Nguồn: lịch cơ quan chính phủ DGPA 2026. Gợi ý nghỉ theo lịch chính phủ; ngày nghỉ công ty tư nhân theo quy định Bộ Lao động và thông báo công ty.</p>
     </div>
   </section>
 
   <!-- 相處天數 -->
   <section class="panel" id="panel-days" role="tabpanel">
     <div class="card">
-      <h2 data-i18n="days_h2">相處天數 / 紀念日計算</h2>
-      <p class="lead" data-i18n="days_lead">算出在一起或某個起點已經過了幾天，並倒數下一個整百日與週年。</p>
+      <h2 data-i18n="days_h2">Số ngày bên nhau / kỷ niệm</h2>
+      <p class="lead" data-i18n="days_lead">Tính số ngày kể từ ngày bắt đầu, và đếm ngược tới mốc trăm ngày và ngày kỷ niệm kế tiếp.</p>
       <div class="row">
-        <div class="field"><label data-i18n="days_l_start">起始日期（如在一起、生日）</label><input type="date" id="d-start"></div>
-        <div class="field"><label data-i18n="days_l_end">計算到（預設今天）</label><input type="date" id="d-end"></div>
+        <div class="field"><label data-i18n="days_l_start">Ngày bắt đầu (vd. yêu nhau, sinh nhật)</label><input type="date" id="d-start"></div>
+        <div class="field"><label data-i18n="days_l_end">Tính đến (mặc định hôm nay)</label><input type="date" id="d-end"></div>
       </div>
-      <button class="btn" id="days-go" data-i18n="days_btn">計算</button>
+      <button class="btn" id="days-go" data-i18n="days_btn">Tính</button>
       <div class="result" id="days-result"><div class="big" id="days-big">—</div><div class="sub" id="days-sub"></div><div class="grid2" id="days-grid"></div><p class="note" id="days-note"></p>
         <!-- 結果觸發式情境廣告：紀念日 → KKday 體驗 -->
         <a class="promo" href="https://onelink.one/s/xTqQW" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">💑</div><div class="pbody"><div class="ptitle">紀念日來場小旅行</div><div class="pdesc">KKday 在地體驗、一日遊、約會行程</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
@@ -322,14 +323,14 @@
   <!-- 護照效期 -->
   <section class="panel" id="panel-passport" role="tabpanel">
     <div class="card">
-      <h2 data-i18n="pp_h2">護照效期計算</h2>
-      <p class="lead" data-i18n="pp_lead">多數國家要求入境時護照「剩餘效期至少 6 個月」。輸入護照到期日，算出剩餘效期、是否該換發；可選填預計入境日與要求月數，判斷是否符合規定。</p>
-      <div class="field"><label data-i18n="pp_l_expiry">護照到期日</label><input type="date" id="p-expiry"></div>
+      <h2 data-i18n="pp_h2">Tính hạn hộ chiếu</h2>
+      <p class="lead" data-i18n="pp_lead">Hầu hết các nước yêu cầu hộ chiếu còn hạn ít nhất 6 tháng khi nhập cảnh. Nhập ngày hết hạn để xem hạn còn lại và có cần đổi mới; có thể thêm ngày nhập cảnh dự kiến và số tháng yêu cầu để kiểm tra.</p>
+      <div class="field"><label data-i18n="pp_l_expiry">Ngày hết hạn hộ chiếu</label><input type="date" id="p-expiry"></div>
       <div class="row">
-        <div class="field"><label data-i18n="pp_l_entry">預計入境日（可不填）</label><input type="date" id="p-entry"></div>
-        <div class="field"><label data-i18n="pp_l_months">要求剩餘效期（月）</label><input type="number" id="p-months" inputmode="numeric" value="6" min="0" max="24"></div>
+        <div class="field"><label data-i18n="pp_l_entry">Ngày nhập cảnh dự kiến (tùy chọn)</label><input type="date" id="p-entry"></div>
+        <div class="field"><label data-i18n="pp_l_months">Hạn yêu cầu (tháng)</label><input type="number" id="p-months" inputmode="numeric" value="6" min="0" max="24"></div>
       </div>
-      <button class="btn" id="passport-go" data-i18n="pp_btn">計算</button>
+      <button class="btn" id="passport-go" data-i18n="pp_btn">Tính</button>
       <div class="result" id="passport-result">
         <div class="big" id="passport-big">—</div><div class="sub" id="passport-sub"></div>
         <div class="grid2" id="passport-grid"></div><p class="note" id="passport-note"></p>
@@ -349,43 +350,43 @@
   </a>
 
   <div class="content">
-    <h2 data-i18n="ct_h2">關於這些日期換算</h2>
-    <h3 data-i18n="ct_q1">農曆生日為什麼要換算成國曆？</h3>
-    <p data-i18n="ct_a1">許多長輩記的是農曆生日，但證件、報名、生日提醒大多使用國曆（西元/民國）。農曆每年對應的國曆日期都不同，需依曆法逐年換算。本工具內建 1912～2049 年農曆資料並處理閏月，輸入農曆年月日即可得到正確國曆日期與生肖。</p>
-    <h3 data-i18n="ct_q2">民國年怎麼換算西元年？</h3>
-    <p data-i18n="ct_a2">中華民國以 1912 年為民國元年，因此「西元年 = 民國年 + 1911」，反過來「民國年 = 西元年 − 1911」。月份與日期在兩種紀年下相同，只需換算年份。</p>
-    <h3 data-i18n="ct_q3">工作天和日曆天差在哪？</h3>
-    <p data-i18n="ct_a3">日曆天把每一天都算進去；工作天會扣掉週六、週日與國定假日。簽約、請款、收件天數常以工作天計算，算錯容易誤判到期日。</p>
-    <h3 data-i18n="ct_q4">2026 年放假新制重點</h3>
-    <p data-i18n="ct_a4">自 2025 年下半年起改為「只補假、不補班」：國定假日若遇週末，於前後一個上班日補假，但不再安排補班日，因此 2026 年沒有補班日。勞動節自 2025 年起亦改為全國統一放假。</p>
+    <h2 data-i18n="ct_h2">Về các công cụ ngày tháng này</h2>
+    <h3 data-i18n="ct_q1">Vì sao cần đổi sinh nhật âm lịch sang dương lịch?</h3>
+    <p data-i18n="ct_a1">Nhiều người lớn tuổi chỉ nhớ sinh nhật âm lịch, nhưng giấy tờ, đăng ký và nhắc nhở đều dùng dương lịch (Dương/ROC). Ngày dương của sinh nhật âm lịch khác nhau mỗi năm và phải đổi theo quy tắc lịch. Công cụ có sẵn dữ liệu âm lịch 1912–2049 kèm tháng nhuận — nhập ngày âm lịch để có ngày dương và con giáp chính xác.</p>
+    <h3 data-i18n="ct_q2">Đổi năm ROC sang năm dương thế nào?</h3>
+    <p data-i18n="ct_a2">Trung Hoa Dân Quốc lấy 1912 là năm ROC thứ 1, nên “năm dương = năm ROC + 1911”, và “năm ROC = năm dương − 1911”. Tháng và ngày giống nhau ở cả hai; chỉ đổi năm.</p>
+    <h3 data-i18n="ct_q3">Ngày làm việc và ngày lịch khác nhau ra sao?</h3>
+    <p data-i18n="ct_a3">Ngày lịch tính mọi ngày; ngày làm việc trừ thứ Bảy, Chủ nhật và ngày lễ. Hợp đồng, thanh toán và thời gian giao hàng thường tính theo ngày làm việc, tính sai dễ nhầm ngày đến hạn.</p>
+    <h3 data-i18n="ct_q4">Điểm chính của quy định nghỉ lễ 2026</h3>
+    <p data-i18n="ct_a4">Từ nửa cuối 2025, quy định là “chỉ nghỉ bù, không làm bù”: nếu ngày lễ rơi vào cuối tuần, một ngày làm gần đó thành ngày nghỉ bù, nhưng không xếp ngày làm bù — nên 2026 không có ngày làm bù. Ngày Lao động cũng là ngày nghỉ toàn quốc từ 2025.</p>
   </div>
 
   <div class="legal" id="legal-about">
-    <h2 data-i18n="lg_about_h">關於本站</h2>
-    <p data-i18n="lg_about_p1">本站提供台灣常用的免費日期換算工具，包括農曆轉國曆、民國西元轉換、含國定假日的工作天計算、連假請假攻略與相處天數計算，目標是讓查詢又快又準。</p>
-    <p data-i18n="lg_about_p2">所有計算皆在你的瀏覽器內完成，本站不會儲存你輸入的任何日期資料。</p>
-    <span class="close" data-close data-i18n="btn_close">關閉</span>
+    <h2 data-i18n="lg_about_h">Về trang này</h2>
+    <p data-i18n="lg_about_p1">Trang cung cấp các công cụ ngày tháng miễn phí thường dùng ở Đài Loan: âm sang dương, đổi ROC–Dương, tính ngày làm việc kèm ngày lễ, cẩm nang nghỉ lễ và đếm ngày bên nhau — hướng tới tra cứu nhanh và chính xác.</p>
+    <p data-i18n="lg_about_p2">Mọi phép tính chạy trong trình duyệt của bạn; trang không lưu bất kỳ ngày nào bạn nhập.</p>
+    <span class="close" data-close data-i18n="btn_close">Đóng</span>
   </div>
   <div class="legal" id="legal-privacy">
-    <h2 data-i18n="lg_priv_h">隱私權與推廣揭露</h2>
-    <p data-i18n="lg_priv_p1">本站工具的所有運算都在你的裝置上完成，我們不會蒐集或儲存你輸入的個人資料。</p>
-    <p data-i18n="lg_priv_p2">本站部分連結為合作推廣或聯盟行銷連結，標示「推廣」字樣。透過這些連結消費，本站可能獲得分潤，但不會增加你的費用。</p>
-    <p data-i18n="lg_priv_p3">本站可能使用 Cookie 與流量分析工具以了解整體使用狀況；你可透過瀏覽器設定隨時清除或封鎖 Cookie。</p>
-    <span class="close" data-close data-i18n="btn_close">關閉</span>
+    <h2 data-i18n="lg_priv_h">Quyền riêng tư & công bố</h2>
+    <p data-i18n="lg_priv_p1">Mọi phép tính chạy trên thiết bị của bạn; chúng tôi không thu thập hay lưu dữ liệu cá nhân bạn nhập.</p>
+    <p data-i18n="lg_priv_p2">Một số liên kết trên trang là liên kết đối tác hoặc tiếp thị liên kết, ghi “quảng cáo”. Nếu bạn mua qua đó, trang có thể nhận hoa hồng mà không tăng chi phí của bạn.</p>
+    <p data-i18n="lg_priv_p3">Trang có thể dùng cookie và công cụ phân tích để hiểu mức sử dụng chung; bạn có thể xóa hoặc chặn cookie bất cứ lúc nào trong cài đặt trình duyệt.</p>
+    <span class="close" data-close data-i18n="btn_close">Đóng</span>
   </div>
   <div class="legal" id="legal-contact">
-    <h2 data-i18n="lg_contact_h">聯絡方式</h2>
-    <p data-i18n="lg_contact_p">對工具有任何建議或發現資料需要更新，歡迎來信：<b>y0911122420@gmail.com</b>（歡迎來信我的信箱）。</p>
-    <span class="close" data-close data-i18n="btn_close">關閉</span>
+    <h2 data-i18n="lg_contact_h">Liên hệ</h2>
+    <p data-i18n="lg_contact_p">Góp ý hoặc báo lỗi dữ liệu, email: <b>y0911122420@gmail.com</b>.</p>
+    <span class="close" data-close data-i18n="btn_close">Đóng</span>
   </div>
 
   <footer>
     <div class="links">
-      <a href="#" data-legal="legal-about" data-i18n="foot_about">關於本站</a>
-      <a href="#" data-legal="legal-privacy" data-i18n="foot_privacy">隱私權與推廣揭露</a>
-      <a href="#" data-legal="legal-contact" data-i18n="foot_contact">聯絡方式</a>
+      <a href="#" data-legal="legal-about" data-i18n="foot_about">Giới thiệu</a>
+      <a href="#" data-legal="legal-privacy" data-i18n="foot_privacy">Quyền riêng tư & công bố</a>
+      <a href="#" data-legal="legal-contact" data-i18n="foot_contact">Liên hệ</a>
     </div>
-    <div data-i18n="foot_disclaimer">本站工具僅供一般參考。國定假日依行政院人事行政總處公告為準，民間企業放假請以公司公告與勞動部規定為準。</div>
+    <div data-i18n="foot_disclaimer">Các công cụ chỉ mang tính tham khảo. Ngày lễ theo thông báo của DGPA; ngày nghỉ của công ty theo thông báo công ty và quy định của Bộ Lao động.</div>
     <div style="margin-top:8px">© <span id="yr"></span> 台灣日期工具</div>
   </footer>
 
