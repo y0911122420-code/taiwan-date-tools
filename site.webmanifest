@@ -1,0 +1,13 @@
+{
+  "name": "台灣日期工具",
+  "short_name": "台灣日期",
+  "description": "農曆轉西元、民國西元轉換、工作天、連假攻略、相處天數",
+  "icons": [
+    { "src": "https://y0911122420-code.github.io/taiwan-date-tools/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "https://y0911122420-code.github.io/taiwan-date-tools/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "start_url": "https://y0911122420-code.github.io/taiwan-date-tools/",
+  "display": "standalone",
+  "background_color": "#0F1319",
+  "theme_color": "#0F1319"
+}
