@@ -1062,8 +1062,25 @@
   // 子頁（/en/ /id/ /vi/）由 build.mjs 注入 window.__PAGE_LANG__，優先於 localStorage，
   // 避免 JS 載入後把預渲染的該語言內容又切回 zh。
   let savedLang = (typeof window!=='undefined' && window.__PAGE_LANG__) || 'zh';
-  if(!window.__PAGE_LANG__){ try{savedLang=localStorage.getItem('tdt_lang')||'zh';}catch(e){} }
+  if(!window.__PAGE_LANG__){
+    let stored=null; try{stored=localStorage.getItem('tdt_lang');}catch(e){}
+    // 沒手動選過語言時，依瀏覽器語言自動切成印尼/越南語（在台移工是主要受眾，
+    // 落地看到中文會直接跳出）。不做網址轉址，只切內容，避免影響根頁索引。
+    // 刻意不自動切 en：Googlebot 的語言是 en-US，切了會讓爬蟲看到英文版首頁。
+    savedLang = stored || detectLang() || 'zh';
+  }
   applyLang(savedLang);
+
+  function detectLang(){
+    const list = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language];
+    for(const l of list){
+      const code = String(l||'').toLowerCase();
+      if(code.startsWith('id')||code.startsWith('in')) return 'id'; // in 為印尼語舊代碼
+      if(code.startsWith('vi')) return 'vi';
+      if(code.startsWith('zh')) return 'zh';
+    }
+    return null;
+  }
 })();
 </script>
 </body>
