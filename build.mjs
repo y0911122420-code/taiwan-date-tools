@@ -11,7 +11,7 @@ import { dirname, join } from 'node:path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const SRC = join(__dirname, 'index.html');
-const BASE = 'https://y0911122420-code.github.io/taiwan-date-tools/';
+const BASE = 'https://twdatetools.com/';
 
 // 各語言的 <html lang>、og:locale，以及聚焦在台移工關鍵字（民國↔西元、居留證 ARC、農曆、護照效期）的 title/description
 const META = {
