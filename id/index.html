@@ -208,6 +208,7 @@
       <button class="tab" role="tab" aria-selected="false" data-tab="leave" data-i18n="tab_leave">Panduan libur</button>
       <button class="tab" role="tab" aria-selected="false" data-tab="days" data-i18n="tab_days">Hari bersama</button>
       <button class="tab" role="tab" aria-selected="false" data-tab="passport" data-i18n="tab_passport">Masa paspor</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="age" data-i18n="tab_age">Umur</button>
     </div>
   </div>
 </nav>
@@ -351,6 +352,25 @@
     </div>
   </section>
 
+  <!-- 年齡計算 -->
+  <section class="panel" id="panel-age" role="tabpanel">
+    <div class="card">
+      <h2 data-i18n="age_h2">Kalkulator umur</h2>
+      <p class="lead" data-i18n="age_lead">Masukkan tanggal lahir untuk melihat umur pasti, total hari hidup, dan hari menuju ulang tahun berikutnya.</p>
+      <div class="row">
+        <div class="field"><label data-i18n="age_l_birth">Tanggal lahir</label><input type="date" id="age-birth"></div>
+        <div class="field"><label data-i18n="age_l_to">Hitung sampai (default hari ini)</label><input type="date" id="age-to"></div>
+      </div>
+      <button class="btn" id="age-go" data-i18n="age_btn">Hitung</button>
+      <div class="result" id="age-result">
+        <div class="big" id="age-big">—</div><div class="sub" id="age-sub"></div>
+        <div class="grid2" id="age-grid"></div><p class="note" id="age-note"></p>
+        <!-- 結果觸發式情境廣告：生日 → KKday 體驗 -->
+        <a class="promo" href="https://onelink.one/s/xTqQW" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">🎂</div><div class="pbody"><div class="ptitle">生日就用一場體驗慶祝</div><div class="pdesc">KKday 一日遊、餐券、在地體驗</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      </div>
+    </div>
+  </section>
+
   </main>
 
   <!-- ====== 推廣版位 B：結果下方黃金位置・Trip.com 聯盟 ====== -->
@@ -465,6 +485,7 @@
       pp_expired_sub:'到期日 {date}，已過期 {days} 天', pp_expired_note:'請盡快換發護照後再規劃出國行程。',
       pp_remain:'剩餘效期 {y} 年 {m} 個月 {d} 天', pp_subexp:'護照到期日 {date}（剩 {days} 天）',
       pp_st_expiry:'護照到期日', pp_st_remdays:'剩餘天數', fmt_days:'{n} 天',
+      age_err:'請先選擇生日', age_err_order:'生日不能晚於計算日期', age_big:'{y} 歲', age_sub:'{y} 歲 {m} 個月 {d} 天', age_st_nominal:'虛歲', age_years:'{n} 歲', age_st_total:'總共活了', age_st_nextbday:'下次生日', age_note:'生日 {s}　計算到 {e}',
       pp_st_entry:'預計入境日', pp_bad_title:'⚠️ 不符合', pp_early_val:'護照到期早於入境日',
       pp_note_early:'護照在入境日前就到期，務必先換發。各國規定不同，請以目的地國要求為準。',
       pp_ok_title:'✅ 符合規定', pp_short_title:'⚠️ 效期不足',
@@ -552,6 +573,7 @@
       pp_expired_sub:'Expiry {date}, expired {days} days ago', pp_expired_note:'Please renew your passport before planning any travel.',
       pp_remain:'Validity left: {y}y {m}mo {d}d', pp_subexp:'Passport expiry {date} ({days} days left)',
       pp_st_expiry:'Expiry date', pp_st_remdays:'Days left', fmt_days:'{n} days',
+      tab_age:'Age', age_h2:'Age calculator', age_lead:'Enter your birthday to get your exact age, total days lived, and days until your next birthday.', age_l_birth:'Birthday', age_l_to:'Count until (default today)', age_btn:'Calculate', age_err:'Please select your birthday', age_err_order:'Birthday cannot be later than the target date', age_big:'{y} years old', age_sub:'{y} years {m} months {d} days', age_st_nominal:'Nominal age', age_years:'{n} yrs', age_st_total:'Total days lived', age_st_nextbday:'Next birthday', age_note:'Birthday {s} · counted to {e}',
       pp_st_entry:'Planned entry', pp_bad_title:'⚠️ Not valid', pp_early_val:'Expires before entry date',
       pp_note_early:'The passport expires before the entry date — you must renew first. Rules vary by country; follow the destination’s requirements.',
       pp_ok_title:'✅ Compliant', pp_short_title:'⚠️ Insufficient',
@@ -639,6 +661,7 @@
       pp_expired_sub:'Kedaluwarsa {date}, lewat {days} hari', pp_expired_note:'Perpanjang paspor dulu sebelum merencanakan perjalanan.',
       pp_remain:'Sisa berlaku: {y} thn {m} bln {d} hr', pp_subexp:'Kedaluwarsa {date} (sisa {days} hari)',
       pp_st_expiry:'Tanggal kedaluwarsa', pp_st_remdays:'Sisa hari', fmt_days:'{n} hari',
+      tab_age:'Umur', age_h2:'Kalkulator umur', age_lead:'Masukkan tanggal lahir untuk melihat umur pasti, total hari hidup, dan hari menuju ulang tahun berikutnya.', age_l_birth:'Tanggal lahir', age_l_to:'Hitung sampai (default hari ini)', age_btn:'Hitung', age_err:'Silakan pilih tanggal lahir', age_err_order:'Tanggal lahir tidak boleh lebih lambat dari tanggal tujuan', age_big:'{y} tahun', age_sub:'{y} tahun {m} bulan {d} hari', age_st_nominal:'Usia nominal', age_years:'{n} thn', age_st_total:'Total hari hidup', age_st_nextbday:'Ulang tahun berikutnya', age_note:'Lahir {s} · dihitung sampai {e}',
       pp_st_entry:'Tanggal masuk', pp_bad_title:'⚠️ Tidak memenuhi', pp_early_val:'Kedaluwarsa sebelum tanggal masuk',
       pp_note_early:'Paspor kedaluwarsa sebelum tanggal masuk — harus diperpanjang dulu. Aturan tiap negara berbeda; ikuti ketentuan negara tujuan.',
       pp_ok_title:'✅ Memenuhi', pp_short_title:'⚠️ Kurang',
@@ -726,6 +749,7 @@
       pp_expired_sub:'Hết hạn {date}, đã quá {days} ngày', pp_expired_note:'Hãy đổi hộ chiếu mới trước khi lên kế hoạch đi nước ngoài.',
       pp_remain:'Hạn còn lại: {y} năm {m} tháng {d} ngày', pp_subexp:'Hết hạn {date} (còn {days} ngày)',
       pp_st_expiry:'Ngày hết hạn', pp_st_remdays:'Số ngày còn lại', fmt_days:'{n} ngày',
+      tab_age:'Tính tuổi', age_h2:'Máy tính tuổi', age_lead:'Nhập ngày sinh để biết tuổi chính xác, tổng số ngày đã sống và số ngày đến sinh nhật tới.', age_l_birth:'Ngày sinh', age_l_to:'Tính đến (mặc định hôm nay)', age_btn:'Tính', age_err:'Vui lòng chọn ngày sinh', age_err_order:'Ngày sinh không được muộn hơn ngày tính', age_big:'{y} tuổi', age_sub:'{y} tuổi {m} tháng {d} ngày', age_st_nominal:'Tuổi mụ', age_years:'{n} tuổi', age_st_total:'Tổng số ngày đã sống', age_st_nextbday:'Sinh nhật tới', age_note:'Ngày sinh {s} · tính đến {e}',
       pp_st_entry:'Ngày nhập cảnh', pp_bad_title:'⚠️ Không đạt', pp_early_val:'Hết hạn trước ngày nhập cảnh',
       pp_note_early:'Hộ chiếu hết hạn trước ngày nhập cảnh — phải đổi mới trước. Quy định mỗi nước khác nhau; theo yêu cầu của nước đến.',
       pp_ok_title:'✅ Đạt yêu cầu', pp_short_title:'⚠️ Không đủ',
@@ -984,6 +1008,28 @@
     const nextAnni=new Date(start);nextAnni.setFullYear(start.getFullYear()+y+1);
     grid.innerHTML=stat(F('d_st_hundred',{h:nextHundred}),fmt(hundredDate))+stat(t('st_remain'),F('fmt_days',{n:dayDiff(end,hundredDate)}),'work')+stat(F('d_st_anni',{a:y+1}),fmt(nextAnni))+stat(t('st_remain'),F('fmt_days',{n:dayDiff(end,nextAnni)}),'holiday');
     note.textContent=F('d_note',{s:fmt(start),e:fmt(end)});
+  });
+
+  /* ===== 年齡計算 ===== */
+  $('#age-go').addEventListener('click',()=>{
+    const res=$('#age-result'),big=$('#age-big'),sub=$('#age-sub'),grid=$('#age-grid'),note=$('#age-note');
+    const s=$('#age-birth').value;
+    if(!s){big.textContent=t('age_err');big.classList.add('err');sub.textContent='';grid.innerHTML='';note.textContent='';res.classList.add('show');return;}
+    big.classList.remove('err');
+    const birth=new Date(s+'T00:00:00');
+    const end=$('#age-to').value?new Date($('#age-to').value+'T00:00:00'):new Date(new Date().toDateString());
+    if(end<birth){big.textContent=t('age_err_order');big.classList.add('err');sub.textContent='';grid.innerHTML='';note.textContent='';res.classList.add('show');return;}
+    res.classList.add('show');
+    const diff=ymdDiff(birth,end);
+    const total=dayDiff(birth,end);
+    const nominal=end.getFullYear()-birth.getFullYear()+1;
+    big.innerHTML=F('age_big',{y:diff.y});
+    sub.textContent=F('age_sub',{y:diff.y,m:diff.m,d:diff.d});
+    let nb=new Date(end.getFullYear(),birth.getMonth(),birth.getDate());
+    if(nb<end) nb=new Date(end.getFullYear()+1,birth.getMonth(),birth.getDate());
+    const toBday=dayDiff(end,nb);
+    grid.innerHTML=stat(t('age_st_nominal'),F('age_years',{n:nominal}))+stat(t('age_st_total'),F('fmt_days',{n:total}),'work')+stat(t('age_st_nextbday'),fmt(nb))+stat(t('st_remain'),F('fmt_days',{n:toBday}),'holiday');
+    note.textContent=F('age_note',{s:fmt(birth),e:fmt(end)});
   });
 
   /* ===== 護照效期 ===== */
