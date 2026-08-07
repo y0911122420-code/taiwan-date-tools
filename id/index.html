@@ -82,8 +82,7 @@
   .today .cd.now{background:var(--holiday-soft);color:var(--holiday)}
 
   nav.tabs{position:sticky;top:0;z-index:20;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
-  .tabs-inner{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .tabs-inner::-webkit-scrollbar{display:none}
+  .tabs-inner{display:flex;flex-wrap:wrap;gap:8px}
   .tab{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--ink-soft);
     padding:9px 15px;border-radius:999px;font-size:14.5px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.15s}
   .tab[aria-selected="true"]{background:var(--brand-bg);border-color:var(--brand-bg);color:#fff}
