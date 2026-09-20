@@ -98,6 +98,12 @@
   .promo .ptag{flex:0 0 auto;font-size:10px;color:var(--ink-faint);border:1px solid var(--line);border-radius:6px;padding:2px 6px}
   .promo .parrow{color:var(--brand);font-weight:800;flex:0 0 auto;font-size:18px}
   .promo-h{font-size:14px;font-weight:800;color:var(--ink-soft);margin:18px 0 2px}
+  /* 動態文案輪播（Trip.com 版位 A/B）：文字淡入淡出 + 小圓點指示 */
+  .promo .ptitle,.promo .pdesc{transition:opacity .25s ease}
+  .promo .ptitle.fade,.promo .pdesc.fade{opacity:0}
+  .promo .pdots{display:flex;gap:4px;margin-top:6px}
+  .promo .pdots span{width:5px;height:5px;border-radius:50%;background:var(--line)}
+  .promo .pdots span.on{background:var(--brand)}
   .ad-banner{margin:16px 0;text-align:center}
   .ad-banner img{max-width:100%;height:auto;border-radius:10px}
   .ad-banner .ptag{display:inline-block;font-size:10px;color:var(--ink-faint);border:1px solid var(--line);border-radius:6px;padding:2px 6px;margin-bottom:8px}
@@ -213,10 +219,10 @@
 
 <div class="wrap">
 
-  <!-- ====== 推廣版位 A：Trip.com 聯盟 ====== -->
-  <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener">
+  <!-- ====== 推廣版位 A：Trip.com 聯盟（動態文案輪播） ====== -->
+  <a class="promo" id="trip-banner-a" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener">
     <div class="pic">✈️</div>
-    <div class="pbody"><div class="ptitle">Trip.com 訂房・機票</div><div class="pdesc">連假出遊，飯店機票票券一站搞定</div></div>
+    <div class="pbody"><div class="ptitle">Trip.com 訂房・機票</div><div class="pdesc">連假出遊，飯店機票票券一站搞定</div><div class="pdots" aria-hidden="true"></div></div>
     <span class="ptag">推廣</span><span class="parrow">›</span>
   </a>
 
@@ -371,10 +377,10 @@
 
   </main>
 
-  <!-- ====== 推廣版位 B：結果下方黃金位置・Trip.com 聯盟 ====== -->
-  <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener">
+  <!-- ====== 推廣版位 B：結果下方黃金位置・Trip.com 聯盟（動態文案輪播） ====== -->
+  <a class="promo" id="trip-banner-b" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener">
     <div class="pic">🏨</div>
-    <div class="pbody"><div class="ptitle">連假訂房就上 Trip.com</div><div class="pdesc">熱門飯店民宿早訂早划算，比價更安心</div></div>
+    <div class="pbody"><div class="ptitle">連假訂房就上 Trip.com</div><div class="pdesc">熱門飯店民宿早訂早划算，比價更安心</div><div class="pdots" aria-hidden="true"></div></div>
     <span class="ptag">推廣</span><span class="parrow">›</span>
   </a>
 
@@ -447,6 +453,10 @@
       hn_newyear:'元旦', hn_cny:'農曆春節', hn_228:'和平紀念日（228）', hn_qingming:'兒童節・清明節',
       hn_labor:'勞動節', hn_dragon:'端午節', hn_midautumn:'中秋節・教師節', hn_national:'國慶日',
       hn_retro:'光復節', hn_constitution:'行憲紀念日', days_off:'放 {n} 天',
+      trip_g1_t:'Trip.com 訂房・機票', trip_g1_d:'連假出遊，飯店機票票券一站搞定',
+      trip_g2_t:'連假訂房就上 Trip.com', trip_g2_d:'熱門飯店民宿早訂早划算，比價更安心',
+      trip_now_t:'『{name}』連假進行中', trip_now_d:'機票飯店比價，出發前先訂更安心',
+      trip_soon_t:'距離『{name}』還有 {n} 天', trip_soon_d:'Trip.com 先比價，早訂早划算',
       tip_newyear:'1/2（五）請 1 天，可連休 1/1～1/4 共 <b>4 天</b>；想拚更長可請 12/29～12/31、1/2 共 4 天，連休 12/27～1/4 共 <b>9 天</b>。',
       tip_cny:'請 2/23～2/26 共 4 天，與 228 串連可連休 2/14～3/1 共 <b>16 天</b>。',
       tip_228:'已與週末相連，<b>免請假</b>即有 3 天連假。',
@@ -500,6 +510,10 @@
       hn_newyear:"New Year's Day", hn_cny:'Lunar New Year', hn_228:'Peace Memorial Day (228)', hn_qingming:"Children's & Tomb-Sweeping Day",
       hn_labor:'Labor Day', hn_dragon:'Dragon Boat Festival', hn_midautumn:"Mid-Autumn & Teachers' Day", hn_national:'National Day',
       hn_retro:'Retrocession Day', hn_constitution:'Constitution Day', days_off:'{n} days off',
+      trip_g1_t:'Trip.com Hotels & Flights', trip_g1_d:'Book hotels, flights and tickets for the holidays in one place',
+      trip_g2_t:'Book your holiday stay on Trip.com', trip_g2_d:'Popular hotels fill up fast — compare prices early',
+      trip_now_t:'“{name}” is happening now', trip_now_d:'Compare hotel & flight prices before you go',
+      trip_soon_t:'{n} days until “{name}”', trip_soon_d:'Compare prices on Trip.com — book early, save more',
       tip_newyear:'Take 1/2 (Fri) off (1 day) for 1/1–1/4, <b>4 days</b>; or take 12/29–12/31 + 1/2 (4 days) for 12/27–1/4, <b>9 days</b>.',
       tip_cny:'Take 2/23–2/26 (4 days); linked with 228 you get 2/14–3/1, <b>16 days</b>.',
       tip_228:'Already joins the weekend — <b>no leave needed</b> for a 3-day break.',
@@ -588,6 +602,10 @@
       hn_newyear:'Tahun Baru', hn_cny:'Tahun Baru Imlek', hn_228:'Hari Peringatan Perdamaian (228)', hn_qingming:'Hari Anak & Ziarah Kubur',
       hn_labor:'Hari Buruh', hn_dragon:'Festival Perahu Naga', hn_midautumn:'Festival Kue Bulan & Hari Guru', hn_national:'Hari Nasional',
       hn_retro:'Hari Retrosesi Taiwan', hn_constitution:'Hari Konstitusi', days_off:'Libur {n} hari',
+      trip_g1_t:'Trip.com Hotel & Tiket Pesawat', trip_g1_d:'Pesan hotel, tiket pesawat, dan tiket wisata dalam satu tempat',
+      trip_g2_t:'Pesan penginapan liburan di Trip.com', trip_g2_d:'Hotel favorit cepat penuh — bandingkan harga lebih awal',
+      trip_now_t:'"{name}" sedang berlangsung', trip_now_d:'Bandingkan harga hotel & tiket pesawat sebelum berangkat',
+      trip_soon_t:'{n} hari lagi menuju "{name}"', trip_soon_d:'Bandingkan harga di Trip.com — pesan lebih awal lebih hemat',
       tip_newyear:'Ambil 1 hari cuti 1/2 (Jum) untuk libur 1/1–1/4, <b>4 hari</b>; atau cuti 12/29–12/31 + 1/2 (4 hari) jadi 12/27–1/4, <b>9 hari</b>.',
       tip_cny:'Cuti 2/23–2/26 (4 hari); disambung 228 jadi 2/14–3/1, <b>16 hari</b>.',
       tip_228:'Sudah menyatu dengan akhir pekan — <b>tanpa cuti</b> pun libur 3 hari.',
@@ -676,6 +694,10 @@
       hn_newyear:'Tết Dương lịch', hn_cny:'Tết Nguyên đán', hn_228:'Ngày Hòa bình (228)', hn_qingming:'Tết Thiếu nhi & Thanh minh',
       hn_labor:'Ngày Lao động', hn_dragon:'Tết Đoan Ngọ', hn_midautumn:'Trung thu & Ngày Nhà giáo', hn_national:'Quốc khánh',
       hn_retro:'Ngày Quang phục', hn_constitution:'Ngày Hiến pháp', days_off:'Nghỉ {n} ngày',
+      trip_g1_t:'Trip.com Khách sạn & Vé máy bay', trip_g1_d:'Đặt khách sạn, vé máy bay, vé tham quan chỉ trong một nơi',
+      trip_g2_t:'Đặt phòng nghỉ lễ trên Trip.com', trip_g2_d:'Khách sạn hot dễ hết phòng — so sánh giá sớm',
+      trip_now_t:'"{name}" đang diễn ra', trip_now_d:'So sánh giá khách sạn & vé máy bay trước khi đi',
+      trip_soon_t:'Còn {n} ngày nữa đến "{name}"', trip_soon_d:'So sánh giá trên Trip.com — đặt sớm tiết kiệm hơn',
       tip_newyear:'Nghỉ 1 ngày 1/2 (T6) để được 1/1–1/4, <b>4 ngày</b>; hoặc nghỉ 12/29–12/31 + 1/2 (4 ngày) thành 12/27–1/4, <b>9 ngày</b>.',
       tip_cny:'Nghỉ 2/23–2/26 (4 ngày); nối với 228 thành 2/14–3/1, <b>16 ngày</b>.',
       tip_228:'Đã liền với cuối tuần — <b>không cần xin nghỉ</b> vẫn được 3 ngày.',
@@ -776,6 +798,7 @@
     syncRocLabel();
     if(typeof renderToday==='function') renderToday();
     if(typeof renderLeave==='function') renderLeave();
+    if(typeof refreshTripPromos==='function') refreshTripPromos();
     try{localStorage.setItem('tdt_lang',lang);}catch(e){}
   }
 
@@ -859,6 +882,16 @@
   function cnMonth(m){return (m===1?'正':CN_NUM[m])+'月';}
   function cnDay(d){if(d<=10)return '初'+CN_NUM[d];if(d<20)return '十'+CN_NUM[d-10];if(d===20)return '二十';if(d<30)return '廿'+CN_NUM[d-20];return '三十';}
 
+  /* 掃 LW_DATES：回傳「進行中」或「即將到來」的連假，供今日資訊列與 Trip 推廣輪播共用 */
+  function nextOrCurrentHoliday(now){
+    for(const [key,s,e] of LW_DATES){
+      const sd=new Date(s+'T00:00:00'), ed=new Date(e+'T00:00:00');
+      if(now>=sd && now<=ed) return {status:'now', key};
+      if(now<sd) return {status:'next', key, days:dayDiff(now,sd)};
+    }
+    return null;
+  }
+
   /* ===== 今日資訊列 ===== */
   function renderToday(){
     const now=new Date();
@@ -869,13 +902,9 @@
       : (ld.isLeap?t('leap_word'):'')+ld.month+'/'+ld.day;
     $('#today-meta').textContent=F('td_meta',{roc:now.getFullYear()-1911,lunar:lunar,zod:zod(ld.year)});
     const cd=$('#today-cd'); cd.className='cd'; cd.style.display='';
-    let next=null;
-    for(const [key,s,e] of LW_DATES){
-      const sd=new Date(s+'T00:00:00'), ed=new Date(e+'T00:00:00');
-      if(now>=sd && now<=ed){ cd.classList.add('now'); cd.innerHTML=F('td_now',{name:t(key)}); return; }
-      if(now<sd){ next=[key,sd]; break; }
-    }
-    if(next){ cd.innerHTML=F('td_next',{name:t(next[0]),n:dayDiff(now,next[1])}); }
+    const hol=nextOrCurrentHoliday(now);
+    if(hol && hol.status==='now'){ cd.classList.add('now'); cd.innerHTML=F('td_now',{name:t(hol.key)}); return; }
+    if(hol && hol.status==='next'){ cd.innerHTML=F('td_next',{name:t(hol.key),n:hol.days}); }
     else cd.style.display='none';
   }
 
@@ -1103,6 +1132,54 @@
 
   const nowD=new Date();
   $('#d-end').value=`${nowD.getFullYear()}-${pad(nowD.getMonth()+1)}-${pad(nowD.getDate())}`;
+
+  /* ===== Trip.com 推廣輪播（依最近連假動態換文案） ===== */
+  const TRIP_BANNERS=['trip-banner-a','trip-banner-b'];
+  const tripState={};
+  function tripPromoVariants(){
+    const hol=nextOrCurrentHoliday(new Date());
+    const list=[];
+    if(hol&&hol.status==='now') list.push({title:F('trip_now_t',{name:t(hol.key)}), desc:t('trip_now_d')});
+    else if(hol&&hol.status==='next'&&hol.days<=45) list.push({title:F('trip_soon_t',{name:t(hol.key),n:hol.days}), desc:t('trip_soon_d')});
+    list.push({title:t('trip_g1_t'), desc:t('trip_g1_d')});
+    list.push({title:t('trip_g2_t'), desc:t('trip_g2_d')});
+    return list;
+  }
+  function paintTrip(id){
+    const st=tripState[id], el=$('#'+id); if(!st||!el) return;
+    const titleEl=el.querySelector('.ptitle'), descEl=el.querySelector('.pdesc'), dotsEl=el.querySelector('.pdots');
+    titleEl.textContent=st.variants[st.i].title;
+    descEl.textContent=st.variants[st.i].desc;
+    if(dotsEl) dotsEl.innerHTML=st.variants.length>1 ? st.variants.map((_,idx)=>`<span class="${idx===st.i?'on':''}"></span>`).join('') : '';
+  }
+  function tickTrip(id){
+    const st=tripState[id], el=$('#'+id); if(!st||!el||st.paused||st.variants.length<2) return;
+    const titleEl=el.querySelector('.ptitle'), descEl=el.querySelector('.pdesc');
+    titleEl.classList.add('fade'); descEl.classList.add('fade');
+    setTimeout(()=>{
+      st.i=(st.i+1)%st.variants.length;
+      paintTrip(id);
+      titleEl.classList.remove('fade'); descEl.classList.remove('fade');
+    },250);
+  }
+  function initTripCarousel(id){
+    const el=$('#'+id); if(!el) return;
+    tripState[id]={variants:tripPromoVariants(), i:0, paused:false};
+    paintTrip(id);
+    if(!el.dataset.carouselBound){
+      el.dataset.carouselBound='1';
+      el.addEventListener('mouseenter',()=>{ if(tripState[id]) tripState[id].paused=true; });
+      el.addEventListener('mouseleave',()=>{ if(tripState[id]) tripState[id].paused=false; });
+    }
+  }
+  let tripInterval=null;
+  function refreshTripPromos(){
+    TRIP_BANNERS.forEach(initTripCarousel);
+    if(!tripInterval){
+      const reduceMotion=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(!reduceMotion) tripInterval=setInterval(()=>{ if(!document.hidden) TRIP_BANNERS.forEach(tickTrip); }, 5000);
+    }
+  }
 
   /* ===== 廣告點擊追蹤（GA4）：自動為所有推廣連結綁定事件 ===== */
   document.querySelectorAll('a.promo').forEach(function(el){
