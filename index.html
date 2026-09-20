@@ -98,6 +98,12 @@
   .promo .ptag{flex:0 0 auto;font-size:10px;color:var(--ink-faint);border:1px solid var(--line);border-radius:6px;padding:2px 6px}
   .promo .parrow{color:var(--brand);font-weight:800;flex:0 0 auto;font-size:18px}
   .promo-h{font-size:14px;font-weight:800;color:var(--ink-soft);margin:18px 0 2px}
+  /* 動態文案輪播（Trip.com 版位 A/B）：文字淡入淡出 + 小圓點指示 */
+  .promo .ptitle,.promo .pdesc{transition:opacity .25s ease}
+  .promo .ptitle.fade,.promo .pdesc.fade{opacity:0}
+  .promo .pdots{display:flex;gap:4px;margin-top:6px}
+  .promo .pdots span{width:5px;height:5px;border-radius:50%;background:var(--line)}
+  .promo .pdots span.on{background:var(--brand)}
   .ad-banner{margin:16px 0;text-align:center}
   .ad-banner img{max-width:100%;height:auto;border-radius:10px}
   .ad-banner .ptag{display:inline-block;font-size:10px;color:var(--ink-faint);border:1px solid var(--line);border-radius:6px;padding:2px 6px;margin-bottom:8px}
@@ -213,10 +219,10 @@
 
 <div class="wrap">
 
-  <!-- ====== 推廣版位 A：Trip.com 聯盟 ====== -->
-  <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener">
+  <!-- ====== 推廣版位 A：Trip.com 聯盟（動態文案輪播） ====== -->
+  <a class="promo" id="trip-banner-a" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener">
     <div class="pic">✈️</div>
-    <div class="pbody"><div class="ptitle">Trip.com 訂房・機票</div><div class="pdesc">連假出遊，飯店機票票券一站搞定</div></div>
+    <div class="pbody"><div class="ptitle">Trip.com 訂房・機票</div><div class="pdesc">連假出遊，飯店機票票券一站搞定</div><div class="pdots" aria-hidden="true"></div></div>
     <span class="ptag">推廣</span><span class="parrow">›</span>
   </a>
 
@@ -267,7 +273,7 @@
       <button class="btn" id="roc-go" data-i18n="roc_btn">換算</button>
       <div class="result" id="roc-result"><div class="big" id="roc-out">—</div><div class="sub" id="roc-sub"></div>
         <!-- 結果觸發式情境廣告：出國查年份 → Trip.com 比價 -->
-        <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">✈️</div><div class="pbody"><div class="ptitle">要出國嗎？機票飯店先比價</div><div class="pdesc">Trip.com 一站搞定，早訂早划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+        <a class="promo" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">✈️</div><div class="pbody"><div class="ptitle">要出國嗎？機票飯店先比價</div><div class="pdesc">Trip.com 一站搞定，早訂早划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
       </div>
       <p class="note" data-i18n="roc_note_static">小提醒：民國元年為西元 1912 年。民國前年份可用「西元 → 民國」查看。</p>
     </div>
@@ -277,7 +283,7 @@
   <section class="panel" id="panel-work" role="tabpanel">
     <div class="card">
       <h2 data-i18n="work_h2">工作天計算</h2>
-      <p class="lead" data-i18n="work_lead">自動扣除週六、週日與台灣國定假日（目前涵蓋 2026 年）。</p>
+      <p class="lead" data-i18n="work_lead">自動扣除週六、週日與台灣國定假日（目前涵蓋 2026–2027 年）。</p>
       <div class="seg" id="work-seg">
         <button aria-pressed="true"  data-mode="range" data-i18n="work_seg_range">區間工作天</button>
         <button aria-pressed="false" data-mode="add" data-i18n="work_seg_add">推算到期日</button>
@@ -293,7 +299,7 @@
       <button class="btn" id="work-go" data-i18n="work_btn">計算</button>
       <div class="result" id="work-result"><div class="big" id="work-big">—</div><div class="grid2" id="work-grid"></div><p class="note" id="work-note"></p>
         <!-- 結果觸發式情境廣告：排假 → Trip.com 訂房機票 -->
-        <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">🏖️</div><div class="pbody"><div class="ptitle">假期排好了？搶先訂房機票</div><div class="pdesc">Trip.com 熱門飯店班機，越早越划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+        <a class="promo" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">🏖️</div><div class="pbody"><div class="ptitle">假期排好了？搶先訂房機票</div><div class="pdesc">Trip.com 熱門飯店班機，越早越划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
       </div>
     </div>
   </section>
@@ -306,9 +312,9 @@
       <div id="leave-list"></div>
       <!-- ====== 旅遊聯盟專區（看完攻略最容易轉換，把 href 換成你的聯盟連結）====== -->
       <div class="promo-h" data-i18n="leave_promo_h">連假玩什麼？（合作推廣）</div>
-      <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener"><div class="pic">🏨</div><div class="pbody"><div class="ptitle">連假訂房</div><div class="pdesc">熱門飯店民宿，早訂早划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
-      <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener"><div class="pic">✈️</div><div class="pbody"><div class="ptitle">連假機票</div><div class="pdesc">出國比價，搶連假航班</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
-      <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener"><div class="pic">🎫</div><div class="pbody"><div class="ptitle">行程與票券</div><div class="pdesc">景點門票、一日遊、體驗活動</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      <a class="promo" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener"><div class="pic">🏨</div><div class="pbody"><div class="ptitle">連假訂房</div><div class="pdesc">熱門飯店民宿，早訂早划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      <a class="promo" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener"><div class="pic">✈️</div><div class="pbody"><div class="ptitle">連假機票</div><div class="pdesc">出國比價，搶連假航班</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      <a class="promo" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener"><div class="pic">🎫</div><div class="pbody"><div class="ptitle">行程與票券</div><div class="pdesc">景點門票、一日遊、體驗活動</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
       <p class="note" data-i18n="leave_note_static">資料來源：行政院人事行政總處 115 年政府行政機關辦公日曆表。連假與請假建議以公務機關行事曆為準；民間企業放假依勞動部規定與公司公告為準。</p>
     </div>
   </section>
@@ -345,7 +351,7 @@
         <div class="big" id="passport-big">—</div><div class="sub" id="passport-sub"></div>
         <div class="grid2" id="passport-grid"></div><p class="note" id="passport-note"></p>
         <!-- 結果觸發式情境廣告：出國 → Trip.com -->
-        <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">🛂</div><div class="pbody"><div class="ptitle">準備出國？機票飯店先比價</div><div class="pdesc">Trip.com 一站搞定，早訂早安心</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+        <a class="promo" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">🛂</div><div class="pbody"><div class="ptitle">準備出國？機票飯店先比價</div><div class="pdesc">Trip.com 一站搞定，早訂早安心</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
       </div>
     </div>
   </section>
@@ -371,10 +377,10 @@
 
   </main>
 
-  <!-- ====== 推廣版位 B：結果下方黃金位置・Trip.com 聯盟 ====== -->
-  <a class="promo" href="https://afflink.one/s/8SN3w" target="_blank" rel="sponsored noopener">
+  <!-- ====== 推廣版位 B：結果下方黃金位置・Trip.com 聯盟（動態文案輪播） ====== -->
+  <a class="promo" id="trip-banner-b" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener">
     <div class="pic">🏨</div>
-    <div class="pbody"><div class="ptitle">連假訂房就上 Trip.com</div><div class="pdesc">熱門飯店民宿早訂早划算，比價更安心</div></div>
+    <div class="pbody"><div class="ptitle">連假訂房就上 Trip.com</div><div class="pdesc">熱門飯店民宿早訂早划算，比價更安心</div><div class="pdots" aria-hidden="true"></div></div>
     <span class="ptag">推廣</span><span class="parrow">›</span>
   </a>
 
@@ -447,6 +453,10 @@
       hn_newyear:'元旦', hn_cny:'農曆春節', hn_228:'和平紀念日（228）', hn_qingming:'兒童節・清明節',
       hn_labor:'勞動節', hn_dragon:'端午節', hn_midautumn:'中秋節・教師節', hn_national:'國慶日',
       hn_retro:'光復節', hn_constitution:'行憲紀念日', days_off:'放 {n} 天',
+      trip_g1_t:'Trip.com 訂房・機票', trip_g1_d:'連假出遊，飯店機票票券一站搞定',
+      trip_g2_t:'連假訂房就上 Trip.com', trip_g2_d:'熱門飯店民宿早訂早划算，比價更安心',
+      trip_now_t:'『{name}』連假進行中', trip_now_d:'機票飯店比價，出發前先訂更安心',
+      trip_soon_t:'距離『{name}』還有 {n} 天', trip_soon_d:'Trip.com 先比價，早訂早划算',
       tip_newyear:'1/2（五）請 1 天，可連休 1/1～1/4 共 <b>4 天</b>；想拚更長可請 12/29～12/31、1/2 共 4 天，連休 12/27～1/4 共 <b>9 天</b>。',
       tip_cny:'請 2/23～2/26 共 4 天，與 228 串連可連休 2/14～3/1 共 <b>16 天</b>。',
       tip_228:'已與週末相連，<b>免請假</b>即有 3 天連假。',
@@ -500,6 +510,10 @@
       hn_newyear:"New Year's Day", hn_cny:'Lunar New Year', hn_228:'Peace Memorial Day (228)', hn_qingming:"Children's & Tomb-Sweeping Day",
       hn_labor:'Labor Day', hn_dragon:'Dragon Boat Festival', hn_midautumn:"Mid-Autumn & Teachers' Day", hn_national:'National Day',
       hn_retro:'Retrocession Day', hn_constitution:'Constitution Day', days_off:'{n} days off',
+      trip_g1_t:'Trip.com Hotels & Flights', trip_g1_d:'Book hotels, flights and tickets for the holidays in one place',
+      trip_g2_t:'Book your holiday stay on Trip.com', trip_g2_d:'Popular hotels fill up fast — compare prices early',
+      trip_now_t:'“{name}” is happening now', trip_now_d:'Compare hotel & flight prices before you go',
+      trip_soon_t:'{n} days until “{name}”', trip_soon_d:'Compare prices on Trip.com — book early, save more',
       tip_newyear:'Take 1/2 (Fri) off (1 day) for 1/1–1/4, <b>4 days</b>; or take 12/29–12/31 + 1/2 (4 days) for 12/27–1/4, <b>9 days</b>.',
       tip_cny:'Take 2/23–2/26 (4 days); linked with 228 you get 2/14–3/1, <b>16 days</b>.',
       tip_228:'Already joins the weekend — <b>no leave needed</b> for a 3-day break.',
@@ -559,7 +573,7 @@
       lunar_l_year:'Lunar year (AD)', lunar_l_month:'Lunar month', lunar_l_day:'Lunar day', lunar_leap:'This is a leap month (only tick if the month repeats)', lunar_btn:'Convert to solar date',
       roc_h2:'ROC ⇄ AD year converter', roc_lead:'Enter a year (month/day optional) to convert both ways. AD = ROC + 1911.',
       roc_seg_r2a:'ROC → AD', roc_seg_a2r:'AD → ROC', roc_l_year:'ROC year', roc_l_yearAD:'AD year', roc_l_month:'Month (optional)', roc_l_day:'Day (optional)', roc_btn:'Convert',
-      work_h2:'Working-day calculator', work_lead:'Automatically excludes Saturdays, Sundays and Taiwan public holidays (currently covers 2026).',
+      work_h2:'Working-day calculator', work_lead:'Automatically excludes Saturdays, Sundays and Taiwan public holidays (currently covers 2026–2027).',
       work_seg_range:'Days in range', work_seg_add:'Find a due date', work_l_start:'Start date', work_l_end:'End date', work_l_from:'From date', work_l_n:'Working days', work_btn:'Calculate',
       leave_h2:'2026 Holiday leave planner', leave_lead:'Based on the Executive Yuan (DGPA) 2026 calendar. From 2026 it is “make-up leave only, no make-up workdays”, so there are no make-up workdays all year.', leave_promo_h:'What to do on the holidays? (sponsored)',
       days_h2:'Days together / anniversary', days_lead:'Count how many days since a start date, and count down to the next hundred-day mark and anniversary.', days_l_start:'Start date (e.g. together, birthday)', days_l_end:'Count until (default today)', days_btn:'Calculate',
@@ -588,6 +602,10 @@
       hn_newyear:'Tahun Baru', hn_cny:'Tahun Baru Imlek', hn_228:'Hari Peringatan Perdamaian (228)', hn_qingming:'Hari Anak & Ziarah Kubur',
       hn_labor:'Hari Buruh', hn_dragon:'Festival Perahu Naga', hn_midautumn:'Festival Kue Bulan & Hari Guru', hn_national:'Hari Nasional',
       hn_retro:'Hari Retrosesi Taiwan', hn_constitution:'Hari Konstitusi', days_off:'Libur {n} hari',
+      trip_g1_t:'Trip.com Hotel & Tiket Pesawat', trip_g1_d:'Pesan hotel, tiket pesawat, dan tiket wisata dalam satu tempat',
+      trip_g2_t:'Pesan penginapan liburan di Trip.com', trip_g2_d:'Hotel favorit cepat penuh — bandingkan harga lebih awal',
+      trip_now_t:'"{name}" sedang berlangsung', trip_now_d:'Bandingkan harga hotel & tiket pesawat sebelum berangkat',
+      trip_soon_t:'{n} hari lagi menuju "{name}"', trip_soon_d:'Bandingkan harga di Trip.com — pesan lebih awal lebih hemat',
       tip_newyear:'Ambil 1 hari cuti 1/2 (Jum) untuk libur 1/1–1/4, <b>4 hari</b>; atau cuti 12/29–12/31 + 1/2 (4 hari) jadi 12/27–1/4, <b>9 hari</b>.',
       tip_cny:'Cuti 2/23–2/26 (4 hari); disambung 228 jadi 2/14–3/1, <b>16 hari</b>.',
       tip_228:'Sudah menyatu dengan akhir pekan — <b>tanpa cuti</b> pun libur 3 hari.',
@@ -647,7 +665,7 @@
       lunar_l_year:'Tahun Imlek (Masehi)', lunar_l_month:'Bulan Imlek', lunar_l_day:'Hari Imlek', lunar_leap:'Ini bulan kabisat (centang hanya bila bulan berulang)', lunar_btn:'Konversi ke tanggal Masehi',
       roc_h2:'Konversi tahun ROC ⇄ Masehi', roc_lead:'Masukkan tahun (bulan/hari opsional) untuk konversi dua arah. Masehi = ROC + 1911.',
       roc_seg_r2a:'ROC → Masehi', roc_seg_a2r:'Masehi → ROC', roc_l_year:'Tahun ROC', roc_l_yearAD:'Tahun Masehi', roc_l_month:'Bulan (opsional)', roc_l_day:'Hari (opsional)', roc_btn:'Konversi',
-      work_h2:'Kalkulator hari kerja', work_lead:'Otomatis mengecualikan Sabtu, Minggu, dan hari libur nasional Taiwan (saat ini mencakup 2026).',
+      work_h2:'Kalkulator hari kerja', work_lead:'Otomatis mengecualikan Sabtu, Minggu, dan hari libur nasional Taiwan (saat ini mencakup 2026–2027).',
       work_seg_range:'Hari dalam rentang', work_seg_add:'Cari tanggal jatuh tempo', work_l_start:'Tanggal mulai', work_l_end:'Tanggal akhir', work_l_from:'Dari tanggal', work_l_n:'Jumlah hari kerja', work_btn:'Hitung',
       leave_h2:'Panduan cuti libur 2026', leave_lead:'Berdasarkan kalender 2026 dari Executive Yuan (DGPA). Mulai 2026 berlaku “hanya cuti pengganti, tanpa hari kerja pengganti”, jadi tidak ada hari kerja pengganti sepanjang tahun.', leave_promo_h:'Mau ke mana saat libur? (iklan mitra)',
       days_h2:'Hari bersama / hari jadi', days_lead:'Hitung berapa hari sejak tanggal awal, dan hitung mundur ke kelipatan 100 hari dan hari jadi berikutnya.', days_l_start:'Tanggal awal (mis. jadian, ulang tahun)', days_l_end:'Hitung sampai (default hari ini)', days_btn:'Hitung',
@@ -676,6 +694,10 @@
       hn_newyear:'Tết Dương lịch', hn_cny:'Tết Nguyên đán', hn_228:'Ngày Hòa bình (228)', hn_qingming:'Tết Thiếu nhi & Thanh minh',
       hn_labor:'Ngày Lao động', hn_dragon:'Tết Đoan Ngọ', hn_midautumn:'Trung thu & Ngày Nhà giáo', hn_national:'Quốc khánh',
       hn_retro:'Ngày Quang phục', hn_constitution:'Ngày Hiến pháp', days_off:'Nghỉ {n} ngày',
+      trip_g1_t:'Trip.com Khách sạn & Vé máy bay', trip_g1_d:'Đặt khách sạn, vé máy bay, vé tham quan chỉ trong một nơi',
+      trip_g2_t:'Đặt phòng nghỉ lễ trên Trip.com', trip_g2_d:'Khách sạn hot dễ hết phòng — so sánh giá sớm',
+      trip_now_t:'"{name}" đang diễn ra', trip_now_d:'So sánh giá khách sạn & vé máy bay trước khi đi',
+      trip_soon_t:'Còn {n} ngày nữa đến "{name}"', trip_soon_d:'So sánh giá trên Trip.com — đặt sớm tiết kiệm hơn',
       tip_newyear:'Nghỉ 1 ngày 1/2 (T6) để được 1/1–1/4, <b>4 ngày</b>; hoặc nghỉ 12/29–12/31 + 1/2 (4 ngày) thành 12/27–1/4, <b>9 ngày</b>.',
       tip_cny:'Nghỉ 2/23–2/26 (4 ngày); nối với 228 thành 2/14–3/1, <b>16 ngày</b>.',
       tip_228:'Đã liền với cuối tuần — <b>không cần xin nghỉ</b> vẫn được 3 ngày.',
@@ -735,7 +757,7 @@
       lunar_l_year:'Năm âm lịch (dương)', lunar_l_month:'Tháng âm lịch', lunar_l_day:'Ngày âm lịch', lunar_leap:'Đây là tháng nhuận (chỉ tick khi tháng lặp lại)', lunar_btn:'Đổi sang ngày dương',
       roc_h2:'Chuyển đổi năm ROC ⇄ Dương', roc_lead:'Nhập năm (tháng/ngày tùy chọn) để đổi hai chiều. Dương = ROC + 1911.',
       roc_seg_r2a:'ROC → Dương', roc_seg_a2r:'Dương → ROC', roc_l_year:'Năm ROC', roc_l_yearAD:'Năm dương', roc_l_month:'Tháng (tùy chọn)', roc_l_day:'Ngày (tùy chọn)', roc_btn:'Chuyển đổi',
-      work_h2:'Tính ngày làm việc', work_lead:'Tự động trừ thứ Bảy, Chủ nhật và ngày lễ Đài Loan (hiện bao gồm 2026).',
+      work_h2:'Tính ngày làm việc', work_lead:'Tự động trừ thứ Bảy, Chủ nhật và ngày lễ Đài Loan (hiện bao gồm 2026–2027).',
       work_seg_range:'Ngày trong khoảng', work_seg_add:'Tìm ngày đến hạn', work_l_start:'Ngày bắt đầu', work_l_end:'Ngày kết thúc', work_l_from:'Từ ngày', work_l_n:'Số ngày làm việc', work_btn:'Tính',
       leave_h2:'Cẩm nang nghỉ lễ 2026', leave_lead:'Dựa trên lịch 2026 của Viện Hành chính (DGPA). Từ 2026 áp dụng “chỉ nghỉ bù, không làm bù”, nên cả năm không có ngày làm bù.', leave_promo_h:'Đi đâu dịp lễ? (quảng cáo đối tác)',
       days_h2:'Số ngày bên nhau / kỷ niệm', days_lead:'Tính số ngày kể từ ngày bắt đầu, và đếm ngược tới mốc trăm ngày và ngày kỷ niệm kế tiếp.', days_l_start:'Ngày bắt đầu (vd. yêu nhau, sinh nhật)', days_l_end:'Tính đến (mặc định hôm nay)', days_btn:'Tính',
@@ -776,6 +798,7 @@
     syncRocLabel();
     if(typeof renderToday==='function') renderToday();
     if(typeof renderLeave==='function') renderLeave();
+    if(typeof refreshTripPromos==='function') refreshTripPromos();
     try{localStorage.setItem('tdt_lang',lang);}catch(e){}
   }
 
@@ -788,6 +811,19 @@
     '2026-05-01':'勞動節','2026-06-19':'端午節','2026-09-25':'中秋節','2026-09-28':'教師節',
     '2026-10-09':'國慶日補假','2026-10-10':'國慶日','2026-10-25':'光復節','2026-10-26':'光復節補假',
     '2026-12-25':'行憲紀念日'
+  }, 2027:{
+    '2027-01-01':'元旦',
+    '2027-02-04':'小年夜','2027-02-05':'除夕',
+    '2027-02-06':'春節','2027-02-07':'春節','2027-02-08':'春節',
+    '2027-02-09':'春節補假','2027-02-10':'春節補假',
+    '2027-02-28':'和平紀念日','2027-03-01':'和平紀念日補假',
+    '2027-04-04':'兒童節','2027-04-05':'清明節','2027-04-06':'兒童節補假',
+    '2027-04-30':'勞動節補假','2027-05-01':'勞動節',
+    '2027-06-09':'端午節','2027-09-15':'中秋節','2027-09-28':'教師節',
+    '2027-10-10':'國慶日','2027-10-11':'國慶日補假',
+    '2027-10-25':'光復節',
+    '2027-12-24':'行憲紀念日補假','2027-12-25':'行憲紀念日',
+    '2027-12-31':'開國紀念日補假'
   }};
   const COVERED = Object.keys(HOLIDAYS).map(Number);
   const hkey = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
@@ -800,7 +836,11 @@
     ['hn_newyear','2026-01-01','2026-01-01'],['hn_cny','2026-02-14','2026-02-22'],['hn_228','2026-02-27','2026-03-01'],
     ['hn_qingming','2026-04-03','2026-04-06'],['hn_labor','2026-05-01','2026-05-03'],['hn_dragon','2026-06-19','2026-06-21'],
     ['hn_midautumn','2026-09-25','2026-09-28'],['hn_national','2026-10-09','2026-10-11'],['hn_retro','2026-10-24','2026-10-26'],
-    ['hn_constitution','2026-12-25','2026-12-27'],['hn_newyear','2027-01-01','2027-01-01']
+    ['hn_constitution','2026-12-25','2026-12-27'],
+    ['hn_newyear','2027-01-01','2027-01-01'],['hn_cny','2027-02-04','2027-02-10'],['hn_228','2027-02-27','2027-03-01'],
+    ['hn_qingming','2027-04-03','2027-04-06'],['hn_labor','2027-04-30','2027-05-02'],['hn_dragon','2027-06-09','2027-06-09'],
+    ['hn_midautumn','2027-09-15','2027-09-15'],['hn_national','2027-10-09','2027-10-11'],['hn_retro','2027-10-23','2027-10-25'],
+    ['hn_constitution','2027-12-24','2027-12-26'],['hn_newyear','2027-12-31','2028-01-02']
   ];
 
   /* ===== 農曆資料 1900–2049（已用歷年春節+全範圍 round-trip 驗證） ===== */
@@ -842,6 +882,16 @@
   function cnMonth(m){return (m===1?'正':CN_NUM[m])+'月';}
   function cnDay(d){if(d<=10)return '初'+CN_NUM[d];if(d<20)return '十'+CN_NUM[d-10];if(d===20)return '二十';if(d<30)return '廿'+CN_NUM[d-20];return '三十';}
 
+  /* 掃 LW_DATES：回傳「進行中」或「即將到來」的連假，供今日資訊列與 Trip 推廣輪播共用 */
+  function nextOrCurrentHoliday(now){
+    for(const [key,s,e] of LW_DATES){
+      const sd=new Date(s+'T00:00:00'), ed=new Date(e+'T00:00:00');
+      if(now>=sd && now<=ed) return {status:'now', key};
+      if(now<sd) return {status:'next', key, days:dayDiff(now,sd)};
+    }
+    return null;
+  }
+
   /* ===== 今日資訊列 ===== */
   function renderToday(){
     const now=new Date();
@@ -852,13 +902,9 @@
       : (ld.isLeap?t('leap_word'):'')+ld.month+'/'+ld.day;
     $('#today-meta').textContent=F('td_meta',{roc:now.getFullYear()-1911,lunar:lunar,zod:zod(ld.year)});
     const cd=$('#today-cd'); cd.className='cd'; cd.style.display='';
-    let next=null;
-    for(const [key,s,e] of LW_DATES){
-      const sd=new Date(s+'T00:00:00'), ed=new Date(e+'T00:00:00');
-      if(now>=sd && now<=ed){ cd.classList.add('now'); cd.innerHTML=F('td_now',{name:t(key)}); return; }
-      if(now<sd){ next=[key,sd]; break; }
-    }
-    if(next){ cd.innerHTML=F('td_next',{name:t(next[0]),n:dayDiff(now,next[1])}); }
+    const hol=nextOrCurrentHoliday(now);
+    if(hol && hol.status==='now'){ cd.classList.add('now'); cd.innerHTML=F('td_now',{name:t(hol.key)}); return; }
+    if(hol && hol.status==='next'){ cd.innerHTML=F('td_next',{name:t(hol.key),n:hol.days}); }
     else cd.style.display='none';
   }
 
@@ -1087,11 +1133,59 @@
   const nowD=new Date();
   $('#d-end').value=`${nowD.getFullYear()}-${pad(nowD.getMonth()+1)}-${pad(nowD.getDate())}`;
 
+  /* ===== Trip.com 推廣輪播（依最近連假動態換文案） ===== */
+  const TRIP_BANNERS=['trip-banner-a','trip-banner-b'];
+  const tripState={};
+  function tripPromoVariants(){
+    const hol=nextOrCurrentHoliday(new Date());
+    const list=[];
+    if(hol&&hol.status==='now') list.push({title:F('trip_now_t',{name:t(hol.key)}), desc:t('trip_now_d')});
+    else if(hol&&hol.status==='next'&&hol.days<=45) list.push({title:F('trip_soon_t',{name:t(hol.key),n:hol.days}), desc:t('trip_soon_d')});
+    list.push({title:t('trip_g1_t'), desc:t('trip_g1_d')});
+    list.push({title:t('trip_g2_t'), desc:t('trip_g2_d')});
+    return list;
+  }
+  function paintTrip(id){
+    const st=tripState[id], el=$('#'+id); if(!st||!el) return;
+    const titleEl=el.querySelector('.ptitle'), descEl=el.querySelector('.pdesc'), dotsEl=el.querySelector('.pdots');
+    titleEl.textContent=st.variants[st.i].title;
+    descEl.textContent=st.variants[st.i].desc;
+    if(dotsEl) dotsEl.innerHTML=st.variants.length>1 ? st.variants.map((_,idx)=>`<span class="${idx===st.i?'on':''}"></span>`).join('') : '';
+  }
+  function tickTrip(id){
+    const st=tripState[id], el=$('#'+id); if(!st||!el||st.paused||st.variants.length<2) return;
+    const titleEl=el.querySelector('.ptitle'), descEl=el.querySelector('.pdesc');
+    titleEl.classList.add('fade'); descEl.classList.add('fade');
+    setTimeout(()=>{
+      st.i=(st.i+1)%st.variants.length;
+      paintTrip(id);
+      titleEl.classList.remove('fade'); descEl.classList.remove('fade');
+    },250);
+  }
+  function initTripCarousel(id){
+    const el=$('#'+id); if(!el) return;
+    tripState[id]={variants:tripPromoVariants(), i:0, paused:false};
+    paintTrip(id);
+    if(!el.dataset.carouselBound){
+      el.dataset.carouselBound='1';
+      el.addEventListener('mouseenter',()=>{ if(tripState[id]) tripState[id].paused=true; });
+      el.addEventListener('mouseleave',()=>{ if(tripState[id]) tripState[id].paused=false; });
+    }
+  }
+  let tripInterval=null;
+  function refreshTripPromos(){
+    TRIP_BANNERS.forEach(initTripCarousel);
+    if(!tripInterval){
+      const reduceMotion=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(!reduceMotion) tripInterval=setInterval(()=>{ if(!document.hidden) TRIP_BANNERS.forEach(tickTrip); }, 5000);
+    }
+  }
+
   /* ===== 廣告點擊追蹤（GA4）：自動為所有推廣連結綁定事件 ===== */
   document.querySelectorAll('a.promo').forEach(function(el){
     el.addEventListener('click',function(){
       const href=el.getAttribute('href')||'';
-      const vendor=href.indexOf('onelink.one')>-1?'KKday':href.indexOf('afflink.one')>-1?'Trip.com':'other';
+      const vendor=href.indexOf('onelink.one')>-1?'KKday':href.indexOf('trip.com')>-1?'Trip.com':'other';
       const titleEl=el.querySelector('.ptitle');
       const title=titleEl?titleEl.textContent.trim():'';
       if(typeof gtag==='function'){
