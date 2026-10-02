@@ -1,96 +1,1225 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>民國83年是西元幾年？83年出生今年幾歲｜台灣日期工具</title>
-<meta name="theme-color" content="#0F1319">
-<meta name="description" content="民國83年是西元1994年，生肖屬狗。查今年幾歲、民國西元一鍵互換，免費線上換算工具。">
-<link rel="canonical" href="https://twdatetools.com/minguo/83/">
-<meta property="og:title" content="民國83年是西元幾年？83年出生今年幾歲｜台灣日期工具">
-<meta property="og:description" content="民國83年是西元1994年，生肖屬狗。查今年幾歲、民國西元一鍵互換，免費線上換算工具。">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台灣日期工具｜農曆轉西元、民國西元轉換、工作天、連假攻略</title>
+<meta name="description" content="免費台灣日期工具：農曆生日轉西元/民國、民國西元年互轉、含國定假日的工作天計算、2026 連假請假攻略、相處天數計算。手機可用、即算即得。">
+
+<!-- Canonical / 多語 hreflang（zh-Hant 主頁 + en/id/vi 子頁）— build.mjs 會為子頁改寫 canonical -->
+<link rel="canonical" href="https://twdatetools.com/">
+<link rel="alternate" hreflang="zh-Hant" href="https://twdatetools.com/">
+<link rel="alternate" hreflang="en" href="https://twdatetools.com/en/">
+<link rel="alternate" hreflang="id" href="https://twdatetools.com/id/">
+<link rel="alternate" hreflang="vi" href="https://twdatetools.com/vi/">
+<link rel="alternate" hreflang="x-default" href="https://twdatetools.com/">
+
+<!-- Open Graph / 社群分享預覽 -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://twdatetools.com/minguo/83/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"民國83年是西元幾年？","acceptedAnswer":{"@type":"Answer","text":"民國83年是西元1994年。換算公式為民國年 + 1911 = 西元年。"}},{"@type":"Question","name":"民國83年出生今年幾歲？","acceptedAnswer":{"@type":"Answer","text":"民國83年出生者，在2026年滿32歲，虛歲約33歲(實際實歲以生日是否已過為準)。"}},{"@type":"Question","name":"民國83年生肖屬什麼？","acceptedAnswer":{"@type":"Answer","text":"民國83年(西元1994年)生肖屬狗。生肖以農曆年計,農曆年初前出生者請以實際農曆日期為準。"}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://twdatetools.com/"},{"@type":"ListItem","position":2,"name":"民國西元換算","item":"https://twdatetools.com/minguo/"},{"@type":"ListItem","position":3,"name":"民國83年","item":"https://twdatetools.com/minguo/83/"}]}</script>
+<meta property="og:site_name" content="台灣日期工具">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="台灣日期工具｜農曆轉西元、民國西元轉換、工作天、連假攻略">
+<meta property="og:description" content="免費台灣日期工具：農曆/民國西元轉換、含國定假日的工作天計算、2026 連假請假攻略、相處天數計算。手機可用、即算即得。">
+<meta property="og:url" content="https://twdatetools.com/">
+<meta property="og:image" content="https://twdatetools.com/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="台灣日期工具｜農曆轉西元、民國西元轉換、工作天、連假攻略">
+<meta name="twitter:description" content="免費台灣日期工具：農曆/民國西元轉換、工作天、2026 連假攻略，手機可用即算即得。">
+<meta name="twitter:image" content="https://twdatetools.com/og-cover.png">
+
+<!-- App 圖示（手機加到主畫面 / 分頁）— 台北101 桌面圖 -->
+<!-- 分頁 favicon（小尺寸，裁切聚焦台北101，確保縮到 16/32px 仍可辨識） -->
+<link rel="icon" type="image/x-icon" href="https://twdatetools.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="https://twdatetools.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://twdatetools.com/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://twdatetools.com/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://twdatetools.com/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://twdatetools.com/icon-512.png">
+<link rel="manifest" href="https://twdatetools.com/site.webmanifest">
+<meta name="theme-color" content="#0F1319">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H3W0TZ95YZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H3W0TZ95YZ');
+</script>
 <style>
-:root{--brand:#4da3ff;--bg:#0F1319;--card:#1a212c;--line:#2a3340;--ink:#e8ecf1;--muted:#8b97a7}
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
-header{background:#0b0e13;border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;gap:10px;padding:14px 20px;max-width:900px;margin:0 auto}
-header a.brand{color:#fff;text-decoration:none;font-weight:800;font-size:18px}
-header .links{margin-left:auto}
-header .links a{color:var(--muted);text-decoration:none;font-size:14px}
-main{max-width:760px;margin:0 auto;padding:24px 20px 56px}
-nav.crumb{font-size:13px;color:var(--muted);margin-bottom:14px}
-nav.crumb a{color:var(--muted)}
-h1{font-size:26px;margin:.2em 0 .6em}
-.answer{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;text-align:center}
-.answer .big{font-size:34px;font-weight:800;color:var(--brand)}
-.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
-.fact{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
-.fact .k{font-size:13px;color:var(--muted)}
-.fact .v{font-size:22px;font-weight:700;margin-top:4px}
-.tool{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin:20px 0}
-.tool label{font-size:14px;color:var(--muted)}
-.tool input{font-size:18px;padding:8px 10px;width:120px;border:1px solid var(--line);border-radius:8px;margin:0 8px;background:#0b0e13;color:var(--ink)}
-.tool .out{font-weight:700;color:var(--brand)}
-.yearnav{display:flex;justify-content:space-between;margin:24px 0}
-.nav-link{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 14px;text-decoration:none;color:var(--brand);font-weight:600}
-.nav-link.disabled{color:#3a4350}
-h2{font-size:19px;margin-top:32px;border-left:4px solid var(--brand);padding-left:10px}
-.faq-item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:10px 0}
-.faq-item h3{font-size:15px;margin:0 0 6px}
-.faq-item p{margin:0;color:var(--muted)}
-.promo{display:block;border:1px solid var(--line);border-radius:10px;padding:14px;text-align:center;color:var(--muted);font-size:14px;margin:22px 0;text-decoration:none;background:var(--card)}
-footer{background:#0b0e13;border-top:1px solid var(--line);color:var(--muted)}
-footer .wrap{padding:18px 20px;font-size:13px;text-align:center;max-width:900px;margin:0 auto}
-footer a{color:var(--muted)}
-@media(max-width:520px){.facts{grid-template-columns:1fr}.answer .big{font-size:28px}header .links{display:none}}
+  :root{
+    --bg:#0F1319;--surface:#19202B;--surface-2:#141A23;
+    --ink:#E8ECF3;--ink-soft:#A2ACBC;--ink-faint:#6E7888;--line:#28313F;
+    --brand:#8E9AFF;--brand-strong:#AEB6FF;--brand-bg:#4E5AD6;--brand-bg-hover:#5F6BE9;--brand-soft:#1F2746;
+    --holiday:#FF8585;--holiday-soft:#3A2329;--work:#5BD2A4;--gold:#FFD166;
+    --radius:14px;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);--maxw:680px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+  a{color:var(--brand)}
+
+  header.site{background:linear-gradient(180deg,#1A2230,#10151D);border-bottom:1px solid var(--line);padding:20px 0 16px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand .mark{width:38px;height:38px;border-radius:10px;flex:0 0 auto;background:var(--brand-bg);color:#fff;
+    display:grid;place-items:center;font-weight:800;font-size:13px;letter-spacing:.5px;line-height:1.05;text-align:center}
+  .brand h1{font-size:19px;margin:0;font-weight:800;letter-spacing:.2px}
+  .brand p{margin:2px 0 0;font-size:12.5px;color:var(--ink-soft)}
+
+  /* 今日資訊列 */
+  .today{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:14px;
+    background:rgba(78,90,214,.10);border:1px solid var(--line);border-radius:12px;padding:10px 13px}
+  .today .date{font-weight:700;font-size:14px}
+  .today .meta{font-size:12.5px;color:var(--ink-soft)}
+  .today .cd{margin-left:auto;background:var(--brand-soft);color:var(--brand-strong);font-weight:700;
+    font-size:12.5px;padding:6px 11px;border-radius:999px;white-space:nowrap}
+  .today .cd b{color:#fff;font-variant-numeric:tabular-nums}
+  .today .cd.now{background:var(--holiday-soft);color:var(--holiday)}
+
+  nav.tabs{position:sticky;top:0;z-index:20;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+  .tabs-inner{display:flex;flex-wrap:wrap;gap:8px}
+  .tab{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--ink-soft);
+    padding:9px 15px;border-radius:999px;font-size:14.5px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.15s}
+  .tab[aria-selected="true"]{background:var(--brand-bg);border-color:var(--brand-bg);color:#fff}
+
+  /* 推廣卡片（換成你的產品 / 聯盟連結） */
+  .promo{display:flex;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);
+    border-radius:12px;padding:13px 14px;margin:16px 0;text-decoration:none;color:var(--ink);transition:.15s}
+  .promo:hover{border-color:var(--brand);transform:translateY(-1px)}
+  .promo .pic{width:46px;height:46px;border-radius:10px;background:var(--brand-soft);display:grid;place-items:center;font-size:22px;flex:0 0 auto}
+  .promo .pbody{flex:1;min-width:0}
+  .promo .ptitle{font-weight:800;font-size:15px}
+  .promo .pdesc{font-size:12.5px;color:var(--ink-soft);margin-top:2px}
+  .promo .ptag{flex:0 0 auto;font-size:10px;color:var(--ink-faint);border:1px solid var(--line);border-radius:6px;padding:2px 6px}
+  .promo .parrow{color:var(--brand);font-weight:800;flex:0 0 auto;font-size:18px}
+  .promo-h{font-size:14px;font-weight:800;color:var(--ink-soft);margin:18px 0 2px}
+  /* 動態文案輪播（Trip.com 版位 A/B）：文字淡入淡出 + 小圓點指示 */
+  .promo .ptitle,.promo .pdesc{transition:opacity .25s ease}
+  .promo .ptitle.fade,.promo .pdesc.fade{opacity:0}
+  .promo .pdots{display:flex;gap:4px;margin-top:6px}
+  .promo .pdots span{width:5px;height:5px;border-radius:50%;background:var(--line)}
+  .promo .pdots span.on{background:var(--brand)}
+  .ad-banner{margin:16px 0;text-align:center}
+  .ad-banner img{max-width:100%;height:auto;border-radius:10px}
+  .ad-banner .ptag{display:inline-block;font-size:10px;color:var(--ink-faint);border:1px solid var(--line);border-radius:6px;padding:2px 6px;margin-bottom:8px}
+
+  main{padding:18px 0 8px}
+  .panel{display:none;animation:fade .25s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 18px;margin-bottom:16px}
+  .card h2{font-size:18px;margin:0 0 4px;font-weight:800}
+  .card .lead{margin:0 0 16px;color:var(--ink-soft);font-size:13.5px}
+
+  .field{margin-bottom:14px}
+  label{display:block;font-size:13.5px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+  input,select{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;color:var(--ink);background:var(--surface-2)}
+  input:focus,select:focus{outline:2px solid var(--brand-soft);border-color:var(--brand)}
+  select{appearance:none;-webkit-appearance:none}
+  .row{display:flex;gap:10px}
+  .row > .field{flex:1}
+  .check{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:14px;color:var(--ink-soft);cursor:pointer}
+  .check input{width:18px;height:18px;flex:0 0 auto}
+
+  .seg{display:flex;gap:6px;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:4px;margin-bottom:16px}
+  .seg button{flex:1;border:0;background:transparent;padding:9px;border-radius:999px;font-size:14px;font-weight:600;color:var(--ink-soft);cursor:pointer;transition:.15s}
+  .seg button[aria-pressed="true"]{background:var(--brand-soft);color:var(--brand-strong)}
+
+  .btn{width:100%;border:0;background:var(--brand-bg);color:#fff;font-size:16px;font-weight:700;padding:13px;border-radius:11px;cursor:pointer;font-family:inherit;transition:.15s}
+  .btn:hover{background:var(--brand-bg-hover)}
+  .btn:active{transform:translateY(1px)}
+
+  .result{margin-top:16px;border-top:1px dashed var(--line);padding-top:16px;display:none}
+  .result.show{display:block;animation:fade .25s ease}
+  .result .big{font-size:30px;font-weight:800;letter-spacing:.3px;font-variant-numeric:tabular-nums;color:var(--brand);line-height:1.2}
+  .result .big small{font-size:15px;color:var(--ink-soft);font-weight:600;margin-left:4px}
+  .result .sub{color:var(--ink-soft);font-size:13.5px;margin-top:4px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+  .stat{background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:11px 12px}
+  .stat .k{font-size:12px;color:var(--ink-faint)}
+  .stat .v{font-size:19px;font-weight:800;font-variant-numeric:tabular-nums;margin-top:2px}
+  .stat.holiday .v{color:var(--holiday)}
+  .stat.work .v{color:var(--work)}
+  .note{font-size:12.5px;color:var(--ink-faint);margin-top:12px;line-height:1.55}
+  .err{color:var(--holiday)!important}
+
+  .lw{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:11px;background:var(--surface-2)}
+  .lw .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .lw .name{font-weight:800;font-size:15.5px}
+  .lw .days{flex:0 0 auto;background:var(--holiday-soft);color:var(--holiday);font-weight:800;font-size:13px;padding:3px 10px;border-radius:999px}
+  .lw .range{color:var(--ink-soft);font-size:13px;margin-top:3px}
+  .lw .tip{margin-top:9px;font-size:13.5px;background:var(--brand-soft);color:var(--brand-strong);border-radius:9px;padding:9px 11px;line-height:1.55}
+  .lw .tip b{font-weight:800;color:#fff}
+
+  .content{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px;margin-bottom:16px}
+  .content h2{font-size:17px;margin:0 0 10px}
+  .content h3{font-size:14.5px;margin:16px 0 4px;color:var(--brand-strong)}
+  .content p{margin:0 0 8px;font-size:14px;color:var(--ink-soft)}
+
+  footer{border-top:1px solid var(--line);margin-top:8px;padding:22px 0 40px;color:var(--ink-faint);font-size:12.5px}
+  footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+  footer .links a{color:var(--ink-soft);text-decoration:none;font-weight:600}
+  footer .links a:hover{color:var(--brand)}
+  .legal{display:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px;margin-bottom:16px}
+  .legal.show{display:block}
+  .legal h2{font-size:17px;margin:0 0 10px}
+  .legal p{font-size:13.5px;color:var(--ink-soft);margin:0 0 8px}
+  .legal .close{font-size:13px;color:var(--brand);cursor:pointer;font-weight:700;display:inline-block;margin-top:6px}
+
+  .langbar{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+  .langbar button{border:1px solid var(--line);background:var(--surface);color:var(--ink-soft);padding:5px 12px;border-radius:999px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit;transition:.15s}
+  .langbar button[aria-pressed="true"]{background:var(--brand-bg);border-color:var(--brand-bg);color:#fff}
+
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href="/">台灣日期工具</a><nav class="links"><a href="/">← 回所有工具</a></nav></div></header>
-<main>
-  <nav class="crumb"><a href="/">首頁</a> › <a href="/minguo/">民國西元換算</a> › 民國83年</nav>
 
-  <h1>民國 83 年 = 西元 1994 年</h1>
+<header class="site">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">日期<br>工具</div>
+      <div>
+        <h1 data-i18n="brand_title">台灣日期工具</h1>
+        <p data-i18n="brand_sub">農曆轉西元 · 民國西元 · 工作天 · 連假攻略 · 相處天數</p>
+      </div>
+    </div>
+    <div class="today" id="today">
+      <span class="date" id="today-date">—</span>
+      <span class="meta" id="today-meta"></span>
+      <span class="cd" id="today-cd"></span>
+    </div>
+    <div class="langbar" id="langbar">
+      <button data-lang="zh" aria-pressed="true">中文</button>
+      <button data-lang="en" aria-pressed="false">English</button>
+      <button data-lang="id" aria-pressed="false">Indonesia</button>
+      <button data-lang="vi" aria-pressed="false">Tiếng Việt</button>
+    </div>
+  </div>
+</header>
 
-  <div class="answer">
-    <div>民國 83 年就是</div>
-    <div class="big">西元 1994 年</div>
-    <div style="color:var(--muted);margin-top:6px">生肖屬狗</div>
+<nav class="tabs">
+  <div class="wrap">
+    <div class="tabs-inner" role="tablist">
+      <button class="tab" role="tab" aria-selected="true"  data-tab="lunar" data-i18n="tab_lunar">農曆轉西元</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="roc" data-i18n="tab_roc">民國 ⇄ 西元</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="work" data-i18n="tab_work">工作天計算</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="leave" data-i18n="tab_leave">連假請假攻略</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="days" data-i18n="tab_days">相處天數</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="passport" data-i18n="tab_passport">護照效期</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="age" data-i18n="tab_age">年齡計算</button>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- ====== 推廣版位 A：Trip.com 聯盟（動態文案輪播） ====== -->
+  <a class="promo" id="trip-banner-a" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener">
+    <div class="pic">✈️</div>
+    <div class="pbody"><div class="ptitle">Trip.com 訂房・機票</div><div class="pdesc">連假出遊，飯店機票票券一站搞定</div><div class="pdots" aria-hidden="true"></div></div>
+    <span class="ptag">推廣</span><span class="parrow">›</span>
+  </a>
+
+  <!-- ====== 推廣版位 A2：KKday 聯盟 ====== -->
+  <a class="promo" href="https://onelink.one/s/xTqQW" target="_blank" rel="sponsored noopener">
+    <div class="pic">🎫</div>
+    <div class="pbody"><div class="ptitle">KKday 行程・票券</div><div class="pdesc">景點門票、一日遊、在地體驗</div></div>
+    <span class="ptag">推廣</span><span class="parrow">›</span>
+  </a>
+
+  <main>
+
+  <!-- 農曆轉西元 -->
+  <section class="panel active" id="panel-lunar" role="tabpanel">
+    <div class="card">
+      <h2 data-i18n="lunar_h2">農曆生日轉西元 / 民國</h2>
+      <p class="lead" data-i18n="lunar_lead">很多人記得的是農曆生日。輸入農曆年月日，算出對應的西元與民國國曆日期。支援西元 1912～2049 年。</p>
+      <div class="field"><label data-i18n="lunar_l_year">農曆年（西元）</label><input type="number" id="l-year" inputmode="numeric" placeholder="例如 1990" data-i18n-ph="ph_eg1990"></div>
+      <div class="row">
+        <div class="field"><label data-i18n="lunar_l_month">農曆月</label><select id="l-month"></select></div>
+        <div class="field"><label data-i18n="lunar_l_day">農曆日</label><select id="l-day"></select></div>
+      </div>
+      <label class="check"><input type="checkbox" id="l-leap"> <span data-i18n="lunar_leap">這是閏月（同一個月過兩次時才勾）</span></label>
+      <button class="btn" id="lunar-go" data-i18n="lunar_btn">換算國曆日期</button>
+      <div class="result" id="lunar-result">
+        <div class="big" id="lunar-big">—</div><div class="sub" id="lunar-sub"></div>
+        <div class="grid2" id="lunar-grid"></div><p class="note" id="lunar-note"></p>
+        <!-- 結果觸發式情境廣告：生日 → KKday 體驗 -->
+        <a class="promo" href="https://onelink.one/s/xTqQW" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">🎂</div><div class="pbody"><div class="ptitle">生日就用一場體驗慶祝</div><div class="pdesc">KKday 一日遊、餐券、在地體驗</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 民國 / 西元 -->
+  <section class="panel" id="panel-roc" role="tabpanel">
+    <div class="card">
+      <h2 data-i18n="roc_h2">民國 ⇄ 西元 年份轉換</h2>
+      <p class="lead" data-i18n="roc_lead">輸入年份（可加月、日）即可雙向換算，西元 = 民國 + 1911。</p>
+      <div class="seg" id="roc-seg">
+        <button aria-pressed="true"  data-dir="roc2ad" data-i18n="roc_seg_r2a">民國 → 西元</button>
+        <button aria-pressed="false" data-dir="ad2roc" data-i18n="roc_seg_a2r">西元 → 民國</button>
+      </div>
+      <div class="row">
+        <div class="field"><label id="roc-ylabel" data-i18n="roc_l_year">民國年</label><input type="number" id="roc-year" inputmode="numeric" placeholder="例如 115" data-i18n-ph="ph_eg115"></div>
+        <div class="field"><label data-i18n="roc_l_month">月（可不填）</label><input type="number" id="roc-month" inputmode="numeric" min="1" max="12" placeholder="月" data-i18n-ph="ph_month"></div>
+        <div class="field"><label data-i18n="roc_l_day">日（可不填）</label><input type="number" id="roc-day" inputmode="numeric" min="1" max="31" placeholder="日" data-i18n-ph="ph_day"></div>
+      </div>
+      <button class="btn" id="roc-go" data-i18n="roc_btn">換算</button>
+      <div class="result" id="roc-result"><div class="big" id="roc-out">—</div><div class="sub" id="roc-sub"></div>
+        <!-- 結果觸發式情境廣告：出國查年份 → Trip.com 比價 -->
+        <a class="promo" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">✈️</div><div class="pbody"><div class="ptitle">要出國嗎？機票飯店先比價</div><div class="pdesc">Trip.com 一站搞定，早訂早划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      </div>
+      <p class="note" data-i18n="roc_note_static">小提醒：民國元年為西元 1912 年。民國前年份可用「西元 → 民國」查看。</p>
+    </div>
+  </section>
+
+  <!-- 工作天 -->
+  <section class="panel" id="panel-work" role="tabpanel">
+    <div class="card">
+      <h2 data-i18n="work_h2">工作天計算</h2>
+      <p class="lead" data-i18n="work_lead">自動扣除週六、週日與台灣國定假日（目前涵蓋 2026–2027 年）。</p>
+      <div class="seg" id="work-seg">
+        <button aria-pressed="true"  data-mode="range" data-i18n="work_seg_range">區間工作天</button>
+        <button aria-pressed="false" data-mode="add" data-i18n="work_seg_add">推算到期日</button>
+      </div>
+      <div id="work-range"><div class="row">
+        <div class="field"><label data-i18n="work_l_start">起始日</label><input type="date" id="w-start"></div>
+        <div class="field"><label data-i18n="work_l_end">結束日</label><input type="date" id="w-end"></div>
+      </div></div>
+      <div id="work-add" style="display:none"><div class="row">
+        <div class="field"><label data-i18n="work_l_from">起算日</label><input type="date" id="w-from"></div>
+        <div class="field"><label data-i18n="work_l_n">工作天數</label><input type="number" id="w-n" inputmode="numeric" placeholder="例如 10" data-i18n-ph="ph_eg10"></div>
+      </div></div>
+      <button class="btn" id="work-go" data-i18n="work_btn">計算</button>
+      <div class="result" id="work-result"><div class="big" id="work-big">—</div><div class="grid2" id="work-grid"></div><p class="note" id="work-note"></p>
+        <!-- 結果觸發式情境廣告：排假 → Trip.com 訂房機票 -->
+        <a class="promo" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">🏖️</div><div class="pbody"><div class="ptitle">假期排好了？搶先訂房機票</div><div class="pdesc">Trip.com 熱門飯店班機，越早越划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 連假攻略 -->
+  <section class="panel" id="panel-leave" role="tabpanel">
+    <div class="card">
+      <h2 data-i18n="leave_h2">2026 連假請假攻略</h2>
+      <p class="lead" data-i18n="leave_lead">依行政院人事行政總處核定的 115 年行事曆整理。2026 起「只補假、不補班」，全年無補班日。</p>
+      <div id="leave-list"></div>
+      <!-- ====== 旅遊聯盟專區（看完攻略最容易轉換，把 href 換成你的聯盟連結）====== -->
+      <div class="promo-h" data-i18n="leave_promo_h">連假玩什麼？（合作推廣）</div>
+      <a class="promo" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener"><div class="pic">🏨</div><div class="pbody"><div class="ptitle">連假訂房</div><div class="pdesc">熱門飯店民宿，早訂早划算</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      <a class="promo" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener"><div class="pic">✈️</div><div class="pbody"><div class="ptitle">連假機票</div><div class="pdesc">出國比價，搶連假航班</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      <a class="promo" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener"><div class="pic">🎫</div><div class="pbody"><div class="ptitle">行程與票券</div><div class="pdesc">景點門票、一日遊、體驗活動</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      <p class="note" data-i18n="leave_note_static">資料來源：行政院人事行政總處 115 年政府行政機關辦公日曆表。連假與請假建議以公務機關行事曆為準；民間企業放假依勞動部規定與公司公告為準。</p>
+    </div>
+  </section>
+
+  <!-- 相處天數 -->
+  <section class="panel" id="panel-days" role="tabpanel">
+    <div class="card">
+      <h2 data-i18n="days_h2">相處天數 / 紀念日計算</h2>
+      <p class="lead" data-i18n="days_lead">算出在一起或某個起點已經過了幾天，並倒數下一個整百日與週年。</p>
+      <div class="row">
+        <div class="field"><label data-i18n="days_l_start">起始日期（如在一起、生日）</label><input type="date" id="d-start"></div>
+        <div class="field"><label data-i18n="days_l_end">計算到（預設今天）</label><input type="date" id="d-end"></div>
+      </div>
+      <button class="btn" id="days-go" data-i18n="days_btn">計算</button>
+      <div class="result" id="days-result"><div class="big" id="days-big">—</div><div class="sub" id="days-sub"></div><div class="grid2" id="days-grid"></div><p class="note" id="days-note"></p>
+        <!-- 結果觸發式情境廣告：紀念日 → KKday 體驗 -->
+        <a class="promo" href="https://onelink.one/s/xTqQW" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">💑</div><div class="pbody"><div class="ptitle">紀念日來場小旅行</div><div class="pdesc">KKday 在地體驗、一日遊、約會行程</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 護照效期 -->
+  <section class="panel" id="panel-passport" role="tabpanel">
+    <div class="card">
+      <h2 data-i18n="pp_h2">護照效期計算</h2>
+      <p class="lead" data-i18n="pp_lead">多數國家要求入境時護照「剩餘效期至少 6 個月」。輸入護照到期日，算出剩餘效期、是否該換發；可選填預計入境日與要求月數，判斷是否符合規定。</p>
+      <div class="field"><label data-i18n="pp_l_expiry">護照到期日</label><input type="date" id="p-expiry"></div>
+      <div class="row">
+        <div class="field"><label data-i18n="pp_l_entry">預計入境日（可不填）</label><input type="date" id="p-entry"></div>
+        <div class="field"><label data-i18n="pp_l_months">要求剩餘效期（月）</label><input type="number" id="p-months" inputmode="numeric" value="6" min="0" max="24"></div>
+      </div>
+      <button class="btn" id="passport-go" data-i18n="pp_btn">計算</button>
+      <div class="result" id="passport-result">
+        <div class="big" id="passport-big">—</div><div class="sub" id="passport-sub"></div>
+        <div class="grid2" id="passport-grid"></div><p class="note" id="passport-note"></p>
+        <!-- 結果觸發式情境廣告：出國 → Trip.com -->
+        <a class="promo" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">🛂</div><div class="pbody"><div class="ptitle">準備出國？機票飯店先比價</div><div class="pdesc">Trip.com 一站搞定，早訂早安心</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 年齡計算 -->
+  <section class="panel" id="panel-age" role="tabpanel">
+    <div class="card">
+      <h2 data-i18n="age_h2">年齡計算</h2>
+      <p class="lead" data-i18n="age_lead">輸入生日，算出實歲、虛歲、活了幾天，以及下次生日還有幾天。</p>
+      <div class="row">
+        <div class="field"><label data-i18n="age_l_birth">生日</label><input type="date" id="age-birth"></div>
+        <div class="field"><label data-i18n="age_l_to">計算到（預設今天）</label><input type="date" id="age-to"></div>
+      </div>
+      <button class="btn" id="age-go" data-i18n="age_btn">計算</button>
+      <div class="result" id="age-result">
+        <div class="big" id="age-big">—</div><div class="sub" id="age-sub"></div>
+        <div class="grid2" id="age-grid"></div><p class="note" id="age-note"></p>
+        <!-- 結果觸發式情境廣告：生日 → KKday 體驗 -->
+        <a class="promo" href="https://onelink.one/s/xTqQW" target="_blank" rel="sponsored noopener" style="margin-bottom:0"><div class="pic">🎂</div><div class="pbody"><div class="ptitle">生日就用一場體驗慶祝</div><div class="pdesc">KKday 一日遊、餐券、在地體驗</div></div><span class="ptag">推廣</span><span class="parrow">›</span></a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ====== 推廣版位 B：結果下方黃金位置・Trip.com 聯盟（動態文案輪播） ====== -->
+  <a class="promo" id="trip-banner-b" href="https://hk.trip.com/?Allianceid=10621794&amp;SID=331581041&amp;trip_sub1=&amp;trip_sub3=D19901989" target="_blank" rel="sponsored noopener">
+    <div class="pic">🏨</div>
+    <div class="pbody"><div class="ptitle">連假訂房就上 Trip.com</div><div class="pdesc">熱門飯店民宿早訂早划算，比價更安心</div><div class="pdots" aria-hidden="true"></div></div>
+    <span class="ptag">推廣</span><span class="parrow">›</span>
+  </a>
+
+  <div class="content">
+    <h2 data-i18n="ct_h2">關於這些日期換算</h2>
+    <h3 data-i18n="ct_q1">農曆生日為什麼要換算成國曆？</h3>
+    <p data-i18n="ct_a1">許多長輩記的是農曆生日，但證件、報名、生日提醒大多使用國曆（西元/民國）。農曆每年對應的國曆日期都不同，需依曆法逐年換算。本工具內建 1912～2049 年農曆資料並處理閏月，輸入農曆年月日即可得到正確國曆日期與生肖。</p>
+    <h3 data-i18n="ct_q2">民國年怎麼換算西元年？</h3>
+    <p data-i18n="ct_a2">中華民國以 1912 年為民國元年，因此「西元年 = 民國年 + 1911」，反過來「民國年 = 西元年 − 1911」。月份與日期在兩種紀年下相同，只需換算年份。</p>
+    <h3 data-i18n="ct_q3">工作天和日曆天差在哪？</h3>
+    <p data-i18n="ct_a3">日曆天把每一天都算進去；工作天會扣掉週六、週日與國定假日。簽約、請款、收件天數常以工作天計算，算錯容易誤判到期日。</p>
+    <h3 data-i18n="ct_q4">2026 年放假新制重點</h3>
+    <p data-i18n="ct_a4">自 2025 年下半年起改為「只補假、不補班」：國定假日若遇週末，於前後一個上班日補假，但不再安排補班日，因此 2026 年沒有補班日。勞動節自 2025 年起亦改為全國統一放假。</p>
   </div>
 
-  <div class="facts">
-    <div class="fact"><div class="k">西元年份</div><div class="v">1994</div></div>
-    <div class="fact"><div class="k">生肖</div><div class="v">狗</div></div>
-    <div class="fact"><div class="k">今年(2026)滿</div><div class="v">32 歲</div></div>
+  <div class="legal" id="legal-about">
+    <h2 data-i18n="lg_about_h">關於本站</h2>
+    <p data-i18n="lg_about_p1">本站提供台灣常用的免費日期換算工具，包括農曆轉國曆、民國西元轉換、含國定假日的工作天計算、連假請假攻略與相處天數計算，目標是讓查詢又快又準。</p>
+    <p data-i18n="lg_about_p2">所有計算皆在你的瀏覽器內完成，本站不會儲存你輸入的任何日期資料。</p>
+    <span class="close" data-close data-i18n="btn_close">關閉</span>
+  </div>
+  <div class="legal" id="legal-privacy">
+    <h2 data-i18n="lg_priv_h">隱私權與推廣揭露</h2>
+    <p data-i18n="lg_priv_p1">本站工具的所有運算都在你的裝置上完成，我們不會蒐集或儲存你輸入的個人資料。</p>
+    <p data-i18n="lg_priv_p2">本站部分連結為合作推廣或聯盟行銷連結，標示「推廣」字樣。透過這些連結消費，本站可能獲得分潤，但不會增加你的費用。</p>
+    <p data-i18n="lg_priv_p3">本站可能使用 Cookie 與流量分析工具以了解整體使用狀況；你可透過瀏覽器設定隨時清除或封鎖 Cookie。</p>
+    <span class="close" data-close data-i18n="btn_close">關閉</span>
+  </div>
+  <div class="legal" id="legal-contact">
+    <h2 data-i18n="lg_contact_h">聯絡方式</h2>
+    <p data-i18n="lg_contact_p">對工具有任何建議或發現資料需要更新，歡迎來信：<b>y0911122420@gmail.com</b>（歡迎來信我的信箱）。</p>
+    <span class="close" data-close data-i18n="btn_close">關閉</span>
   </div>
 
-  <!-- 弱商業意圖頁:放柔性內部連結;日後要置入 AdSense 可改這一塊 -->
-  <a class="promo" href="/">需要農曆、連假、護照效期等其他日期工具？回首頁 →</a>
+  <footer>
+    <div class="links">
+      <a href="#" data-legal="legal-about" data-i18n="foot_about">關於本站</a>
+      <a href="#" data-legal="legal-privacy" data-i18n="foot_privacy">隱私權與推廣揭露</a>
+      <a href="#" data-legal="legal-contact" data-i18n="foot_contact">聯絡方式</a>
+    </div>
+    <div data-i18n="foot_disclaimer">本站工具僅供一般參考。國定假日依行政院人事行政總處公告為準，民間企業放假請以公司公告與勞動部規定為準。</div>
+    <div style="margin-top:8px">© <span id="yr"></span> 台灣日期工具</div>
+  </footer>
 
-  <div class="tool">
-    <label>快速換算:民國</label>
-    <input id="roc" type="number" value="83" min="1" aria-label="民國年">
-    <label>年 = 西元 <span id="ad" class="out">1994</span> 年</label>
-    <script>
-      (function(){var i=document.getElementById('roc'),o=document.getElementById('ad');
-      i.addEventListener('input',function(){var v=parseInt(i.value,10);o.textContent=isNaN(v)?'—':(v+1911);});})();
-    </script>
-  </div>
+</div>
 
-  <div class="yearnav"><a class="nav-link" href="/minguo/82/">← 民國82年</a><a class="nav-link" href="/minguo/84/">民國84年 →</a></div>
+<script>
+(function(){
+  "use strict";
+  const $ = s => document.querySelector(s);
+  const pad = n => String(n).padStart(2,'0');
+  const WD_L = {zh:['日','一','二','三','四','五','六'],en:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],id:['Min','Sen','Sel','Rab','Kam','Jum','Sab'],vi:['CN','T2','T3','T4','T5','T6','T7']};
+  const ZOD_L = {zh:['鼠','牛','虎','兔','龍','蛇','馬','羊','猴','雞','狗','豬'],en:['Rat','Ox','Tiger','Rabbit','Dragon','Snake','Horse','Goat','Monkey','Rooster','Dog','Pig'],id:['Tikus','Kerbau','Macan','Kelinci','Naga','Ular','Kuda','Kambing','Monyet','Ayam','Anjing','Babi'],vi:['Tý','Sửu','Dần','Mão','Thìn','Tỵ','Ngọ','Mùi','Thân','Dậu','Tuất','Hợi']};
+  const wdName = i => (WD_L[T_LANG]||WD_L.zh)[i];
+  const zod = y => (ZOD_L[T_LANG]||ZOD_L.zh)[((y-1900)%12+12)%12];
+  const wrapWd = w => T_LANG==='zh' ? `（${w}）` : ` (${w})`;
+  const fmt = d => `${d.getFullYear()}/${pad(d.getMonth()+1)}/${pad(d.getDate())}${wrapWd(wdName(d.getDay()))}`;
+  const toUTC = d => Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+  const dayDiff = (a,b) => Math.round((toUTC(b)-toUTC(a))/86400000);
+  const RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
-  <h2>關於民國 83 年</h2>
-  <p>民國 83 年對應西元 1994 年,這一年出生的人生肖屬狗,在 2026 年滿 32 歲(虛歲約 33 歲)。民國紀年以中華民國成立的西元 1912 年為民國 1 年,因此換算公式很單純:<strong>民國年 + 1911 = 西元年</strong>,反過來則是西元年 − 1911 = 民國年。</p>
+  /* ===== i18n 多語言 ===== */
+  let T_LANG = 'zh';
+  const I18N = {
+    zh: {
+      leap_word:'閏',
+      td_today:'今天 {d}', td_meta:'民國 {roc} 年 · 農曆{lunar} · {zod}年',
+      td_now:'🎉 {name}連假進行中', td_next:'下一個連假 {name}　還有 <b>{n}</b> 天',
+      hn_newyear:'元旦', hn_cny:'農曆春節', hn_228:'和平紀念日（228）', hn_qingming:'兒童節・清明節',
+      hn_labor:'勞動節', hn_dragon:'端午節', hn_midautumn:'中秋節・教師節', hn_national:'國慶日',
+      hn_retro:'光復節', hn_constitution:'行憲紀念日', days_off:'放 {n} 天',
+      trip_g1_t:'Trip.com 訂房・機票', trip_g1_d:'連假出遊，飯店機票票券一站搞定',
+      trip_g2_t:'連假訂房就上 Trip.com', trip_g2_d:'熱門飯店民宿早訂早划算，比價更安心',
+      trip_now_t:'『{name}』連假進行中', trip_now_d:'機票飯店比價，出發前先訂更安心',
+      trip_soon_t:'距離『{name}』還有 {n} 天', trip_soon_d:'Trip.com 先比價，早訂早划算',
+      tip_newyear:'1/2（五）請 1 天，可連休 1/1～1/4 共 <b>4 天</b>；想拚更長可請 12/29～12/31、1/2 共 4 天，連休 12/27～1/4 共 <b>9 天</b>。',
+      tip_cny:'請 2/23～2/26 共 4 天，與 228 串連可連休 2/14～3/1 共 <b>16 天</b>。',
+      tip_228:'已與週末相連，<b>免請假</b>即有 3 天連假。',
+      tip_qingming:'請 3/30～4/2 共 4 天，連休 3/28～4/6 共 <b>10 天</b>；或請 4/7～4/10 共 4 天，連休 4/3～4/12 共 <b>10 天</b>。',
+      tip_labor:'請 4/27～4/30 共 4 天，可連休 4/25～5/3 共 <b>9 天</b>。',
+      tip_dragon:'請 6/15～6/18 共 4 天，可連休 6/13～6/21 共 <b>9 天</b>。',
+      tip_midautumn:'請 9/21～9/24 共 4 天，可連休 9/19～9/28 共 <b>10 天</b>。',
+      tip_national:'國慶日逢週六、補假於 10/9（五）。請 10/5～10/8 共 4 天，可連休 10/3～10/11 共 <b>9 天</b>。',
+      tip_retro:'光復節逢週日、補假於 10/26（一），已與週末相連，<b>免請假</b>即有 3 天連假。',
+      tip_constitution:'請 12/29～12/31、1/2 共 4 天，可連休 12/27～1/4 共 <b>9 天</b>（跨年連休）。',
+      l_err_year:'請輸入農曆年', l_err_range:'目前支援西元 1912～{max} 年', l_err_noleap:'農曆 {y} 年沒有閏 {m} 月',
+      l_err_days:'農曆 {y} 年{lm}{m}月只有 {dim} 天',
+      l_big:'西元 <span style="font-variant-numeric:tabular-nums">{y}</span>／{mo}／{d}（{wd}）',
+      l_sub:'農曆 {y} 年{lm}{lunar}（{zod}年）', l_roc_val:'{roc} 年 {mo} 月 {d} 日',
+      l_note:'國曆即一般西元/民國日曆。農曆資料涵蓋 1912～{max} 年並已處理閏月。',
+      st_roc:'民國', st_ad:'西元', st_zodiac:'生肖',
+      r_err_year:'請先輸入年份', r_out:'{label} <span style="font-variant-numeric:tabular-nums">{val}</span> 年{tail}',
+      r_tail_m:'／{m} 月', r_tail_d:' {d} 日', r_before:'民國前 {n} 年',
+      r_before_sub:'{src} 換算結果（民國元年為 1912 年）', r_src_roc:'民國 {y} 年', r_src_ad:'西元 {y} 年',
+      r_sub:'{src}{tail} 換算結果',
+      w_err_range:'請選擇起始日與結束日', w_err_add:'請選擇起算日並輸入工作天數',
+      w_big:'工作天 <span style="font-variant-numeric:tabular-nums">{n}</span> 天',
+      st_caltotal:'日曆天總計', st_workdays:'工作天', st_weekend:'週末天數', st_wkholiday:'平日國定假日',
+      w_note_range:'區間：{s} ～ {e}（含頭尾）。{warn}',
+      w_cover:'※ 目前僅內建 {years} 年的國定假日，{miss} 年僅扣除週末、未扣國定假日，數字僅供參考。',
+      st_fromdate:'起算日', st_calc:'推算', w_calc_val:'{sign}{n} 個工作天',
+      w_note_add:'從起算日的次一天開始計算，跳過週末與國定假日。{warn}',
+      d_err_start:'請先選擇起始日期', d_err_order:'結束日期不能早於起始日期',
+      d_big:'第 <span style="font-variant-numeric:tabular-nums">{n}</span> 天 <small>（已經過 {p} 天）</small>',
+      d_sub:'相當於 {y} 年 {m} 個月 {d} 天', d_st_hundred:'下一個 {h} 天', st_remain:'還有', d_st_anni:'第 {a} 週年',
+      d_note:'起：{s}　迄：{e}。第一天起算為第 1 天。',
+      roc_l_yearAD:'西元年', ph_eg2026:'例如 2026',
+      pp_err_expiry:'請選擇護照到期日', pp_expired:'護照已過期',
+      pp_expired_sub:'到期日 {date}，已過期 {days} 天', pp_expired_note:'請盡快換發護照後再規劃出國行程。',
+      pp_remain:'剩餘效期 {y} 年 {m} 個月 {d} 天', pp_subexp:'護照到期日 {date}（剩 {days} 天）',
+      pp_st_expiry:'護照到期日', pp_st_remdays:'剩餘天數', fmt_days:'{n} 天',
+      age_err:'請先選擇生日', age_err_order:'生日不能晚於計算日期', age_big:'{y} 歲', age_sub:'{y} 歲 {m} 個月 {d} 天', age_st_nominal:'虛歲', age_years:'{n} 歲', age_st_total:'總共活了', age_st_nextbday:'下次生日', age_note:'生日 {s}　計算到 {e}',
+      pp_st_entry:'預計入境日', pp_bad_title:'⚠️ 不符合', pp_early_val:'護照到期早於入境日',
+      pp_note_early:'護照在入境日前就到期，務必先換發。各國規定不同，請以目的地國要求為準。',
+      pp_ok_title:'✅ 符合規定', pp_short_title:'⚠️ 效期不足',
+      pp_entry_remain:'入境時剩 {y} 年 {m} 月 {d} 天',
+      pp_note_ok:'入境當天護照剩餘效期符合「至少 {n} 個月」的常見要求。各國規定不同，請以目的地國要求為準。',
+      pp_note_short:'入境當天護照剩餘效期不足 {n} 個月，建議先換發護照再出國。各國規定不同，請以目的地國要求為準。',
+      pp_st_safe:'建議使用至（保留 {n} 個月）',
+      pp_note_safe:'多數國家要求入境時護照剩餘效期至少 {n} 個月。依此標準，建議在 {date} 之前出國入境；之後出國部分國家可能拒絕入境，宜提前換發。各國規定不同，請以目的地國要求為準。'
+    },
+    en: {
+      leap_word:'leap ',
+      td_today:'Today {d}', td_meta:'ROC {roc} · Lunar {lunar} · {zod}',
+      td_now:'🎉 {name} holiday now', td_next:'Next holiday: {name} in <b>{n}</b> days',
+      hn_newyear:"New Year's Day", hn_cny:'Lunar New Year', hn_228:'Peace Memorial Day (228)', hn_qingming:"Children's & Tomb-Sweeping Day",
+      hn_labor:'Labor Day', hn_dragon:'Dragon Boat Festival', hn_midautumn:"Mid-Autumn & Teachers' Day", hn_national:'National Day',
+      hn_retro:'Retrocession Day', hn_constitution:'Constitution Day', days_off:'{n} days off',
+      trip_g1_t:'Trip.com Hotels & Flights', trip_g1_d:'Book hotels, flights and tickets for the holidays in one place',
+      trip_g2_t:'Book your holiday stay on Trip.com', trip_g2_d:'Popular hotels fill up fast — compare prices early',
+      trip_now_t:'“{name}” is happening now', trip_now_d:'Compare hotel & flight prices before you go',
+      trip_soon_t:'{n} days until “{name}”', trip_soon_d:'Compare prices on Trip.com — book early, save more',
+      tip_newyear:'Take 1/2 (Fri) off (1 day) for 1/1–1/4, <b>4 days</b>; or take 12/29–12/31 + 1/2 (4 days) for 12/27–1/4, <b>9 days</b>.',
+      tip_cny:'Take 2/23–2/26 (4 days); linked with 228 you get 2/14–3/1, <b>16 days</b>.',
+      tip_228:'Already joins the weekend — <b>no leave needed</b> for a 3-day break.',
+      tip_qingming:'Take 3/30–4/2 (4 days) for 3/28–4/6, <b>10 days</b>; or 4/7–4/10 (4 days) for 4/3–4/12, <b>10 days</b>.',
+      tip_labor:'Take 4/27–4/30 (4 days) for 4/25–5/3, <b>9 days</b>.',
+      tip_dragon:'Take 6/15–6/18 (4 days) for 6/13–6/21, <b>9 days</b>.',
+      tip_midautumn:'Take 9/21–9/24 (4 days) for 9/19–9/28, <b>10 days</b>.',
+      tip_national:'National Day is on Saturday; makeup on 10/9 (Fri). Take 10/5–10/8 (4 days) for 10/3–10/11, <b>9 days</b>.',
+      tip_retro:'Retrocession Day is on Sunday; makeup on 10/26 (Mon), already joins the weekend — <b>no leave needed</b> for 3 days.',
+      tip_constitution:'Take 12/29–12/31 + 1/2 (4 days) for 12/27–1/4, <b>9 days</b> (into New Year).',
+      l_err_year:'Enter the lunar year', l_err_range:'Supported range: 1912–{max}', l_err_noleap:'Lunar {y} has no leap month {m}',
+      l_err_days:'Lunar {y} {lm}month {m} has only {dim} days',
+      l_big:'AD <span style="font-variant-numeric:tabular-nums">{y}</span>/{mo}/{d} ({wd})',
+      l_sub:'Lunar {y}, {lm}{lunar} ({zod})', l_roc_val:'ROC {roc}/{mo}/{d}',
+      l_note:'“Solar” is the usual AD/ROC calendar. Lunar data covers 1912–{max} with leap months.',
+      st_roc:'ROC', st_ad:'AD', st_zodiac:'Zodiac',
+      r_err_year:'Enter a year first', r_out:'{label} <span style="font-variant-numeric:tabular-nums">{val}</span>{tail}',
+      r_tail_m:'/{m}', r_tail_d:'/{d}', r_before:'{n} year(s) before ROC 1',
+      r_before_sub:'{src} — result (ROC year 1 = 1912)', r_src_roc:'ROC {y}', r_src_ad:'AD {y}',
+      r_sub:'{src}{tail} — result',
+      w_err_range:'Select start and end dates', w_err_add:'Select a from-date and enter working days',
+      w_big:'Working days: <span style="font-variant-numeric:tabular-nums">{n}</span>',
+      st_caltotal:'Calendar days', st_workdays:'Working days', st_weekend:'Weekend days', st_wkholiday:'Weekday holidays',
+      w_note_range:'Range: {s} – {e} (inclusive). {warn}',
+      w_cover:'※ Only {years} public holidays are built in; for {miss}, only weekends are excluded, so figures are indicative.',
+      st_fromdate:'From date', st_calc:'Result', w_calc_val:'{sign}{n} working days',
+      w_note_add:'Counting starts the day after the from-date, skipping weekends and holidays. {warn}',
+      d_err_start:'Select a start date first', d_err_order:'End date cannot be before start date',
+      d_big:'Day <span style="font-variant-numeric:tabular-nums">{n}</span> <small>({p} days elapsed)</small>',
+      d_sub:'Equivalent to {y}y {m}mo {d}d', d_st_hundred:'Next {h} days', st_remain:'In', d_st_anni:'Year {a} anniversary',
+      d_note:'From {s} to {e}. The first day counts as day 1.',
+      ct_h2:'About these date tools',
+      ct_q1:'Why convert a lunar birthday to the solar calendar?',
+      ct_a1:'Many elders remember only the lunar birthday, but IDs, sign-ups and reminders use the solar (AD/ROC) calendar. The solar date of a lunar birthday differs every year and must be converted by the calendar rules. This tool has built-in lunar data for 1912–2049 with leap months — enter the lunar date to get the correct solar date and zodiac.',
+      ct_q2:'How do you convert ROC years to AD years?',
+      ct_a2:'The Republic of China counts 1912 as ROC year 1, so “AD year = ROC year + 1911”, and “ROC year = AD year − 1911”. Month and day are the same in both systems; only the year changes.',
+      ct_q3:'What is the difference between working days and calendar days?',
+      ct_a3:'Calendar days count every day; working days exclude Saturdays, Sundays and public holidays. Contracts, payments and delivery times are often counted in working days, and a miscount easily leads to a wrong due date.',
+      ct_q4:'Key points of the 2026 holiday rules',
+      ct_a4:'From the second half of 2025 the rule became “make-up leave only, no make-up workdays”: if a public holiday falls on a weekend, a nearby workday becomes a make-up holiday, but no make-up workday is scheduled — so 2026 has no make-up workdays. Labor Day has also been a nationwide holiday since 2025.',
+      lg_about_h:'About this site',
+      lg_about_p1:'This site offers free date tools commonly used in Taiwan: lunar-to-solar, ROC–AD conversion, working-day calculation with public holidays, a holiday leave planner and a days-together counter — aiming for fast, accurate lookups.',
+      lg_about_p2:'All calculations run in your browser; the site does not store any dates you enter.',
+      lg_priv_h:'Privacy & disclosure',
+      lg_priv_p1:'All calculations run on your device; we do not collect or store any personal data you enter.',
+      lg_priv_p2:'Some links on this site are partner or affiliate links, marked “sponsored”. If you buy through them, the site may earn a commission at no extra cost to you.',
+      lg_priv_p3:'This site may use cookies and analytics to understand overall usage; you can clear or block cookies anytime in your browser settings.',
+      lg_contact_h:'Contact',
+      lg_contact_p:'For suggestions or data corrections, email: <b>y0911122420@gmail.com</b>.',
+      btn_close:'Close',
+      foot_disclaimer:'These tools are for general reference only. Public holidays follow the DGPA announcements; company holidays follow your employer’s notice and Ministry of Labor rules.',
+      roc_note_static:'Note: ROC year 1 is 1912. For years before that, use “AD → ROC”.',
+      leave_note_static:'Source: DGPA 2026 government office calendar. Leave suggestions follow the government calendar; private-company holidays follow Ministry of Labor rules and company notices.',
+      brand_title:'Taiwan Date Tools', brand_sub:'Lunar↔Solar · ROC↔AD · Working days · Holiday planner · Days together',
+      tab_lunar:'Lunar→Solar', tab_roc:'ROC ⇄ AD', tab_work:'Working days', tab_leave:'Holiday planner', tab_days:'Days together', tab_passport:'Passport validity',
+      lunar_h2:'Lunar birthday → Solar / ROC', lunar_lead:'Many people only know their lunar birthday. Enter the lunar date to get the matching solar (AD) and ROC date. Supports years 1912–2049.',
+      lunar_l_year:'Lunar year (AD)', lunar_l_month:'Lunar month', lunar_l_day:'Lunar day', lunar_leap:'This is a leap month (only tick if the month repeats)', lunar_btn:'Convert to solar date',
+      roc_h2:'ROC ⇄ AD year converter', roc_lead:'Enter a year (month/day optional) to convert both ways. AD = ROC + 1911.',
+      roc_seg_r2a:'ROC → AD', roc_seg_a2r:'AD → ROC', roc_l_year:'ROC year', roc_l_yearAD:'AD year', roc_l_month:'Month (optional)', roc_l_day:'Day (optional)', roc_btn:'Convert',
+      work_h2:'Working-day calculator', work_lead:'Automatically excludes Saturdays, Sundays and Taiwan public holidays (currently covers 2026–2027).',
+      work_seg_range:'Days in range', work_seg_add:'Find a due date', work_l_start:'Start date', work_l_end:'End date', work_l_from:'From date', work_l_n:'Working days', work_btn:'Calculate',
+      leave_h2:'2026 Holiday leave planner', leave_lead:'Based on the Executive Yuan (DGPA) 2026 calendar. From 2026 it is “make-up leave only, no make-up workdays”, so there are no make-up workdays all year.', leave_promo_h:'What to do on the holidays? (sponsored)',
+      days_h2:'Days together / anniversary', days_lead:'Count how many days since a start date, and count down to the next hundred-day mark and anniversary.', days_l_start:'Start date (e.g. together, birthday)', days_l_end:'Count until (default today)', days_btn:'Calculate',
+      pp_h2:'Passport validity calculator', pp_lead:'Most countries require at least 6 months of passport validity on entry. Enter your passport expiry date to see remaining validity and whether to renew; optionally add a planned entry date and required months to check compliance.',
+      pp_l_expiry:'Passport expiry date', pp_l_entry:'Planned entry date (optional)', pp_l_months:'Required validity (months)', pp_btn:'Calculate',
+      foot_about:'About', foot_privacy:'Privacy & disclosure', foot_contact:'Contact',
+      ph_eg1990:'e.g. 1990', ph_eg115:'e.g. 115', ph_eg2026:'e.g. 2026', ph_month:'M', ph_day:'D', ph_eg10:'e.g. 10',
+      pp_err_expiry:'Please select the passport expiry date', pp_expired:'Passport expired',
+      pp_expired_sub:'Expiry {date}, expired {days} days ago', pp_expired_note:'Please renew your passport before planning any travel.',
+      pp_remain:'Validity left: {y}y {m}mo {d}d', pp_subexp:'Passport expiry {date} ({days} days left)',
+      pp_st_expiry:'Expiry date', pp_st_remdays:'Days left', fmt_days:'{n} days',
+      tab_age:'Age', age_h2:'Age calculator', age_lead:'Enter your birthday to get your exact age, total days lived, and days until your next birthday.', age_l_birth:'Birthday', age_l_to:'Count until (default today)', age_btn:'Calculate', age_err:'Please select your birthday', age_err_order:'Birthday cannot be later than the target date', age_big:'{y} years old', age_sub:'{y} years {m} months {d} days', age_st_nominal:'Nominal age', age_years:'{n} yrs', age_st_total:'Total days lived', age_st_nextbday:'Next birthday', age_note:'Birthday {s} · counted to {e}',
+      pp_st_entry:'Planned entry', pp_bad_title:'⚠️ Not valid', pp_early_val:'Expires before entry date',
+      pp_note_early:'The passport expires before the entry date — you must renew first. Rules vary by country; follow the destination’s requirements.',
+      pp_ok_title:'✅ Compliant', pp_short_title:'⚠️ Insufficient',
+      pp_entry_remain:'At entry: {y}y {m}mo {d}d left',
+      pp_note_ok:'On the entry date your passport meets the common “at least {n} months” requirement. Rules vary by country; follow the destination’s requirements.',
+      pp_note_short:'On the entry date your passport has less than {n} months left; renew it before travelling. Rules vary by country; follow the destination’s requirements.',
+      pp_st_safe:'Use before (keep {n} months)',
+      pp_note_safe:'Most countries require at least {n} months of validity on entry. By that standard, enter before {date}; after that some countries may refuse entry, so renew early. Rules vary by country; follow the destination’s requirements.'
+    },
+    id: {
+      leap_word:'kabisat ',
+      td_today:'Hari ini {d}', td_meta:'ROC {roc} · Imlek {lunar} · Shio {zod}',
+      td_now:'🎉 Libur {name} sedang berlangsung', td_next:'Libur berikutnya: {name}, <b>{n}</b> hari lagi',
+      hn_newyear:'Tahun Baru', hn_cny:'Tahun Baru Imlek', hn_228:'Hari Peringatan Perdamaian (228)', hn_qingming:'Hari Anak & Ziarah Kubur',
+      hn_labor:'Hari Buruh', hn_dragon:'Festival Perahu Naga', hn_midautumn:'Festival Kue Bulan & Hari Guru', hn_national:'Hari Nasional',
+      hn_retro:'Hari Retrosesi Taiwan', hn_constitution:'Hari Konstitusi', days_off:'Libur {n} hari',
+      trip_g1_t:'Trip.com Hotel & Tiket Pesawat', trip_g1_d:'Pesan hotel, tiket pesawat, dan tiket wisata dalam satu tempat',
+      trip_g2_t:'Pesan penginapan liburan di Trip.com', trip_g2_d:'Hotel favorit cepat penuh — bandingkan harga lebih awal',
+      trip_now_t:'"{name}" sedang berlangsung', trip_now_d:'Bandingkan harga hotel & tiket pesawat sebelum berangkat',
+      trip_soon_t:'{n} hari lagi menuju "{name}"', trip_soon_d:'Bandingkan harga di Trip.com — pesan lebih awal lebih hemat',
+      tip_newyear:'Ambil 1 hari cuti 1/2 (Jum) untuk libur 1/1–1/4, <b>4 hari</b>; atau cuti 12/29–12/31 + 1/2 (4 hari) jadi 12/27–1/4, <b>9 hari</b>.',
+      tip_cny:'Cuti 2/23–2/26 (4 hari); disambung 228 jadi 2/14–3/1, <b>16 hari</b>.',
+      tip_228:'Sudah menyatu dengan akhir pekan — <b>tanpa cuti</b> pun libur 3 hari.',
+      tip_qingming:'Cuti 3/30–4/2 (4 hari) jadi 3/28–4/6, <b>10 hari</b>; atau 4/7–4/10 (4 hari) jadi 4/3–4/12, <b>10 hari</b>.',
+      tip_labor:'Cuti 4/27–4/30 (4 hari) jadi 4/25–5/3, <b>9 hari</b>.',
+      tip_dragon:'Cuti 6/15–6/18 (4 hari) jadi 6/13–6/21, <b>9 hari</b>.',
+      tip_midautumn:'Cuti 9/21–9/24 (4 hari) jadi 9/19–9/28, <b>10 hari</b>.',
+      tip_national:'Hari Nasional jatuh Sabtu; cuti pengganti 10/9 (Jum). Cuti 10/5–10/8 (4 hari) jadi 10/3–10/11, <b>9 hari</b>.',
+      tip_retro:'Hari Retrosesi jatuh Minggu; pengganti 10/26 (Sen), sudah menyatu dengan akhir pekan — <b>tanpa cuti</b> libur 3 hari.',
+      tip_constitution:'Cuti 12/29–12/31 + 1/2 (4 hari) jadi 12/27–1/4, <b>9 hari</b> (lintas Tahun Baru).',
+      l_err_year:'Masukkan tahun Imlek', l_err_range:'Didukung: 1912–{max}', l_err_noleap:'Imlek {y} tidak punya bulan kabisat {m}',
+      l_err_days:'Imlek {y} bulan {lm}{m} hanya {dim} hari',
+      l_big:'Masehi <span style="font-variant-numeric:tabular-nums">{y}</span>/{mo}/{d} ({wd})',
+      l_sub:'Imlek {y}, {lm}{lunar} (Shio {zod})', l_roc_val:'ROC {roc}/{mo}/{d}',
+      l_note:'“Masehi” = kalender AD/ROC biasa. Data Imlek mencakup 1912–{max} dengan bulan kabisat.',
+      st_roc:'ROC', st_ad:'Masehi', st_zodiac:'Shio',
+      r_err_year:'Masukkan tahun dulu', r_out:'{label} <span style="font-variant-numeric:tabular-nums">{val}</span>{tail}',
+      r_tail_m:'/{m}', r_tail_d:'/{d}', r_before:'{n} tahun sebelum ROC 1',
+      r_before_sub:'{src} — hasil (ROC tahun 1 = 1912)', r_src_roc:'ROC {y}', r_src_ad:'Masehi {y}',
+      r_sub:'{src}{tail} — hasil',
+      w_err_range:'Pilih tanggal mulai dan akhir', w_err_add:'Pilih tanggal awal dan isi jumlah hari kerja',
+      w_big:'Hari kerja: <span style="font-variant-numeric:tabular-nums">{n}</span>',
+      st_caltotal:'Total hari kalender', st_workdays:'Hari kerja', st_weekend:'Hari akhir pekan', st_wkholiday:'Libur di hari kerja',
+      w_note_range:'Rentang: {s} – {e} (termasuk ujung). {warn}',
+      w_cover:'※ Hanya libur {years} yang tersedia; untuk {miss}, hanya akhir pekan yang dikurangi, jadi angka bersifat perkiraan.',
+      st_fromdate:'Tanggal awal', st_calc:'Hasil', w_calc_val:'{sign}{n} hari kerja',
+      w_note_add:'Perhitungan mulai sehari setelah tanggal awal, melewati akhir pekan dan libur. {warn}',
+      d_err_start:'Pilih tanggal awal dulu', d_err_order:'Tanggal akhir tidak boleh sebelum tanggal awal',
+      d_big:'Hari ke-<span style="font-variant-numeric:tabular-nums">{n}</span> <small>({p} hari berlalu)</small>',
+      d_sub:'Setara {y} thn {m} bln {d} hr', d_st_hundred:'{h} hari berikutnya', st_remain:'Lagi', d_st_anni:'HUT ke-{a}',
+      d_note:'Dari {s} sampai {e}. Hari pertama dihitung sebagai hari ke-1.',
+      ct_h2:'Tentang alat tanggal ini',
+      ct_q1:'Mengapa mengonversi ulang tahun Imlek ke kalender Masehi?',
+      ct_a1:'Banyak orang tua hanya ingat ulang tahun Imlek, padahal KTP, pendaftaran, dan pengingat memakai kalender Masehi (Masehi/ROC). Tanggal Masehi dari ulang tahun Imlek berbeda tiap tahun dan harus dihitung sesuai aturan kalender. Alat ini punya data Imlek 1912–2049 dengan bulan kabisat — masukkan tanggal Imlek untuk mendapat tanggal Masehi dan shio yang benar.',
+      ct_q2:'Bagaimana mengonversi tahun ROC ke tahun Masehi?',
+      ct_a2:'Republik Tiongkok menetapkan 1912 sebagai tahun ROC ke-1, jadi “tahun Masehi = tahun ROC + 1911”, dan “tahun ROC = tahun Masehi − 1911”. Bulan dan hari sama pada kedua sistem; hanya tahunnya yang berubah.',
+      ct_q3:'Apa beda hari kerja dan hari kalender?',
+      ct_a3:'Hari kalender menghitung setiap hari; hari kerja mengecualikan Sabtu, Minggu, dan hari libur nasional. Kontrak, pembayaran, dan waktu pengiriman sering dihitung dalam hari kerja, dan salah hitung mudah membuat tanggal jatuh tempo keliru.',
+      ct_q4:'Poin penting aturan libur 2026',
+      ct_a4:'Sejak paruh kedua 2025, aturannya menjadi “hanya cuti pengganti, tanpa hari kerja pengganti”: bila hari libur jatuh pada akhir pekan, hari kerja terdekat menjadi cuti pengganti, tetapi tidak ada hari kerja pengganti — jadi 2026 tanpa hari kerja pengganti. Hari Buruh juga menjadi libur nasional sejak 2025.',
+      lg_about_h:'Tentang situs ini',
+      lg_about_p1:'Situs ini menyediakan alat tanggal gratis yang umum di Taiwan: Imlek ke Masehi, konversi ROC–Masehi, perhitungan hari kerja dengan hari libur, panduan cuti libur, dan penghitung hari bersama — untuk pencarian cepat dan akurat.',
+      lg_about_p2:'Semua perhitungan berjalan di peramban Anda; situs tidak menyimpan tanggal apa pun yang Anda masukkan.',
+      lg_priv_h:'Privasi & keterbukaan',
+      lg_priv_p1:'Semua perhitungan berjalan di perangkat Anda; kami tidak mengumpulkan atau menyimpan data pribadi yang Anda masukkan.',
+      lg_priv_p2:'Sebagian tautan di situs ini adalah tautan mitra atau afiliasi, ditandai “sponsor”. Jika Anda membeli lewat tautan itu, situs bisa memperoleh komisi tanpa menambah biaya Anda.',
+      lg_priv_p3:'Situs ini dapat memakai cookie dan alat analitik untuk memahami penggunaan secara umum; Anda dapat menghapus atau memblokir cookie kapan saja lewat pengaturan peramban.',
+      lg_contact_h:'Kontak',
+      lg_contact_p:'Untuk saran atau koreksi data, email: <b>y0911122420@gmail.com</b>.',
+      btn_close:'Tutup',
+      foot_disclaimer:'Alat ini hanya untuk referensi umum. Hari libur nasional mengikuti pengumuman DGPA; libur perusahaan mengikuti pemberitahuan perusahaan dan aturan Kementerian Tenaga Kerja.',
+      roc_note_static:'Catatan: tahun ROC ke-1 adalah 1912. Untuk tahun sebelumnya, pakai “Masehi → ROC”.',
+      leave_note_static:'Sumber: kalender kantor pemerintah DGPA 2026. Saran cuti mengikuti kalender pemerintah; libur perusahaan swasta mengikuti aturan Kementerian Tenaga Kerja dan pengumuman perusahaan.',
+      brand_title:'Alat Tanggal Taiwan', brand_sub:'Imlek↔Masehi · ROC↔Masehi · Hari kerja · Panduan libur · Hari bersama',
+      tab_lunar:'Imlek→Masehi', tab_roc:'ROC ⇄ Masehi', tab_work:'Hari kerja', tab_leave:'Panduan libur', tab_days:'Hari bersama', tab_passport:'Masa paspor',
+      lunar_h2:'Ulang tahun Imlek → Masehi / ROC', lunar_lead:'Banyak orang hanya ingat tanggal lahir Imlek. Masukkan tanggal Imlek untuk mendapat tanggal Masehi dan ROC. Mendukung tahun 1912–2049.',
+      lunar_l_year:'Tahun Imlek (Masehi)', lunar_l_month:'Bulan Imlek', lunar_l_day:'Hari Imlek', lunar_leap:'Ini bulan kabisat (centang hanya bila bulan berulang)', lunar_btn:'Konversi ke tanggal Masehi',
+      roc_h2:'Konversi tahun ROC ⇄ Masehi', roc_lead:'Masukkan tahun (bulan/hari opsional) untuk konversi dua arah. Masehi = ROC + 1911.',
+      roc_seg_r2a:'ROC → Masehi', roc_seg_a2r:'Masehi → ROC', roc_l_year:'Tahun ROC', roc_l_yearAD:'Tahun Masehi', roc_l_month:'Bulan (opsional)', roc_l_day:'Hari (opsional)', roc_btn:'Konversi',
+      work_h2:'Kalkulator hari kerja', work_lead:'Otomatis mengecualikan Sabtu, Minggu, dan hari libur nasional Taiwan (saat ini mencakup 2026–2027).',
+      work_seg_range:'Hari dalam rentang', work_seg_add:'Cari tanggal jatuh tempo', work_l_start:'Tanggal mulai', work_l_end:'Tanggal akhir', work_l_from:'Dari tanggal', work_l_n:'Jumlah hari kerja', work_btn:'Hitung',
+      leave_h2:'Panduan cuti libur 2026', leave_lead:'Berdasarkan kalender 2026 dari Executive Yuan (DGPA). Mulai 2026 berlaku “hanya cuti pengganti, tanpa hari kerja pengganti”, jadi tidak ada hari kerja pengganti sepanjang tahun.', leave_promo_h:'Mau ke mana saat libur? (iklan mitra)',
+      days_h2:'Hari bersama / hari jadi', days_lead:'Hitung berapa hari sejak tanggal awal, dan hitung mundur ke kelipatan 100 hari dan hari jadi berikutnya.', days_l_start:'Tanggal awal (mis. jadian, ulang tahun)', days_l_end:'Hitung sampai (default hari ini)', days_btn:'Hitung',
+      pp_h2:'Kalkulator masa berlaku paspor', pp_lead:'Sebagian besar negara mewajibkan masa berlaku paspor minimal 6 bulan saat masuk. Masukkan tanggal kedaluwarsa paspor untuk melihat sisa masa berlaku dan apakah perlu diperpanjang; opsional isi tanggal masuk dan bulan yang disyaratkan untuk memeriksa.',
+      pp_l_expiry:'Tanggal kedaluwarsa paspor', pp_l_entry:'Tanggal masuk rencana (opsional)', pp_l_months:'Masa berlaku disyaratkan (bulan)', pp_btn:'Hitung',
+      foot_about:'Tentang', foot_privacy:'Privasi & keterbukaan', foot_contact:'Kontak',
+      ph_eg1990:'mis. 1990', ph_eg115:'mis. 115', ph_eg2026:'mis. 2026', ph_month:'Bln', ph_day:'Hr', ph_eg10:'mis. 10',
+      pp_err_expiry:'Silakan pilih tanggal kedaluwarsa paspor', pp_expired:'Paspor sudah kedaluwarsa',
+      pp_expired_sub:'Kedaluwarsa {date}, lewat {days} hari', pp_expired_note:'Perpanjang paspor dulu sebelum merencanakan perjalanan.',
+      pp_remain:'Sisa berlaku: {y} thn {m} bln {d} hr', pp_subexp:'Kedaluwarsa {date} (sisa {days} hari)',
+      pp_st_expiry:'Tanggal kedaluwarsa', pp_st_remdays:'Sisa hari', fmt_days:'{n} hari',
+      tab_age:'Umur', age_h2:'Kalkulator umur', age_lead:'Masukkan tanggal lahir untuk melihat umur pasti, total hari hidup, dan hari menuju ulang tahun berikutnya.', age_l_birth:'Tanggal lahir', age_l_to:'Hitung sampai (default hari ini)', age_btn:'Hitung', age_err:'Silakan pilih tanggal lahir', age_err_order:'Tanggal lahir tidak boleh lebih lambat dari tanggal tujuan', age_big:'{y} tahun', age_sub:'{y} tahun {m} bulan {d} hari', age_st_nominal:'Usia nominal', age_years:'{n} thn', age_st_total:'Total hari hidup', age_st_nextbday:'Ulang tahun berikutnya', age_note:'Lahir {s} · dihitung sampai {e}',
+      pp_st_entry:'Tanggal masuk', pp_bad_title:'⚠️ Tidak memenuhi', pp_early_val:'Kedaluwarsa sebelum tanggal masuk',
+      pp_note_early:'Paspor kedaluwarsa sebelum tanggal masuk — harus diperpanjang dulu. Aturan tiap negara berbeda; ikuti ketentuan negara tujuan.',
+      pp_ok_title:'✅ Memenuhi', pp_short_title:'⚠️ Kurang',
+      pp_entry_remain:'Saat masuk: sisa {y} thn {m} bln {d} hr',
+      pp_note_ok:'Pada tanggal masuk paspor memenuhi syarat umum “minimal {n} bulan”. Aturan tiap negara berbeda; ikuti ketentuan negara tujuan.',
+      pp_note_short:'Pada tanggal masuk sisa berlaku paspor kurang dari {n} bulan; perpanjang dulu sebelum berangkat. Aturan tiap negara berbeda; ikuti ketentuan negara tujuan.',
+      pp_st_safe:'Gunakan sebelum (sisakan {n} bulan)',
+      pp_note_safe:'Sebagian besar negara mewajibkan minimal {n} bulan masa berlaku saat masuk. Dengan standar itu, masuklah sebelum {date}; setelah itu sebagian negara bisa menolak, jadi perpanjang lebih awal. Aturan tiap negara berbeda; ikuti ketentuan negara tujuan.'
+    },
+    vi: {
+      leap_word:'nhuận ',
+      td_today:'Hôm nay {d}', td_meta:'ROC {roc} · Âm lịch {lunar} · {zod}',
+      td_now:'🎉 Đang nghỉ {name}', td_next:'Kỳ nghỉ tới: {name}, còn <b>{n}</b> ngày',
+      hn_newyear:'Tết Dương lịch', hn_cny:'Tết Nguyên đán', hn_228:'Ngày Hòa bình (228)', hn_qingming:'Tết Thiếu nhi & Thanh minh',
+      hn_labor:'Ngày Lao động', hn_dragon:'Tết Đoan Ngọ', hn_midautumn:'Trung thu & Ngày Nhà giáo', hn_national:'Quốc khánh',
+      hn_retro:'Ngày Quang phục', hn_constitution:'Ngày Hiến pháp', days_off:'Nghỉ {n} ngày',
+      trip_g1_t:'Trip.com Khách sạn & Vé máy bay', trip_g1_d:'Đặt khách sạn, vé máy bay, vé tham quan chỉ trong một nơi',
+      trip_g2_t:'Đặt phòng nghỉ lễ trên Trip.com', trip_g2_d:'Khách sạn hot dễ hết phòng — so sánh giá sớm',
+      trip_now_t:'"{name}" đang diễn ra', trip_now_d:'So sánh giá khách sạn & vé máy bay trước khi đi',
+      trip_soon_t:'Còn {n} ngày nữa đến "{name}"', trip_soon_d:'So sánh giá trên Trip.com — đặt sớm tiết kiệm hơn',
+      tip_newyear:'Nghỉ 1 ngày 1/2 (T6) để được 1/1–1/4, <b>4 ngày</b>; hoặc nghỉ 12/29–12/31 + 1/2 (4 ngày) thành 12/27–1/4, <b>9 ngày</b>.',
+      tip_cny:'Nghỉ 2/23–2/26 (4 ngày); nối với 228 thành 2/14–3/1, <b>16 ngày</b>.',
+      tip_228:'Đã liền với cuối tuần — <b>không cần xin nghỉ</b> vẫn được 3 ngày.',
+      tip_qingming:'Nghỉ 3/30–4/2 (4 ngày) thành 3/28–4/6, <b>10 ngày</b>; hoặc 4/7–4/10 (4 ngày) thành 4/3–4/12, <b>10 ngày</b>.',
+      tip_labor:'Nghỉ 4/27–4/30 (4 ngày) thành 4/25–5/3, <b>9 ngày</b>.',
+      tip_dragon:'Nghỉ 6/15–6/18 (4 ngày) thành 6/13–6/21, <b>9 ngày</b>.',
+      tip_midautumn:'Nghỉ 9/21–9/24 (4 ngày) thành 9/19–9/28, <b>10 ngày</b>.',
+      tip_national:'Quốc khánh rơi vào thứ Bảy; nghỉ bù 10/9 (T6). Nghỉ 10/5–10/8 (4 ngày) thành 10/3–10/11, <b>9 ngày</b>.',
+      tip_retro:'Ngày Quang phục rơi vào Chủ nhật; bù 10/26 (T2), đã liền cuối tuần — <b>không cần nghỉ</b> vẫn 3 ngày.',
+      tip_constitution:'Nghỉ 12/29–12/31 + 1/2 (4 ngày) thành 12/27–1/4, <b>9 ngày</b> (qua Năm mới).',
+      l_err_year:'Nhập năm âm lịch', l_err_range:'Hỗ trợ: 1912–{max}', l_err_noleap:'Âm lịch {y} không có tháng nhuận {m}',
+      l_err_days:'Âm lịch {y} tháng {lm}{m} chỉ có {dim} ngày',
+      l_big:'Dương <span style="font-variant-numeric:tabular-nums">{y}</span>/{mo}/{d} ({wd})',
+      l_sub:'Âm lịch {y}, {lm}{lunar} ({zod})', l_roc_val:'ROC {roc}/{mo}/{d}',
+      l_note:'“Dương lịch” = lịch AD/ROC thông thường. Dữ liệu âm lịch gồm 1912–{max} kèm tháng nhuận.',
+      st_roc:'ROC', st_ad:'Dương', st_zodiac:'Con giáp',
+      r_err_year:'Nhập năm trước', r_out:'{label} <span style="font-variant-numeric:tabular-nums">{val}</span>{tail}',
+      r_tail_m:'/{m}', r_tail_d:'/{d}', r_before:'{n} năm trước ROC 1',
+      r_before_sub:'{src} — kết quả (ROC năm 1 = 1912)', r_src_roc:'ROC {y}', r_src_ad:'Dương {y}',
+      r_sub:'{src}{tail} — kết quả',
+      w_err_range:'Chọn ngày bắt đầu và kết thúc', w_err_add:'Chọn ngày bắt đầu và nhập số ngày làm việc',
+      w_big:'Ngày làm việc: <span style="font-variant-numeric:tabular-nums">{n}</span>',
+      st_caltotal:'Tổng ngày lịch', st_workdays:'Ngày làm việc', st_weekend:'Ngày cuối tuần', st_wkholiday:'Ngày lễ trong tuần',
+      w_note_range:'Khoảng: {s} – {e} (gồm hai đầu). {warn}',
+      w_cover:'※ Chỉ có ngày lễ {years}; với {miss} chỉ trừ cuối tuần, số liệu chỉ để tham khảo.',
+      st_fromdate:'Ngày bắt đầu', st_calc:'Kết quả', w_calc_val:'{sign}{n} ngày làm việc',
+      w_note_add:'Tính từ ngày kế tiếp ngày bắt đầu, bỏ qua cuối tuần và ngày lễ. {warn}',
+      d_err_start:'Chọn ngày bắt đầu trước', d_err_order:'Ngày kết thúc không thể trước ngày bắt đầu',
+      d_big:'Ngày thứ <span style="font-variant-numeric:tabular-nums">{n}</span> <small>(đã qua {p} ngày)</small>',
+      d_sub:'Tương đương {y} năm {m} tháng {d} ngày', d_st_hundred:'Mốc {h} ngày tới', st_remain:'Còn', d_st_anni:'Kỷ niệm năm {a}',
+      d_note:'Từ {s} đến {e}. Ngày đầu tính là ngày 1.',
+      ct_h2:'Về các công cụ ngày tháng này',
+      ct_q1:'Vì sao cần đổi sinh nhật âm lịch sang dương lịch?',
+      ct_a1:'Nhiều người lớn tuổi chỉ nhớ sinh nhật âm lịch, nhưng giấy tờ, đăng ký và nhắc nhở đều dùng dương lịch (Dương/ROC). Ngày dương của sinh nhật âm lịch khác nhau mỗi năm và phải đổi theo quy tắc lịch. Công cụ có sẵn dữ liệu âm lịch 1912–2049 kèm tháng nhuận — nhập ngày âm lịch để có ngày dương và con giáp chính xác.',
+      ct_q2:'Đổi năm ROC sang năm dương thế nào?',
+      ct_a2:'Trung Hoa Dân Quốc lấy 1912 là năm ROC thứ 1, nên “năm dương = năm ROC + 1911”, và “năm ROC = năm dương − 1911”. Tháng và ngày giống nhau ở cả hai; chỉ đổi năm.',
+      ct_q3:'Ngày làm việc và ngày lịch khác nhau ra sao?',
+      ct_a3:'Ngày lịch tính mọi ngày; ngày làm việc trừ thứ Bảy, Chủ nhật và ngày lễ. Hợp đồng, thanh toán và thời gian giao hàng thường tính theo ngày làm việc, tính sai dễ nhầm ngày đến hạn.',
+      ct_q4:'Điểm chính của quy định nghỉ lễ 2026',
+      ct_a4:'Từ nửa cuối 2025, quy định là “chỉ nghỉ bù, không làm bù”: nếu ngày lễ rơi vào cuối tuần, một ngày làm gần đó thành ngày nghỉ bù, nhưng không xếp ngày làm bù — nên 2026 không có ngày làm bù. Ngày Lao động cũng là ngày nghỉ toàn quốc từ 2025.',
+      lg_about_h:'Về trang này',
+      lg_about_p1:'Trang cung cấp các công cụ ngày tháng miễn phí thường dùng ở Đài Loan: âm sang dương, đổi ROC–Dương, tính ngày làm việc kèm ngày lễ, cẩm nang nghỉ lễ và đếm ngày bên nhau — hướng tới tra cứu nhanh và chính xác.',
+      lg_about_p2:'Mọi phép tính chạy trong trình duyệt của bạn; trang không lưu bất kỳ ngày nào bạn nhập.',
+      lg_priv_h:'Quyền riêng tư & công bố',
+      lg_priv_p1:'Mọi phép tính chạy trên thiết bị của bạn; chúng tôi không thu thập hay lưu dữ liệu cá nhân bạn nhập.',
+      lg_priv_p2:'Một số liên kết trên trang là liên kết đối tác hoặc tiếp thị liên kết, ghi “quảng cáo”. Nếu bạn mua qua đó, trang có thể nhận hoa hồng mà không tăng chi phí của bạn.',
+      lg_priv_p3:'Trang có thể dùng cookie và công cụ phân tích để hiểu mức sử dụng chung; bạn có thể xóa hoặc chặn cookie bất cứ lúc nào trong cài đặt trình duyệt.',
+      lg_contact_h:'Liên hệ',
+      lg_contact_p:'Góp ý hoặc báo lỗi dữ liệu, email: <b>y0911122420@gmail.com</b>.',
+      btn_close:'Đóng',
+      foot_disclaimer:'Các công cụ chỉ mang tính tham khảo. Ngày lễ theo thông báo của DGPA; ngày nghỉ của công ty theo thông báo công ty và quy định của Bộ Lao động.',
+      roc_note_static:'Lưu ý: năm ROC thứ 1 là 1912. Với năm trước đó, dùng “Dương → ROC”.',
+      leave_note_static:'Nguồn: lịch cơ quan chính phủ DGPA 2026. Gợi ý nghỉ theo lịch chính phủ; ngày nghỉ công ty tư nhân theo quy định Bộ Lao động và thông báo công ty.',
+      brand_title:'Công cụ ngày tháng Đài Loan', brand_sub:'Âm↔Dương · ROC↔Dương · Ngày làm việc · Lịch nghỉ lễ · Số ngày bên nhau',
+      tab_lunar:'Âm→Dương', tab_roc:'ROC ⇄ Dương', tab_work:'Ngày làm việc', tab_leave:'Lịch nghỉ lễ', tab_days:'Ngày bên nhau', tab_passport:'Hạn hộ chiếu',
+      lunar_h2:'Sinh nhật âm lịch → Dương / ROC', lunar_lead:'Nhiều người chỉ nhớ sinh nhật âm lịch. Nhập ngày âm lịch để ra ngày dương (AD) và ROC tương ứng. Hỗ trợ năm 1912–2049.',
+      lunar_l_year:'Năm âm lịch (dương)', lunar_l_month:'Tháng âm lịch', lunar_l_day:'Ngày âm lịch', lunar_leap:'Đây là tháng nhuận (chỉ tick khi tháng lặp lại)', lunar_btn:'Đổi sang ngày dương',
+      roc_h2:'Chuyển đổi năm ROC ⇄ Dương', roc_lead:'Nhập năm (tháng/ngày tùy chọn) để đổi hai chiều. Dương = ROC + 1911.',
+      roc_seg_r2a:'ROC → Dương', roc_seg_a2r:'Dương → ROC', roc_l_year:'Năm ROC', roc_l_yearAD:'Năm dương', roc_l_month:'Tháng (tùy chọn)', roc_l_day:'Ngày (tùy chọn)', roc_btn:'Chuyển đổi',
+      work_h2:'Tính ngày làm việc', work_lead:'Tự động trừ thứ Bảy, Chủ nhật và ngày lễ Đài Loan (hiện bao gồm 2026–2027).',
+      work_seg_range:'Ngày trong khoảng', work_seg_add:'Tìm ngày đến hạn', work_l_start:'Ngày bắt đầu', work_l_end:'Ngày kết thúc', work_l_from:'Từ ngày', work_l_n:'Số ngày làm việc', work_btn:'Tính',
+      leave_h2:'Cẩm nang nghỉ lễ 2026', leave_lead:'Dựa trên lịch 2026 của Viện Hành chính (DGPA). Từ 2026 áp dụng “chỉ nghỉ bù, không làm bù”, nên cả năm không có ngày làm bù.', leave_promo_h:'Đi đâu dịp lễ? (quảng cáo đối tác)',
+      days_h2:'Số ngày bên nhau / kỷ niệm', days_lead:'Tính số ngày kể từ ngày bắt đầu, và đếm ngược tới mốc trăm ngày và ngày kỷ niệm kế tiếp.', days_l_start:'Ngày bắt đầu (vd. yêu nhau, sinh nhật)', days_l_end:'Tính đến (mặc định hôm nay)', days_btn:'Tính',
+      pp_h2:'Tính hạn hộ chiếu', pp_lead:'Hầu hết các nước yêu cầu hộ chiếu còn hạn ít nhất 6 tháng khi nhập cảnh. Nhập ngày hết hạn để xem hạn còn lại và có cần đổi mới; có thể thêm ngày nhập cảnh dự kiến và số tháng yêu cầu để kiểm tra.',
+      pp_l_expiry:'Ngày hết hạn hộ chiếu', pp_l_entry:'Ngày nhập cảnh dự kiến (tùy chọn)', pp_l_months:'Hạn yêu cầu (tháng)', pp_btn:'Tính',
+      foot_about:'Giới thiệu', foot_privacy:'Quyền riêng tư & công bố', foot_contact:'Liên hệ',
+      ph_eg1990:'vd. 1990', ph_eg115:'vd. 115', ph_eg2026:'vd. 2026', ph_month:'Th', ph_day:'Ng', ph_eg10:'vd. 10',
+      pp_err_expiry:'Vui lòng chọn ngày hết hạn hộ chiếu', pp_expired:'Hộ chiếu đã hết hạn',
+      pp_expired_sub:'Hết hạn {date}, đã quá {days} ngày', pp_expired_note:'Hãy đổi hộ chiếu mới trước khi lên kế hoạch đi nước ngoài.',
+      pp_remain:'Hạn còn lại: {y} năm {m} tháng {d} ngày', pp_subexp:'Hết hạn {date} (còn {days} ngày)',
+      pp_st_expiry:'Ngày hết hạn', pp_st_remdays:'Số ngày còn lại', fmt_days:'{n} ngày',
+      tab_age:'Tính tuổi', age_h2:'Máy tính tuổi', age_lead:'Nhập ngày sinh để biết tuổi chính xác, tổng số ngày đã sống và số ngày đến sinh nhật tới.', age_l_birth:'Ngày sinh', age_l_to:'Tính đến (mặc định hôm nay)', age_btn:'Tính', age_err:'Vui lòng chọn ngày sinh', age_err_order:'Ngày sinh không được muộn hơn ngày tính', age_big:'{y} tuổi', age_sub:'{y} tuổi {m} tháng {d} ngày', age_st_nominal:'Tuổi mụ', age_years:'{n} tuổi', age_st_total:'Tổng số ngày đã sống', age_st_nextbday:'Sinh nhật tới', age_note:'Ngày sinh {s} · tính đến {e}',
+      pp_st_entry:'Ngày nhập cảnh', pp_bad_title:'⚠️ Không đạt', pp_early_val:'Hết hạn trước ngày nhập cảnh',
+      pp_note_early:'Hộ chiếu hết hạn trước ngày nhập cảnh — phải đổi mới trước. Quy định mỗi nước khác nhau; theo yêu cầu của nước đến.',
+      pp_ok_title:'✅ Đạt yêu cầu', pp_short_title:'⚠️ Không đủ',
+      pp_entry_remain:'Khi nhập cảnh còn: {y} năm {m} tháng {d} ngày',
+      pp_note_ok:'Vào ngày nhập cảnh, hộ chiếu đáp ứng yêu cầu phổ biến “ít nhất {n} tháng”. Quy định mỗi nước khác nhau; theo yêu cầu của nước đến.',
+      pp_note_short:'Vào ngày nhập cảnh, hộ chiếu còn dưới {n} tháng; hãy đổi mới trước khi đi. Quy định mỗi nước khác nhau; theo yêu cầu của nước đến.',
+      pp_st_safe:'Dùng trước (giữ {n} tháng)',
+      pp_note_safe:'Hầu hết các nước yêu cầu còn ít nhất {n} tháng khi nhập cảnh. Theo chuẩn đó, hãy nhập cảnh trước {date}; sau đó một số nước có thể từ chối, nên đổi sớm. Quy định mỗi nước khác nhau; theo yêu cầu của nước đến.'
+    }
+  };
+  function t(key){ const d=I18N[T_LANG]; if(d&&d[key]!=null) return d[key]; return I18N.zh[key]!=null?I18N.zh[key]:key; }
+  function F(k,o){ let s=t(k); if(o) for(const p in o) s=s.split('{'+p+'}').join(o[p]); return s; }
+  function fmtP(d){ return `${d.getFullYear()}/${pad(d.getMonth()+1)}/${pad(d.getDate())}`; }
+  function initI18nBase(){
+    document.querySelectorAll('[data-i18n]').forEach(el=>{ const k=el.dataset.i18n; if(I18N.zh[k]==null) I18N.zh[k]=el.innerHTML; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ const k=el.dataset.i18nPh; if(I18N.zh[k]==null) I18N.zh[k]=el.placeholder; });
+  }
+  function syncRocLabel(){ const ad=(typeof rocDir!=='undefined'&&rocDir==='ad2roc'); const yl=$('#roc-ylabel'); if(yl) yl.textContent=t(ad?'roc_l_yearAD':'roc_l_year'); const yi=$('#roc-year'); if(yi) yi.placeholder=t(ad?'ph_eg2026':'ph_eg115'); }
+  function applyLang(lang){
+    if(!I18N[lang]) lang='zh'; T_LANG=lang;
+    const get=k=>{ const d=I18N[lang]; return (d&&d[k]!=null)?d[k]:I18N.zh[k]; };
+    document.querySelectorAll('[data-i18n]').forEach(el=>{ const v=get(el.dataset.i18n); if(v!=null) el.innerHTML=v; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ const v=get(el.dataset.i18nPh); if(v!=null) el.placeholder=v; });
+    document.documentElement.lang={zh:'zh-Hant',en:'en',id:'id',vi:'vi'}[lang]||'zh-Hant';
+    document.querySelectorAll('#langbar button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.lang===lang?'true':'false'));
+    syncRocLabel();
+    if(typeof renderToday==='function') renderToday();
+    if(typeof renderLeave==='function') renderLeave();
+    if(typeof refreshTripPromos==='function') refreshTripPromos();
+    try{localStorage.setItem('tdt_lang',lang);}catch(e){}
+  }
 
-  <h2>常見問題</h2>
-      <div class="faq-item"><h3>民國83年是西元幾年？</h3><p>民國83年是西元1994年。換算公式為民國年 + 1911 = 西元年。</p></div>
-      <div class="faq-item"><h3>民國83年出生今年幾歲？</h3><p>民國83年出生者，在2026年滿32歲，虛歲約33歲(實際實歲以生日是否已過為準)。</p></div>
-      <div class="faq-item"><h3>民國83年生肖屬什麼？</h3><p>民國83年(西元1994年)生肖屬狗。生肖以農曆年計,農曆年初前出生者請以實際農曆日期為準。</p></div>
-</main>
-<footer><div class="wrap"><a href="/">台灣日期工具 twdatetools.com</a>｜民國西元、農曆、連假、護照效期一站查<br>本站工具僅供一般參考。© 台灣日期工具</div></footer>
+  /* ===== 國定假日 ===== */
+  const HOLIDAYS = { 2026:{
+    '2026-01-01':'元旦','2026-02-15':'小年夜','2026-02-16':'除夕',
+    '2026-02-17':'春節','2026-02-18':'春節','2026-02-19':'春節','2026-02-20':'春節補假',
+    '2026-02-27':'和平紀念日補假','2026-02-28':'和平紀念日',
+    '2026-04-03':'兒童節補假','2026-04-04':'兒童節','2026-04-05':'清明節','2026-04-06':'清明節補假',
+    '2026-05-01':'勞動節','2026-06-19':'端午節','2026-09-25':'中秋節','2026-09-28':'教師節',
+    '2026-10-09':'國慶日補假','2026-10-10':'國慶日','2026-10-25':'光復節','2026-10-26':'光復節補假',
+    '2026-12-25':'行憲紀念日'
+  }, 2027:{
+    '2027-01-01':'元旦',
+    '2027-02-04':'小年夜','2027-02-05':'除夕',
+    '2027-02-06':'春節','2027-02-07':'春節','2027-02-08':'春節',
+    '2027-02-09':'春節補假','2027-02-10':'春節補假',
+    '2027-02-28':'和平紀念日','2027-03-01':'和平紀念日補假',
+    '2027-04-04':'兒童節','2027-04-05':'清明節','2027-04-06':'兒童節補假',
+    '2027-04-30':'勞動節補假','2027-05-01':'勞動節',
+    '2027-06-09':'端午節','2027-09-15':'中秋節','2027-09-28':'教師節',
+    '2027-10-10':'國慶日','2027-10-11':'國慶日補假',
+    '2027-10-25':'光復節',
+    '2027-12-24':'行憲紀念日補假','2027-12-25':'行憲紀念日',
+    '2027-12-31':'開國紀念日補假'
+  }};
+  const COVERED = Object.keys(HOLIDAYS).map(Number);
+  const hkey = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+  const holidayName = d => { const y=HOLIDAYS[d.getFullYear()]; return y ? (y[hkey(d)]||null) : null; };
+  const isWeekend = d => d.getDay()===0 || d.getDay()===6;
+  const isWorkday = d => !isWeekend(d) && !holidayName(d);
+
+  /* 連假起訖（供今日倒數） */
+  const LW_DATES = [
+    ['hn_newyear','2026-01-01','2026-01-01'],['hn_cny','2026-02-14','2026-02-22'],['hn_228','2026-02-27','2026-03-01'],
+    ['hn_qingming','2026-04-03','2026-04-06'],['hn_labor','2026-05-01','2026-05-03'],['hn_dragon','2026-06-19','2026-06-21'],
+    ['hn_midautumn','2026-09-25','2026-09-28'],['hn_national','2026-10-09','2026-10-11'],['hn_retro','2026-10-24','2026-10-26'],
+    ['hn_constitution','2026-12-25','2026-12-27'],
+    ['hn_newyear','2027-01-01','2027-01-01'],['hn_cny','2027-02-04','2027-02-10'],['hn_228','2027-02-27','2027-03-01'],
+    ['hn_qingming','2027-04-03','2027-04-06'],['hn_labor','2027-04-30','2027-05-02'],['hn_dragon','2027-06-09','2027-06-09'],
+    ['hn_midautumn','2027-09-15','2027-09-15'],['hn_national','2027-10-09','2027-10-11'],['hn_retro','2027-10-23','2027-10-25'],
+    ['hn_constitution','2027-12-24','2027-12-26'],['hn_newyear','2027-12-31','2028-01-02']
+  ];
+
+  /* ===== 農曆資料 1900–2049（已用歷年春節+全範圍 round-trip 驗證） ===== */
+  const lunarInfo=[
+  0x04bd8,0x04ae0,0x0a570,0x054d5,0x0d260,0x0d950,0x16554,0x056a0,0x09ad0,0x055d2,
+  0x04ae0,0x0a5b6,0x0a4d0,0x0d250,0x1d255,0x0b540,0x0d6a0,0x0ada2,0x095b0,0x14977,
+  0x04970,0x0a4b0,0x0b4b5,0x06a50,0x06d40,0x1ab54,0x02b60,0x09570,0x052f2,0x04970,
+  0x06566,0x0d4a0,0x0ea50,0x06e95,0x05ad0,0x02b60,0x186e3,0x092e0,0x1c8d7,0x0c950,
+  0x0d4a0,0x1d8a6,0x0b550,0x056a0,0x1a5b4,0x025d0,0x092d0,0x0d2b2,0x0a950,0x0b557,
+  0x06ca0,0x0b550,0x15355,0x04da0,0x0a5b0,0x14573,0x052b0,0x0a9a8,0x0e950,0x06aa0,
+  0x0aea6,0x0ab50,0x04b60,0x0aae4,0x0a570,0x05260,0x0f263,0x0d950,0x05b57,0x056a0,
+  0x096d0,0x04dd5,0x04ad0,0x0a4d0,0x0d4d4,0x0d250,0x0d558,0x0b540,0x0b5a0,0x195a6,
+  0x095b0,0x049b0,0x0a974,0x0a4b0,0x0b27a,0x06a50,0x06d40,0x0af46,0x0ab60,0x09570,
+  0x04af5,0x04970,0x064b0,0x074a3,0x0ea50,0x06b58,0x05ac0,0x0ab60,0x096d5,0x092e0,
+  0x0c960,0x0d954,0x0d4a0,0x0da50,0x07552,0x056a0,0x0abb7,0x025d0,0x092d0,0x0cab5,
+  0x0a950,0x0b4a0,0x0baa4,0x0ad50,0x055d9,0x04ba0,0x0a5b0,0x15176,0x052b0,0x0a930,
+  0x07954,0x06aa0,0x0ad50,0x05b52,0x04b60,0x0a6e6,0x0a4e0,0x0d260,0x0ea65,0x0d530,
+  0x05aa0,0x076a3,0x096d0,0x04bd7,0x04ad0,0x0a4d0,0x1d0b6,0x0d250,0x0d520,0x0dd45,
+  0x0b5a0,0x056d0,0x055b2,0x049b0,0x0a577,0x0a4b0,0x0aa50,0x1b255,0x06d20,0x0ada0
+  ];
+  const LMIN=1900, LMAX=2049;
+  const lLeapMonth=y=>lunarInfo[y-LMIN]&0xf;
+  const lLeapDays=y=>lLeapMonth(y)?((lunarInfo[y-LMIN]&0x10000)?30:29):0;
+  const lMonthDays=(y,m)=>(lunarInfo[y-LMIN]&(0x10000>>m))?30:29;
+  const lYearDays=y=>{let s=348;for(let i=0x8000;i>0x8;i>>=1)s+=(lunarInfo[y-LMIN]&i)?1:0;return s+lLeapDays(y);};
+  function lunar2solar(y,m,d,isLeap){let o=0;for(let i=LMIN;i<y;i++)o+=lYearDays(i);const lp=lLeapMonth(y);let a=false;
+    for(let i=1;i<m;i++){if(lp>0&&i===lp&&!a){o+=lLeapDays(y);a=true;}o+=lMonthDays(y,i);}if(isLeap)o+=lMonthDays(y,m);o+=d-1;
+    return new Date(Date.UTC(1900,0,31)+o*86400000);}
+  function solar2lunar(date){
+    let offset=Math.round((Date.UTC(date.getFullYear(),date.getMonth(),date.getDate())-Date.UTC(1900,0,31))/86400000);
+    let y=1900;while(y<2050){const dy=lYearDays(y);if(offset<dy)break;offset-=dy;y++;}
+    const lp=lLeapMonth(y);let m=1,isLeap=false;
+    while(true){const dm=isLeap?lLeapDays(y):lMonthDays(y,m);if(offset<dm)break;offset-=dm;
+      if(!isLeap&&lp>0&&m===lp){isLeap=true;}else{isLeap=false;m++;}}
+    return{year:y,month:m,day:offset+1,isLeap:isLeap};
+  }
+  const ZODIAC=['鼠','牛','虎','兔','龍','蛇','馬','羊','猴','雞','狗','豬'];
+  const CN_NUM=['','一','二','三','四','五','六','七','八','九','十'];
+  function cnMonth(m){return (m===1?'正':CN_NUM[m])+'月';}
+  function cnDay(d){if(d<=10)return '初'+CN_NUM[d];if(d<20)return '十'+CN_NUM[d-10];if(d===20)return '二十';if(d<30)return '廿'+CN_NUM[d-20];return '三十';}
+
+  /* 掃 LW_DATES：回傳「進行中」或「即將到來」的連假，供今日資訊列與 Trip 推廣輪播共用 */
+  function nextOrCurrentHoliday(now){
+    for(const [key,s,e] of LW_DATES){
+      const sd=new Date(s+'T00:00:00'), ed=new Date(e+'T00:00:00');
+      if(now>=sd && now<=ed) return {status:'now', key};
+      if(now<sd) return {status:'next', key, days:dayDiff(now,sd)};
+    }
+    return null;
+  }
+
+  /* ===== 今日資訊列 ===== */
+  function renderToday(){
+    const now=new Date();
+    const ld=solar2lunar(now);
+    $('#today-date').textContent=F('td_today',{d:fmt(now)});
+    const lunar = T_LANG==='zh'
+      ? (ld.isLeap?'閏':'')+cnMonth(ld.month)+cnDay(ld.day)
+      : (ld.isLeap?t('leap_word'):'')+ld.month+'/'+ld.day;
+    $('#today-meta').textContent=F('td_meta',{roc:now.getFullYear()-1911,lunar:lunar,zod:zod(ld.year)});
+    const cd=$('#today-cd'); cd.className='cd'; cd.style.display='';
+    const hol=nextOrCurrentHoliday(now);
+    if(hol && hol.status==='now'){ cd.classList.add('now'); cd.innerHTML=F('td_now',{name:t(hol.key)}); return; }
+    if(hol && hol.status==='next'){ cd.innerHTML=F('td_next',{name:t(hol.key),n:hol.days}); }
+    else cd.style.display='none';
+  }
+
+  /* ===== 分頁切換 ===== */
+  document.querySelectorAll('.tab').forEach(t=>{
+    t.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected','false'));
+      t.setAttribute('aria-selected','true');
+      document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+      $('#panel-'+t.dataset.tab).classList.add('active');
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  });
+
+  /* ===== 農曆轉換 ===== */
+  (function(){
+    const mSel=$('#l-month'), dSel=$('#l-day');
+    for(let i=1;i<=12;i++) mSel.insertAdjacentHTML('beforeend',`<option value="${i}">${cnMonth(i)}（${i}）</option>`);
+    for(let i=1;i<=30;i++) dSel.insertAdjacentHTML('beforeend',`<option value="${i}">${cnDay(i)}（${i}）</option>`);
+  })();
+  $('#lunar-go').addEventListener('click',()=>{
+    const res=$('#lunar-result'),big=$('#lunar-big'),sub=$('#lunar-sub'),grid=$('#lunar-grid'),note=$('#lunar-note');
+    const reset=msg=>{big.textContent=msg;big.classList.add('err');sub.textContent='';grid.innerHTML='';note.textContent='';res.classList.add('show');};
+    big.classList.remove('err');
+    const y=parseInt($('#l-year').value,10),m=parseInt($('#l-month').value,10),d=parseInt($('#l-day').value,10);
+    const leap=$('#l-leap').checked;
+    if(isNaN(y)) return reset(t('l_err_year'));
+    if(y<LMIN+12||y>LMAX) return reset(F('l_err_range',{max:LMAX}));
+    if(leap && lLeapMonth(y)!==m) return reset(F('l_err_noleap',{y:y,m:m}));
+    const dim=leap?lLeapDays(y):lMonthDays(y,m);
+    if(d>dim) return reset(F('l_err_days',{y:y,lm:leap?t('leap_word'):'',m:m,dim:dim}));
+    const g=lunar2solar(y,m,d,leap);
+    const gy=g.getUTCFullYear(),gm=g.getUTCMonth()+1,gd=g.getUTCDate();
+    const wd=new Date(gy,gm-1,gd).getDay(), roc=gy-1911;
+    const lunarTxt = T_LANG==='zh' ? (cnMonth(m)+cnDay(d)) : (m+'/'+d);
+    big.innerHTML=F('l_big',{y:gy,mo:pad(gm),d:pad(gd),wd:wdName(wd)});
+    sub.textContent=F('l_sub',{y:y,lm:leap?t('leap_word'):'',lunar:lunarTxt,zod:zod(y)});
+    grid.innerHTML=`<div class="stat"><div class="k">${t('st_roc')}</div><div class="v" style="font-size:16px">${F('l_roc_val',{roc:roc,mo:gm,d:gd})}</div></div>`+
+      `<div class="stat work"><div class="k">${t('st_zodiac')}</div><div class="v">${zod(y)}</div></div>`;
+    note.textContent=F('l_note',{max:LMAX});
+    res.classList.add('show');
+  });
+
+  /* ===== 民國 / 西元 ===== */
+  let rocDir='roc2ad';
+  $('#roc-seg').addEventListener('click',e=>{
+    const b=e.target.closest('button'); if(!b)return;
+    [...e.currentTarget.children].forEach(x=>x.setAttribute('aria-pressed','false'));
+    b.setAttribute('aria-pressed','true'); rocDir=b.dataset.dir;
+    syncRocLabel();
+  });
+  $('#roc-go').addEventListener('click',()=>{
+    const y=parseInt($('#roc-year').value,10);
+    const m=$('#roc-month').value?parseInt($('#roc-month').value,10):null;
+    const d=$('#roc-day').value?parseInt($('#roc-day').value,10):null;
+    const res=$('#roc-result'),out=$('#roc-out'),sub=$('#roc-sub');
+    if(isNaN(y)){out.textContent=t('r_err_year');sub.textContent='';res.classList.add('show');return;}
+    let label,val,src;
+    if(rocDir==='roc2ad'){val=y+1911;label=t('st_ad');src=F('r_src_roc',{y:y});}
+    else{val=y-1911;label=t('st_roc');src=F('r_src_ad',{y:y});
+      if(val<=0){out.textContent=F('r_before',{n:1-val});sub.textContent=F('r_before_sub',{src:src});res.classList.add('show');return;}}
+    const tail=(m?F('r_tail_m',{m:m}):'')+(d?F('r_tail_d',{d:d}):'');
+    out.innerHTML=F('r_out',{label:label,val:val,tail:tail});
+    sub.textContent=F('r_sub',{src:src,tail:tail}); res.classList.add('show');
+  });
+
+  /* ===== 工作天 ===== */
+  let workMode='range';
+  $('#work-seg').addEventListener('click',e=>{
+    const b=e.target.closest('button'); if(!b)return;
+    [...e.currentTarget.children].forEach(x=>x.setAttribute('aria-pressed','false'));
+    b.setAttribute('aria-pressed','true'); workMode=b.dataset.mode;
+    $('#work-range').style.display=workMode==='range'?'block':'none';
+    $('#work-add').style.display=workMode==='add'?'block':'none';
+    $('#work-result').classList.remove('show');
+  });
+  function coverWarn(...dates){
+    const ys=[...new Set(dates.map(d=>d.getFullYear()))], miss=ys.filter(y=>!COVERED.includes(y));
+    return miss.length?F('w_cover',{years:COVERED.join('、'),miss:miss.join('、')}):'';
+  }
+  function stat(k,v,cls){return `<div class="stat ${cls||''}"><div class="k">${k}</div><div class="v">${v}</div></div>`;}
+  $('#work-go').addEventListener('click',()=>{
+    const res=$('#work-result'),big=$('#work-big'),grid=$('#work-grid'),note=$('#work-note');
+    if(workMode==='range'){
+      const s=$('#w-start').value,e=$('#w-end').value;
+      if(!s||!e){big.textContent=t('w_err_range');grid.innerHTML='';note.textContent='';res.classList.add('show');return;}
+      let start=new Date(s+'T00:00:00'),end=new Date(e+'T00:00:00'); if(start>end)[start,end]=[end,start];
+      let total=0,work=0,wknd=0,holi=0;
+      for(let d=new Date(start);d<=end;d.setDate(d.getDate()+1)){total++;const h=holidayName(d),w=isWeekend(d);if(w)wknd++;if(h&&!w)holi++;if(!w&&!h)work++;}
+      res.classList.add('show');
+      big.innerHTML=F('w_big',{n:work});
+      grid.innerHTML=stat(t('st_caltotal'),F('fmt_days',{n:total}))+stat(t('st_workdays'),F('fmt_days',{n:work}),'work')+stat(t('st_weekend'),F('fmt_days',{n:wknd}))+stat(t('st_wkholiday'),F('fmt_days',{n:holi}),'holiday');
+      note.textContent=F('w_note_range',{s:fmt(start),e:fmt(end),warn:coverWarn(start,end)});
+    }else{
+      const f=$('#w-from').value,n=parseInt($('#w-n').value,10);
+      if(!f||isNaN(n)){big.textContent=t('w_err_add');grid.innerHTML='';note.textContent='';res.classList.add('show');return;}
+      let d=new Date(f+'T00:00:00');const fwd=n>=0;let steps=Math.abs(n),counted=0;
+      while(counted<steps){d.setDate(d.getDate()+(fwd?1:-1));if(isWorkday(d))counted++;}
+      big.innerHTML=`${fmt(d)}`;
+      grid.innerHTML=stat(t('st_fromdate'),fmt(new Date(f+'T00:00:00')))+stat(t('st_calc'),F('w_calc_val',{sign:fwd?'+':'−',n:steps}),'work');
+      note.textContent=F('w_note_add',{warn:coverWarn(new Date(f+'T00:00:00'),d)});
+      res.classList.add('show');
+    }
+  });
+
+  /* ===== 連假攻略 ===== */
+  const LEAVE_2026=[
+    {key:'hn_newyear',       s:'2026-01-01', e:'2026-01-01', off:1,  tipK:'tip_newyear'},
+    {key:'hn_cny',           s:'2026-02-14', e:'2026-02-22', off:9,  tipK:'tip_cny'},
+    {key:'hn_228',           s:'2026-02-27', e:'2026-03-01', off:3,  tipK:'tip_228'},
+    {key:'hn_qingming',      s:'2026-04-03', e:'2026-04-06', off:4,  tipK:'tip_qingming'},
+    {key:'hn_labor',         s:'2026-05-01', e:'2026-05-03', off:3,  tipK:'tip_labor'},
+    {key:'hn_dragon',        s:'2026-06-19', e:'2026-06-21', off:3,  tipK:'tip_dragon'},
+    {key:'hn_midautumn',     s:'2026-09-25', e:'2026-09-28', off:4,  tipK:'tip_midautumn'},
+    {key:'hn_national',      s:'2026-10-09', e:'2026-10-11', off:3,  tipK:'tip_national'},
+    {key:'hn_retro',         s:'2026-10-24', e:'2026-10-26', off:3,  tipK:'tip_retro'},
+    {key:'hn_constitution',  s:'2026-12-25', e:'2026-12-27', off:3,  tipK:'tip_constitution'}
+  ];
+  function leaveRange(x){
+    const sd=new Date(x.s+'T00:00:00'), ed=new Date(x.e+'T00:00:00');
+    const one=d=>`${d.getMonth()+1}/${d.getDate()}${wrapWd(wdName(d.getDay()))}`;
+    return x.s===x.e ? one(sd) : `${one(sd)}～${one(ed)}`;
+  }
+  function renderLeave(){
+    $('#leave-list').innerHTML=LEAVE_2026.map(x=>`<div class="lw"><div class="top"><div class="name">${t(x.key)}</div><div class="days">${F('days_off',{n:x.off})}</div></div><div class="range">${leaveRange(x)}</div><div class="tip">${t(x.tipK)}</div></div>`).join('');
+  }
+
+  /* ===== 相處天數 ===== */
+  $('#days-go').addEventListener('click',()=>{
+    const res=$('#days-result'),big=$('#days-big'),sub=$('#days-sub'),grid=$('#days-grid'),note=$('#days-note');
+    const s=$('#d-start').value;
+    if(!s){big.textContent=t('d_err_start');sub.textContent='';grid.innerHTML='';note.textContent='';res.classList.add('show');return;}
+    const start=new Date(s+'T00:00:00');
+    const end=$('#d-end').value?new Date($('#d-end').value+'T00:00:00'):new Date(new Date().toDateString());
+    if(end<start){big.textContent=t('d_err_order');sub.textContent='';grid.innerHTML='';note.textContent='';res.classList.add('show');return;}
+    const total=dayDiff(start,end);
+    res.classList.add('show');
+    big.innerHTML=F('d_big',{n:total+1,p:total});
+    let y=end.getFullYear()-start.getFullYear(),m=end.getMonth()-start.getMonth(),d=end.getDate()-start.getDate();
+    if(d<0){m--;d+=new Date(end.getFullYear(),end.getMonth(),0).getDate();}
+    if(m<0){y--;m+=12;}
+    sub.textContent=F('d_sub',{y:y,m:m,d:d});
+    const nextHundred=(Math.floor(total/100)+1)*100;
+    const hundredDate=new Date(start);hundredDate.setDate(hundredDate.getDate()+nextHundred);
+    const nextAnni=new Date(start);nextAnni.setFullYear(start.getFullYear()+y+1);
+    grid.innerHTML=stat(F('d_st_hundred',{h:nextHundred}),fmt(hundredDate))+stat(t('st_remain'),F('fmt_days',{n:dayDiff(end,hundredDate)}),'work')+stat(F('d_st_anni',{a:y+1}),fmt(nextAnni))+stat(t('st_remain'),F('fmt_days',{n:dayDiff(end,nextAnni)}),'holiday');
+    note.textContent=F('d_note',{s:fmt(start),e:fmt(end)});
+  });
+
+  /* ===== 年齡計算 ===== */
+  $('#age-go').addEventListener('click',()=>{
+    const res=$('#age-result'),big=$('#age-big'),sub=$('#age-sub'),grid=$('#age-grid'),note=$('#age-note');
+    const s=$('#age-birth').value;
+    if(!s){big.textContent=t('age_err');big.classList.add('err');sub.textContent='';grid.innerHTML='';note.textContent='';res.classList.add('show');return;}
+    big.classList.remove('err');
+    const birth=new Date(s+'T00:00:00');
+    const end=$('#age-to').value?new Date($('#age-to').value+'T00:00:00'):new Date(new Date().toDateString());
+    if(end<birth){big.textContent=t('age_err_order');big.classList.add('err');sub.textContent='';grid.innerHTML='';note.textContent='';res.classList.add('show');return;}
+    res.classList.add('show');
+    const diff=ymdDiff(birth,end);
+    const total=dayDiff(birth,end);
+    const nominal=end.getFullYear()-birth.getFullYear()+1;
+    big.innerHTML=F('age_big',{y:diff.y});
+    sub.textContent=F('age_sub',{y:diff.y,m:diff.m,d:diff.d});
+    let nb=new Date(end.getFullYear(),birth.getMonth(),birth.getDate());
+    if(nb<end) nb=new Date(end.getFullYear()+1,birth.getMonth(),birth.getDate());
+    const toBday=dayDiff(end,nb);
+    grid.innerHTML=stat(t('age_st_nominal'),F('age_years',{n:nominal}))+stat(t('age_st_total'),F('fmt_days',{n:total}),'work')+stat(t('age_st_nextbday'),fmt(nb))+stat(t('st_remain'),F('fmt_days',{n:toBday}),'holiday');
+    note.textContent=F('age_note',{s:fmt(birth),e:fmt(end)});
+  });
+
+  /* ===== 護照效期 ===== */
+  function addMonths(date,n){const d=new Date(date);const day=d.getDate();d.setMonth(d.getMonth()+n);if(d.getDate()<day)d.setDate(0);return d;}
+  function ymdDiff(a,b){let y=b.getFullYear()-a.getFullYear(),m=b.getMonth()-a.getMonth(),d=b.getDate()-a.getDate();
+    if(d<0){m--;d+=new Date(b.getFullYear(),b.getMonth(),0).getDate();}if(m<0){y--;m+=12;}return{y,m,d};}
+  $('#passport-go').addEventListener('click',()=>{
+    const res=$('#passport-result'),big=$('#passport-big'),sub=$('#passport-sub'),grid=$('#passport-grid'),note=$('#passport-note');
+    const reset=msg=>{big.textContent=msg;big.classList.add('err');sub.textContent='';grid.innerHTML='';note.textContent='';res.classList.add('show');};
+    big.classList.remove('err');
+    const ev=$('#p-expiry').value;
+    if(!ev) return reset(t('pp_err_expiry'));
+    const expiry=new Date(ev+'T00:00:00');
+    const today=new Date(new Date().toDateString());
+    const reqM=Math.max(0,parseInt($('#p-months').value,10)||0);
+    res.classList.add('show');
+    const remDays=dayDiff(today,expiry);
+    if(remDays<0){
+      big.textContent=t('pp_expired');big.classList.add('err');
+      sub.textContent=F('pp_expired_sub',{date:fmtP(expiry),days:-remDays});
+      grid.innerHTML='';note.textContent=t('pp_expired_note');
+      return;
+    }
+    const diff=ymdDiff(today,expiry);
+    big.textContent=F('pp_remain',{y:diff.y,m:diff.m,d:diff.d});
+    sub.textContent=F('pp_subexp',{date:fmtP(expiry),days:remDays});
+    const safeUntil=addMonths(expiry,-reqM);
+    let cells=stat(t('pp_st_expiry'),fmtP(expiry))+stat(t('pp_st_remdays'),F('fmt_days',{n:remDays}),'work');
+    const ent=$('#p-entry').value;
+    if(ent){
+      const entry=new Date(ent+'T00:00:00');
+      if(expiry<entry){
+        cells+=stat(t('pp_st_entry'),fmtP(entry))+stat(t('pp_bad_title'),t('pp_early_val'),'holiday');
+        note.textContent=t('pp_note_early');
+      }else{
+        const needBy=addMonths(entry,reqM);
+        const ok=expiry>=needBy;
+        const er=ymdDiff(entry,expiry);
+        cells+=stat(t('pp_st_entry'),fmtP(entry))+stat(ok?t('pp_ok_title'):t('pp_short_title'),F('pp_entry_remain',{y:er.y,m:er.m,d:er.d}),ok?'work':'holiday');
+        note.textContent=ok?F('pp_note_ok',{n:reqM}):F('pp_note_short',{n:reqM});
+      }
+    }else{
+      cells+=stat(F('pp_st_safe',{n:reqM}),fmtP(safeUntil),'holiday');
+      note.textContent=F('pp_note_safe',{n:reqM,date:fmtP(safeUntil)});
+    }
+    grid.innerHTML=cells;
+  });
+
+  /* ===== 信任頁 ===== */
+  document.querySelectorAll('[data-legal]').forEach(a=>{
+    a.addEventListener('click',e=>{e.preventDefault();
+      document.querySelectorAll('.legal').forEach(l=>l.classList.remove('show'));
+      const el=$('#'+a.dataset.legal);el.classList.add('show');el.scrollIntoView({behavior:'smooth',block:'center'});});
+  });
+  document.querySelectorAll('[data-close]').forEach(c=>c.addEventListener('click',()=>c.closest('.legal').classList.remove('show')));
+
+  const nowD=new Date();
+  $('#d-end').value=`${nowD.getFullYear()}-${pad(nowD.getMonth()+1)}-${pad(nowD.getDate())}`;
+
+  /* ===== Trip.com 推廣輪播（依最近連假動態換文案） ===== */
+  const TRIP_BANNERS=['trip-banner-a','trip-banner-b'];
+  const tripState={};
+  function tripPromoVariants(){
+    const hol=nextOrCurrentHoliday(new Date());
+    const list=[];
+    if(hol&&hol.status==='now') list.push({title:F('trip_now_t',{name:t(hol.key)}), desc:t('trip_now_d')});
+    else if(hol&&hol.status==='next'&&hol.days<=45) list.push({title:F('trip_soon_t',{name:t(hol.key),n:hol.days}), desc:t('trip_soon_d')});
+    list.push({title:t('trip_g1_t'), desc:t('trip_g1_d')});
+    list.push({title:t('trip_g2_t'), desc:t('trip_g2_d')});
+    return list;
+  }
+  function paintTrip(id){
+    const st=tripState[id], el=$('#'+id); if(!st||!el) return;
+    const titleEl=el.querySelector('.ptitle'), descEl=el.querySelector('.pdesc'), dotsEl=el.querySelector('.pdots');
+    titleEl.textContent=st.variants[st.i].title;
+    descEl.textContent=st.variants[st.i].desc;
+    if(dotsEl) dotsEl.innerHTML=st.variants.length>1 ? st.variants.map((_,idx)=>`<span class="${idx===st.i?'on':''}"></span>`).join('') : '';
+  }
+  function tickTrip(id){
+    const st=tripState[id], el=$('#'+id); if(!st||!el||st.paused||st.variants.length<2) return;
+    const titleEl=el.querySelector('.ptitle'), descEl=el.querySelector('.pdesc');
+    titleEl.classList.add('fade'); descEl.classList.add('fade');
+    setTimeout(()=>{
+      st.i=(st.i+1)%st.variants.length;
+      paintTrip(id);
+      titleEl.classList.remove('fade'); descEl.classList.remove('fade');
+    },250);
+  }
+  function initTripCarousel(id){
+    const el=$('#'+id); if(!el) return;
+    tripState[id]={variants:tripPromoVariants(), i:0, paused:false};
+    paintTrip(id);
+    if(!el.dataset.carouselBound){
+      el.dataset.carouselBound='1';
+      el.addEventListener('mouseenter',()=>{ if(tripState[id]) tripState[id].paused=true; });
+      el.addEventListener('mouseleave',()=>{ if(tripState[id]) tripState[id].paused=false; });
+    }
+  }
+  let tripInterval=null;
+  function refreshTripPromos(){
+    TRIP_BANNERS.forEach(initTripCarousel);
+    if(!tripInterval){
+      const reduceMotion=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(!reduceMotion) tripInterval=setInterval(()=>{ if(!document.hidden) TRIP_BANNERS.forEach(tickTrip); }, 5000);
+    }
+  }
+
+  /* ===== 廣告點擊追蹤（GA4）：自動為所有推廣連結綁定事件 ===== */
+  document.querySelectorAll('a.promo').forEach(function(el){
+    el.addEventListener('click',function(){
+      const href=el.getAttribute('href')||'';
+      const vendor=href.indexOf('onelink.one')>-1?'KKday':href.indexOf('trip.com')>-1?'Trip.com':'other';
+      const titleEl=el.querySelector('.ptitle');
+      const title=titleEl?titleEl.textContent.trim():'';
+      if(typeof gtag==='function'){
+        gtag('event','ad_click',{ad_vendor:vendor,ad_title:title,ad_url:href});
+      }
+    });
+  });
+
+  /* ===== i18n 初始化 ===== */
+  initI18nBase();
+  document.querySelectorAll('#langbar button').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+  // 子頁（/en/ /id/ /vi/）由 build.mjs 注入 window.__PAGE_LANG__，優先於 localStorage，
+  // 避免 JS 載入後把預渲染的該語言內容又切回 zh。
+  let savedLang = (typeof window!=='undefined' && window.__PAGE_LANG__) || 'zh';
+  if(!window.__PAGE_LANG__){
+    let stored=null; try{stored=localStorage.getItem('tdt_lang');}catch(e){}
+    // 沒手動選過語言時，依瀏覽器語言自動切成印尼/越南語（在台移工是主要受眾，
+    // 落地看到中文會直接跳出）。不做網址轉址，只切內容，避免影響根頁索引。
+    // 刻意不自動切 en：Googlebot 的語言是 en-US，切了會讓爬蟲看到英文版首頁。
+    savedLang = stored || detectLang() || 'zh';
+  }
+  applyLang(savedLang);
+
+  function detectLang(){
+    const list = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language];
+    for(const l of list){
+      const code = String(l||'').toLowerCase();
+      if(code.startsWith('id')||code.startsWith('in')) return 'id'; // in 為印尼語舊代碼
+      if(code.startsWith('vi')) return 'vi';
+      if(code.startsWith('zh')) return 'zh';
+    }
+    return null;
+  }
+})();
+</script>
 </body>
 </html>
